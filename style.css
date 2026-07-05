@@ -793,3 +793,16 @@ button:active,
 	background: var(--grey-light);
 	background: linear-gradient(180deg, var(--grey-light) 25%, var(--white) 75%);
 }
+
+/* SERVICES PAGES */
+.services-hero.alignfull {
+	max-width: 1920px;
+	text-align: center;
+	margin: 0 auto;
+	padding-bottom: calc( 2 * var(--gap));
+}
+.services-hero.alignfull img {
+	object-fit: cover;
+	min-height: 150px;
+	max-height: 420px;
+}
