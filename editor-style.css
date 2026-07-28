@@ -58,7 +58,12 @@
 }
 
 .block-editor-block-list__layout .block-editor-block-list__block.testimonials-section {
-	background: var(--grey-light);
-	background: linear-gradient(0deg, var(--grey-light) 75%, var(--white) 100%);
+	border-top: 1px solid var(--grey-vlight);
+	border-bottom: 1px solid var(--grey-vlight);
 
+	.wp-block-quote {
+		background: var(--grey-vlight);
+		border-left: none;
+		padding: 0 1rem 1rem;
+	}
 }
