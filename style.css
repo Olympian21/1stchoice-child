@@ -307,10 +307,6 @@ h2 {
 	margin-bottom: 0;
 }
 
-ul.wp-block-list li::marker {
-	color: var(--purple-light);
-}
-
 hr {
 	background-color: var(--grey-dark);
 }
@@ -503,12 +499,39 @@ button:active,
 }
 
 .wp-block-group.is-layout-flex.cards,
-.cards4 {
+.wp-block-group.is-layout-flex.cards2,
+.wp-block-group.is-layout-flex.cards4 {
 	gap: var(--gap);
 	align-items: stretch;
+	flex-wrap: wrap;
+}
+
+.wp-block-group.is-layout-flex.cards2 > .wp-block-group {
+	width: calc( 50% - (var(--gap) / 2 ));
+}
+@media screen and (max-width:900px) {
+	.wp-block-group.is-layout-flex.cards4 {
+		flex-wrap: wrap;
+	}
+}
+@media screen and (min-width:601px) and (max-width:900px) {
+	.wp-block-group.is-layout-flex.cards4 > .wp-block-group {
+		width: calc( 50% - (var(--gap) / 2 ))
+	}
+}
+@media screen and (max-width:600px) {
+	.wp-block-group.is-layout-flex.cards2 {
+		flex-wrap: wrap;
+	}
+
+	.wp-block-group.is-layout-flex.cards2 > .wp-block-group,
+	.wp-block-group.is-layout-flex.cards4 > .wp-block-group {
+		width: 100%;
+	}
 }
 
 .cards > .wp-block-group .wp-block-heading,
+.cards2 > .wp-block-group .wp-block-heading,
 .cards4 > .wp-block-group .wp-block-heading {
 	margin-top: 0;
 }
@@ -557,6 +580,30 @@ button:active,
 		display: flex;
 		flex-direction: column;
 	}
+}
+
+.clickable-card {
+	position: relative;
+}
+.clickable-card a:after {
+	content: '';
+	display: inline-block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.clickable-card:hover,
+.clickable-card:focus {
+	border-color: var(--link-color) !important;
+	background: var(--grey-vlight);
+}
+.clickable-card .wp-block-heading a,
+.clickable-card .wp-block-heading a:hover,
+.clickable-card .wp-block-heading a:focus {
+	color: unset;
+	text-decoration: none;
 }
 
 
@@ -835,6 +882,7 @@ button:active,
 }
 
 .cards.w-grey-bg,
+.cards2.w-grey-bg,
 .cards4.w-grey-bg {
 	gap: var(--gap);
 	align-items: stretch;
@@ -869,5 +917,21 @@ button:active,
 			padding-left: calc( var(--gap) / 2 ) !important;
 			padding-right: calc( var(--gap) / 2 ) !important;
 		}
+	}
+}
+
+ul.checkmarks {
+	columns: 250px 2;
+	list-style-type: none;
+	padding-left: calc(1 * var(--gap) + var(--page-margin)) !important;
+
+	li {
+		padding-left: 0.33rem;
+	}
+
+	li::marker {
+		content: '✓';
+		color: var(--link-color);
+		font-weight: bold;
 	}
 }
