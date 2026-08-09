@@ -16,7 +16,7 @@
 
 	--text: var(--black);
 	--text-input: var(--text);
-	--link-hover-color: var(--purple-dark);
+	--link-hover-color: #951214;
 	--button-bg: var(--link-color);
 	--button-text: var(--white);
 	--button-border-color: transparent;
@@ -70,4 +70,14 @@
 .block-editor-block-list__layout .block-editor-block-list__block.wp-block-group.trust-schedule {
 	border-top: 1px solid var(--grey-vlight);
 	border-bottom: 1px solid var(--grey-vlight);
+}
+.block-editor-block-list__layout .block-editor-block-list__block.wp-block-group.red-cards {
+	border-top: 5px solid var(--red);
+	border-bottom: 5px solid var(--link-hover-color);
+	background: rgba( 194, 24, 26, 0.4 );
+}
+.block-editor-block-list__layout .block-editor-block-list__block.wp-block-group.grey-vdark-bg {
+	border-top: 5px solid var(--grey-vdark);
+	border-bottom: 5px solid var(--grey-vdark);
+	background: var(--grey-vlight);
 }

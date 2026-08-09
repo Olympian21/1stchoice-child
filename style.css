@@ -503,8 +503,14 @@ button:active,
 .wp-block-group.is-layout-flex.cards4 {
 	gap: var(--gap);
 	align-items: stretch;
-	flex-wrap: wrap;
 }
+
+.wp-block-group.is-layout-flex.cards > .wp-block-group,
+.wp-block-group.is-layout-flex.cards2 > .wp-block-group,
+.wp-block-group.is-layout-flex.cards4 > .wp-block-group {
+	padding: var(--gap);
+}
+
 
 .wp-block-group.is-layout-flex.cards2 > .wp-block-group {
 	width: calc( 50% - (var(--gap) / 2 ));
@@ -899,10 +905,8 @@ button:active,
 		padding: calc( var(--gap) / 2 );
 		border: 1px solid var(--grey);
 		border-radius: var(--border-radius);
+		background: var(--white);
 	}
-}
-.cards.w-border,
-.cards4.w-border {
 
 	.wp-block-group:has(.wp-block-group__inner-container .wp-block-image) {
 		padding: 0 0 calc( var(--gap) / 2 );
@@ -920,6 +924,12 @@ button:active,
 	}
 }
 
+.cards4.w-border > .wp-block-group,
+.cards4 > .wp-block-group {
+	width: calc( 25% - ( var(--gap) * 3 / 4 ));
+	min-width: 200px;
+}
+
 ul.checkmarks {
 	columns: 250px 2;
 	list-style-type: none;
@@ -933,5 +943,75 @@ ul.checkmarks {
 		content: '✓';
 		color: var(--link-color);
 		font-weight: bold;
+	}
+}
+ul.checkmarks.no-lpadding {
+	padding-left: calc(1.5 * var(--gap)) !important;
+}
+
+/* RED CARDS SECTION */
+.red-cards.wp-block-group {
+	width: 100%;
+	background: #951214;
+	background: linear-gradient(0deg, var(--link-hover-color) 0%, var(--red) 100%);
+	color: var(--white);
+	padding-top: 3rem;
+	padding-bottom: 4rem;
+	margin-bottom: 0;
+
+	h2 {
+		text-align: center;
+		margin: 0 auto 3rem;
+		color: var(--white);
+		border-top: 3px solid var(--white);
+		border-bottom: 3px solid var(--white);
+		max-width: 40rem !important;
+		padding: 0.5rem 2rem;
+	}
+	h3 { color: var(--white); }
+
+	.cards {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: stretch;
+	}
+
+	.cards > .wp-block-group {
+		background: var(--grey-dark);
+		color: var(--white);
+		border-radius: calc( var(--border-radius) / 2 );
+		width: calc( 50% - (var(--gap) / 2 ));
+		padding: var(--gap);
+		box-shadow: 14px 14px 15px 2px rgba(0, 0, 0, 0.25);
+
+		h3 {
+			text-align: center;
+			color: var(--gold);
+		}
+
+		a {
+			font-weight: bold;
+			color: var(--white);
+		}
+	}
+}
+/* GREY VDARK SECTION */
+.grey-vdark-bg {
+	background: var(--grey-vdark);
+	color: var(--white);
+	margin-bottom: 0;
+	padding-top: calc( 2 * var(--gap));
+	padding-bottom: calc( 2 * var(--gap));
+
+	h2 {
+		color: var(--white);
+		text-align: center;
+		margin-top: 0;
+	}
+
+	.cards,
+	.cards2 {
+		color: var(--text);
 	}
 }
