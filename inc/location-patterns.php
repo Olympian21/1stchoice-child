@@ -51,6 +51,10 @@ function firstchoice_location_warranty_terms() {
  *   slug      - pattern slug fragment
  *   h1        - page H1 / WordPress page title
  *   seo       - title, description, slug, keywords (for Yoast, not output in markup)
+ *   intro_heading - optional H2 above the intro copy. Only set this when the
+ *                   content doc's Section 1 headline differs from the H1;
+ *                   otherwise the page would open with two near-identical
+ *                   headings.
  *   intro     - array of paragraphs under the H1
  *   community - heading + array of paragraphs
  *   storm     - optional: heading + intro paragraphs + list + closing paragraph
@@ -129,6 +133,7 @@ function firstchoice_location_data() {
 			'slug'        => '/roofing-affton-mo',
 			'keywords'    => 'roofing company Affton MO, roof repair Affton, roof replacement Affton MO, Affton roofing contractor, storm damage roofing Affton',
 		),
+		'intro_heading' => 'Residential and Commercial Roofing in Affton',
 		'intro' => array(
 			'Missouri weather doesn&#8217;t take it easy on a roof — hail, high winds, ice, and long stretches of summer heat add up fast. When it&#8217;s time for a repair or a full residential or commercial roof replacement, Affton homeowners need a roofing company they can count on. 1st Choice Roofing and Construction brings experienced crews, premium materials, and the kind of craftsmanship that holds up long after the job is done.',
 		),
@@ -233,6 +238,11 @@ function firstchoice_location_intro( $data ) {
 	?>
 <!-- wp:group {"className":"location-intro","layout":{"type":"constrained"}} -->
 <div class="wp-block-group location-intro">
+	<?php if ( ! empty( $data['intro_heading'] ) ) : ?>
+	<!-- wp:heading -->
+	<h2 class="wp-block-heading"><?php echo wp_kses_post( $data['intro_heading'] ); ?></h2>
+	<!-- /wp:heading -->
+	<?php endif; ?>
 	<?php foreach ( $data['intro'] as $i => $paragraph ) : ?>
 	<!-- wp:paragraph {"className":"<?php echo 0 === $i ? 'location-lead' : ''; ?>"} -->
 	<p class="<?php echo 0 === $i ? 'location-lead' : ''; ?>"><?php echo wp_kses_post( $paragraph ); ?></p>

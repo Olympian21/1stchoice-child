@@ -44,11 +44,17 @@ section that other cities don't.
 | Meta description | Looking for a trusted roofing company in Affton, MO? 1st Choice Roofing and Construction delivers expert repairs, replacements, and storm damage service to Affton homeowners. Free estimates. |
 | Keywords | roofing company Affton MO, roof repair Affton, roof replacement Affton MO, Affton roofing contractor, storm damage roofing Affton |
 
+Affton's content doc uses a different Section 1 headline than its SEO H1, so the
+page opens with the H1 "Roofing Company in Affton, MO" in the red band followed
+by "Residential and Commercial Roofing in Affton" as the intro H2. That comes
+from the optional `intro_heading` key — only set it when the two genuinely
+differ.
+
 ## Page structure
 
 | Section | Class | Treatment |
 |---|---|---|
-| Intro lead | `.location-intro` | White, constrained, larger lead paragraph |
+| Intro lead | `.location-intro` | White, constrained, optional H2 + larger lead paragraph |
 | Local / community paragraph | `.location-community` | Light grey full-width band |
 | Storm damage (Arnold only) | `.location-storm` | White, red H2, checkmark list |
 | Services | `.location-services` | White, two-column checkmark list |
