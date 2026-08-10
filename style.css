@@ -658,11 +658,13 @@ button:active,
 		margin-top: 0;
 	}
 }
-.warranty-text,
-.insurance-text {
+div.warranty-text:not(.alignfull):not(.alignwide),
+div.insurance-text:not(.alignfull):not(.alignwide) {
+	width: auto;
 	flex: 1 1 380px;
 }
-.warranty-images {
+div.warranty-images:not(.alignfull):not(.alignwide) {
+	width: auto;
 	flex: 1 1 420px;
 	gap: var(--gap);
 	align-items: stretch;
@@ -687,6 +689,201 @@ button:active,
 	}
 	.insurance-section {
 		flex-direction: column-reverse;
+	}
+}
+
+/* LOCATION / SERVICE AREA PAGES */
+.location-intro,
+.location-storm,
+.location-services {
+	max-width: var(--aligndefault);
+	margin-left: auto;
+	margin-right: auto;
+	padding-top: calc( 2 * var(--gap));
+	padding-bottom: calc( 2 * var(--gap));
+}
+.location-intro {
+	padding-bottom: var(--gap);
+}
+.location-lead {
+	font-size: var(--font-size-1);
+	line-height: 1.55;
+}
+.location-intro h2:first-child,
+.location-storm h2:first-child,
+.location-services h2:first-child {
+	margin-top: 0;
+}
+
+/* Section 2 — local paragraph, the SEO heart of the page */
+.location-community {
+	background: var(--grey-vlight);
+}
+.location-community > .wp-block-group__inner-container,
+.location-difference > .wp-block-group__inner-container,
+.location-warranty > .wp-block-group__inner-container {
+	max-width: var(--aligndefault);
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: var(--page-margin);
+	padding-right: var(--page-margin);
+	padding-top: calc( 2 * var(--gap));
+	padding-bottom: calc( 2 * var(--gap));
+}
+.location-community h2:first-child {
+	margin-top: 0;
+}
+
+/* Storm section heading picks up the brand red for emphasis */
+.location-storm h2 {
+	color: var(--red);
+}
+
+/* Checkmark service lists */
+ul.wp-block-list.location-checklist {
+	list-style: none;
+	padding-left: 0;
+	margin-top: var(--gap);
+	margin-bottom: var(--gap);
+
+	li {
+		position: relative;
+		padding-left: calc( var(--gap) * 1.4 );
+		margin-bottom: 0.6em;
+	}
+	li:before {
+		content: '';
+		position: absolute;
+		left: 0.2em;
+		top: 0.15em;
+		width: 0.45em;
+		height: 0.8em;
+		border: solid var(--red);
+		border-width: 0 3px 3px 0;
+		transform: rotate(45deg);
+	}
+}
+@media screen and (min-width: 782px) {
+	ul.wp-block-list.location-checklist.is-two-column {
+		column-count: 2;
+		column-gap: calc( 2 * var(--gap));
+
+		li {
+			break-inside: avoid;
+		}
+	}
+}
+
+/* "What sets us apart" — dark callout band, mirrors the Figma feature cards */
+.location-difference {
+	background: var(--grey-vdark);
+	color: var(--white);
+
+	p {
+		color: var(--white);
+		font-size: var(--font-size-1);
+		line-height: 1.55;
+		margin-bottom: 0;
+	}
+}
+
+/* Warranty design block — light band, three-column terms */
+.location-warranty {
+	background: var(--grey-light);
+	background: linear-gradient(0deg, var(--grey-light) 75%, var(--grey-vlight) 100%);
+	text-align: center;
+}
+.location-warranty h2:first-child {
+	margin-top: 0;
+}
+.location-warranty .warranty-terms {
+	gap: calc( 2 * var(--gap));
+	margin-top: calc( 1.5 * var(--gap));
+	margin-bottom: var(--gap);
+	align-items: flex-start;
+}
+/* div-qualified so the blanket "div:not(.alignwide):not(.alignfull){width:100%}"
+   rule above doesn't collapse these into full-width rows. */
+div.warranty-term:not(.alignfull):not(.alignwide) {
+	width: clamp( 180px, calc( 33% - (1.5 * var(--gap))), 260px);
+	text-align: center;
+	border-top: 3px solid var(--red);
+	padding-top: calc( var(--gap) * 0.75 );
+}
+.warranty-term-value {
+	font-family: var(--font-primary);
+	font-size: var(--font-size-3);
+	font-weight: 700;
+	line-height: 1.1;
+	color: var(--red);
+	margin-bottom: 0.2em;
+}
+.warranty-term-label {
+	font-size: var(--font-size-sm);
+	text-transform: uppercase;
+	letter-spacing: 0.6px;
+	font-weight: 700;
+	color: var(--grey-dark);
+	margin-bottom: 0;
+}
+.warranty-note {
+	margin-bottom: 0;
+
+	a {
+		font-weight: 700;
+		white-space: nowrap;
+	}
+}
+@media screen and (max-width: 781px) {
+	.location-warranty .warranty-terms {
+		gap: var(--gap);
+	}
+	div.warranty-term:not(.alignfull):not(.alignwide) {
+		width: 100%;
+	}
+}
+
+/* Closing CTA — inherits .big-red-box, tightened for location pages */
+.location-cta > .wp-block-group__inner-container {
+	text-align: center;
+}
+.location-cta-btn .wp-block-button__link {
+	background: var(--white);
+	color: var(--red);
+	border-color: var(--white);
+}
+.location-cta-btn .wp-block-button__link:hover,
+.location-cta-btn .wp-block-button__link:focus,
+.location-cta-btn .wp-block-button__link:active {
+	background: var(--grey-vlight);
+	color: var(--red);
+}
+.location-cta-phone {
+	margin-top: var(--gap);
+	margin-bottom: 0;
+	font-weight: 700;
+
+	a {
+		color: var(--white);
+		text-decoration: none;
+	}
+	a:hover,
+	a:focus {
+		text-decoration: underline;
+	}
+}
+
+/* Location page testimonial reuses the site testimonial treatment */
+.location-testimonial > .wp-block-group__inner-container {
+	max-width: var(--aligndefault);
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: var(--page-margin);
+	padding-right: var(--page-margin);
+}
+.location-testimonial .wp-block-quote {
+	p {
+		font-style: italic;
 	}
 }
 
