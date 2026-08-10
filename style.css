@@ -691,130 +691,421 @@ div.warranty-images:not(.alignfull):not(.alignwide) {
 		flex-direction: column-reverse;
 	}
 }
-
 /* LOCATION / SERVICE AREA PAGES */
-.location-intro,
-.location-storm,
-.location-services {
-	max-width: var(--aligndefault);
+/* The H1 lives in the page's own hero, so hide the theme's red title band. */
+.location-page .entry-header-wrap,
+.location-page .page-header-wrap {
+	display: none;
+}
+.location-page .site-main article:not(.has-post-thumbnail) .entry-content {
+	padding-top: 0;
+}
+
+/* The theme sets width:100% broadly and box-sizing is content-box, so any
+   location component that carries padding needs border-box or it overflows. */
+.location-hero > .wp-block-group__inner-container,
+.location-trustbar > .wp-block-group__inner-container,
+.location-community > .wp-block-group__inner-container,
+.location-storm > .wp-block-group__inner-container,
+.location-services > .wp-block-group__inner-container,
+.location-cta > .wp-block-group__inner-container,
+.location-warranty > .wp-block-group__inner-container,
+.location-testimonial > .wp-block-group__inner-container,
+.location-gallery > .wp-block-group__inner-container,
+.location-badges > .wp-block-group__inner-container,
+.location-pullquote,
+.storm-copy,
+.storm-cards,
+.storm-card,
+.service-card,
+.gallery-slot,
+.trust-badge,
+.location-testimonial .wp-block-quote {
+	box-sizing: border-box;
+}
+
+/* Location page headings are title case, unlike the uppercase site default. */
+.location-hero h1,
+.location-community h2,
+.location-storm h2,
+.location-services h2,
+.location-cta h2,
+.location-warranty h2,
+.location-testimonial h2,
+.location-gallery h2 {
+	text-transform: none;
+	letter-spacing: 0;
+}
+
+/* Small red label above a section heading */
+.section-eyebrow {
+	font-size: var(--font-size-sm);
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 1.2px;
+	color: var(--red);
+	margin-bottom: 0.35em;
+}
+
+/* Shared button variants */
+.btn-primary-red .wp-block-button__link {
+	background: var(--red);
+	border-color: var(--red);
+	color: var(--white);
+}
+.btn-primary-red .wp-block-button__link:hover,
+.btn-primary-red .wp-block-button__link:focus {
+	background: var(--link-hover-color);
+}
+.btn-outline-white .wp-block-button__link {
+	background: transparent;
+	border: 2px solid var(--white);
+	color: var(--white);
+	filter: none;
+}
+.btn-outline-white .wp-block-button__link:hover,
+.btn-outline-white .wp-block-button__link:focus {
+	background: rgba(255, 255, 255, 0.15);
+}
+.btn-gold .wp-block-button__link {
+	background: var(--gold);
+	border-color: var(--gold);
+	color: var(--grey-vdark);
+}
+.btn-gold .wp-block-button__link:hover,
+.btn-gold .wp-block-button__link:focus {
+	background: #d4b13c; /* darken(--gold, 8) */
+	color: var(--grey-vdark);
+}
+
+/* HERO */
+.location-hero {
+	position: relative;
+	background: var(--grey-dark);
+	/* Diagonal texture stands in for the hero photo until one is selected. */
+	background-image: repeating-linear-gradient(
+		135deg,
+		rgba(255, 255, 255, 0.035) 0px,
+		rgba(255, 255, 255, 0.035) 2px,
+		transparent 2px,
+		transparent 9px
+	);
+	color: var(--white);
+}
+.location-hero > .wp-block-group__inner-container {
+	max-width: var(--alignwide);
 	margin-left: auto;
 	margin-right: auto;
-	padding-top: calc( 2 * var(--gap));
-	padding-bottom: calc( 2 * var(--gap));
+	padding: calc( 3 * var(--gap)) var(--page-margin) calc( 3 * var(--gap));
 }
-.location-intro {
-	padding-bottom: var(--gap);
+.location-hero-badge {
+	display: inline-block;
+	width: auto !important;
+	background: var(--red);
+	color: var(--white);
+	font-size: var(--font-size-sm);
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	padding: 0.4em 0.9em;
+	border-radius: 3px;
+	margin-bottom: var(--gap);
 }
-.location-lead {
-	font-size: var(--font-size-1);
-	line-height: 1.55;
-}
-.location-intro h2:first-child,
-.location-storm h2:first-child,
-.location-services h2:first-child {
+.location-hero-title {
+	color: var(--white);
+	font-size: var(--font-size-4);
+	line-height: 1.1;
+	max-width: 18em;
 	margin-top: 0;
+	margin-bottom: var(--gap);
+}
+.location-hero-kicker {
+	font-size: var(--font-size-1);
+	font-weight: 700;
+	color: var(--gold);
+	max-width: 34em;
+}
+.location-hero-intro {
+	color: var(--grey-light);
+	max-width: 34em;
+	line-height: 1.6;
+}
+.location-hero-buttons {
+	display: flex;
+	gap: calc( var(--gap) * 0.75 );
+	margin-top: calc( 1.5 * var(--gap));
+	flex-wrap: wrap;
+}
+.location-hero-photo-note {
+	font-size: var(--font-size-sm);
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	color: rgba(255, 255, 255, 0.45);
+	margin-top: calc( 2 * var(--gap));
+	margin-bottom: 0;
+}
+@media screen and (max-width: 781px) {
+	.location-hero-title {
+		font-size: var(--font-size-2);
+	}
 }
 
-/* Section 2 — local paragraph, the SEO heart of the page */
+/* TRUST BAR */
+.location-trustbar {
+	background: var(--black);
+	color: var(--white);
+}
+.location-trustbar > .wp-block-group__inner-container {
+	max-width: var(--alignwide);
+	margin-left: auto;
+	margin-right: auto;
+	padding: calc( var(--gap) * 0.85 ) var(--page-margin);
+}
+.location-trustbar .trustbar-items {
+	display: flex;
+	flex-wrap: wrap;
+	gap: calc( var(--gap) * 0.6 ) calc( var(--gap) * 1.6 );
+	align-items: center;
+}
+p.trustbar-item:not(.alignfull):not(.alignwide) {
+	position: relative;
+	width: auto;
+	font-size: var(--font-size-sm);
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.8px;
+	color: var(--white);
+	padding-left: 1.1em;
+	margin-bottom: 0;
+}
+.trustbar-item:before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0.45em;
+	width: 0.5em;
+	height: 0.5em;
+	border-radius: 50%;
+	background: var(--gold);
+}
+
+/* COMMUNITY */
 .location-community {
-	background: var(--grey-vlight);
+	background: var(--white);
 }
 .location-community > .wp-block-group__inner-container,
-.location-difference > .wp-block-group__inner-container,
-.location-warranty > .wp-block-group__inner-container {
+.location-services > .wp-block-group__inner-container,
+.location-cta > .wp-block-group__inner-container,
+.location-warranty > .wp-block-group__inner-container,
+.location-testimonial > .wp-block-group__inner-container,
+.location-gallery > .wp-block-group__inner-container {
 	max-width: var(--aligndefault);
 	margin-left: auto;
 	margin-right: auto;
-	padding-left: var(--page-margin);
-	padding-right: var(--page-margin);
-	padding-top: calc( 2 * var(--gap));
-	padding-bottom: calc( 2 * var(--gap));
+	padding: calc( 2.5 * var(--gap)) var(--page-margin);
 }
-.location-community h2:first-child {
+.location-community h2 {
 	margin-top: 0;
 }
-
-/* Storm section heading picks up the brand red for emphasis */
-.location-storm h2 {
-	color: var(--red);
-}
-
-/* Checkmark service lists */
-ul.wp-block-list.location-checklist {
-	list-style: none;
-	padding-left: 0;
-	margin-top: var(--gap);
-	margin-bottom: var(--gap);
-
-	li {
-		position: relative;
-		padding-left: calc( var(--gap) * 1.4 );
-		margin-bottom: 0.6em;
-	}
-	li:before {
-		content: '';
-		position: absolute;
-		left: 0.2em;
-		top: 0.15em;
-		width: 0.45em;
-		height: 0.8em;
-		border: solid var(--red);
-		border-width: 0 3px 3px 0;
-		transform: rotate(45deg);
-	}
-}
-@media screen and (min-width: 782px) {
-	ul.wp-block-list.location-checklist.is-two-column {
-		column-count: 2;
-		column-gap: calc( 2 * var(--gap));
-
-		li {
-			break-inside: avoid;
-		}
-	}
-}
-
-/* "What sets us apart" — dark callout band, mirrors the Figma feature cards */
-.location-difference {
-	background: var(--grey-vdark);
-	color: var(--white);
-
-	p {
-		color: var(--white);
-		font-size: var(--font-size-1);
-		line-height: 1.55;
-	}
-	p:last-child {
-		margin-bottom: 0;
-	}
-}
-
-/* Warranty design block — light band, three-column terms */
-.location-warranty {
-	background: var(--grey-light);
-	background: linear-gradient(0deg, var(--grey-light) 75%, var(--grey-vlight) 100%);
-	text-align: center;
-}
-.location-warranty h2:first-child {
-	margin-top: 0;
-}
-.location-warranty .warranty-terms {
-	gap: calc( 2 * var(--gap));
+.location-pullquote {
+	background: var(--grey-vlight);
+	border-left: 4px solid var(--red);
+	padding: var(--gap) calc( 1.25 * var(--gap));
+	font-weight: 700;
 	margin-top: calc( 1.5 * var(--gap));
-	margin-bottom: var(--gap);
+	margin-bottom: 0;
+}
+
+/* STORM — red band */
+.location-storm {
+	background: var(--red);
+	color: var(--white);
+}
+.location-storm > .wp-block-group__inner-container {
+	max-width: var(--alignwide);
+	margin-left: auto;
+	margin-right: auto;
+	padding: calc( 2.5 * var(--gap)) var(--page-margin);
+}
+.location-storm h2 {
+	color: var(--white);
+	margin-top: 0;
+}
+.location-storm p {
+	color: var(--white);
+	line-height: 1.6;
+}
+.location-storm .storm-layout {
+	display: flex;
+	flex-wrap: wrap;
+	gap: calc( 2 * var(--gap));
 	align-items: flex-start;
 }
-/* div-qualified so the blanket "div:not(.alignwide):not(.alignfull){width:100%}"
-   rule above doesn't collapse these into full-width rows. */
-div.warranty-term:not(.alignfull):not(.alignwide) {
-	width: clamp( 180px, calc( 33% - (1.5 * var(--gap))), 260px);
+div.storm-copy:not(.alignfull):not(.alignwide) {
+	width: auto;
+	flex: 1 1 380px;
+}
+div.storm-copy.is-full:not(.alignfull):not(.alignwide) {
+	flex: 1 1 100%;
+	max-width: 46em;
+}
+.storm-closing {
+	font-weight: 700;
+}
+div.storm-cards:not(.alignfull):not(.alignwide) {
+	width: auto;
+	flex: 1 1 340px;
+	display: flex;
+	flex-direction: column;
+	gap: calc( var(--gap) * 0.6 );
+}
+.storm-card {
+	display: flex;
+	align-items: center;
+	gap: calc( var(--gap) * 0.7 );
+	background: rgba(0, 0, 0, 0.22);
+	border-radius: 4px;
+	padding: calc( var(--gap) * 0.7 ) var(--gap);
+}
+.storm-card-icon {
+	flex: 0 0 auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 34px;
+	height: 34px;
+	border-radius: 50%;
+	background: var(--gold);
+	color: var(--grey-vdark);
+}
+.storm-card-text {
+	font-size: var(--font-size-sm);
+	font-weight: 700;
+	line-height: 1.35;
+}
+.location-storm .storm-cta {
+	margin-top: calc( 1.5 * var(--gap));
+}
+
+/* SERVICES — light band with white cards */
+.location-services {
+	background: var(--grey-vlight);
+}
+.location-services h2 {
+	margin-top: 0;
+}
+.services-intro {
+	max-width: 44em;
+	margin-left: auto;
+	margin-right: auto;
+}
+.location-services .service-cards {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: var(--gap);
+	margin-top: calc( 1.5 * var(--gap));
+	margin-bottom: calc( 1.5 * var(--gap));
+}
+.service-card {
+	flex: 1 1 clamp( 220px, calc( 33% - var(--gap)), 300px);
+	background: var(--white);
+	border: 1px solid var(--grey-light);
+	border-radius: 4px;
+	padding: var(--gap);
 	text-align: center;
-	border-top: 3px solid var(--red);
-	padding-top: calc( var(--gap) * 0.75 );
+	font-size: var(--font-size-sm);
+	font-weight: 700;
+	color: var(--grey-dark);
+}
+.services-difference {
+	max-width: 46em;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: var(--font-size-sm);
+	font-style: italic;
+	color: var(--grey);
+}
+.services-difference:last-child {
+	margin-bottom: 0;
+}
+
+/* CLOSING CTA — dark band */
+.location-cta {
+	background: var(--grey-vdark);
+	color: var(--white);
+	text-align: center;
+}
+.location-cta h2 {
+	color: var(--white);
+	margin-top: 0;
+}
+.location-cta p {
+	color: var(--grey-light);
+	max-width: 44em;
+	margin-left: auto;
+	margin-right: auto;
+}
+.location-cta .wp-block-buttons {
+	margin-top: calc( 1.5 * var(--gap));
+}
+.location-cta-phone {
+	margin-top: var(--gap);
+	margin-bottom: 0;
+	font-weight: 700;
+	color: var(--white) !important;
+
+	a {
+		color: var(--gold);
+		text-decoration: none;
+	}
+	a:hover,
+	a:focus {
+		text-decoration: underline;
+	}
+}
+
+/* WARRANTY — bordered cards with gold badges */
+.location-warranty {
+	background: var(--white);
+	text-align: center;
+}
+.location-warranty h2 {
+	margin-top: 0;
+}
+.warranty-subtitle {
+	color: var(--grey);
+	margin-bottom: calc( 1.5 * var(--gap));
+}
+.location-warranty .warranty-terms {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: var(--gap);
+	align-items: stretch;
+}
+div.warranty-term:not(.alignfull):not(.alignwide) {
+	width: clamp( 190px, calc( 33.333% - var(--gap)), 260px);
+	box-sizing: border-box;
+	border: 1px solid var(--grey-light);
+	border-radius: 4px;
+	padding: calc( 1.25 * var(--gap)) var(--gap);
+	text-align: center;
+}
+p.warranty-term-badge:not(.alignfull):not(.alignwide) {
+	width: 40px;
+	height: 40px;
+	margin: 0 auto calc( var(--gap) * 0.6 );
+	border-radius: 50%;
+	background: var(--gold);
+	color: var(--grey-vdark);
+	font-weight: 700;
+	line-height: 40px;
+	text-align: center;
 }
 .warranty-term-value {
 	font-family: var(--font-primary);
-	font-size: var(--font-size-3);
+	font-size: var(--font-size-2);
 	font-weight: 700;
 	line-height: 1.1;
 	color: var(--red);
@@ -825,67 +1116,147 @@ div.warranty-term:not(.alignfull):not(.alignwide) {
 	text-transform: uppercase;
 	letter-spacing: 0.6px;
 	font-weight: 700;
-	color: var(--grey-dark);
+	color: var(--grey);
 	margin-bottom: 0;
 }
-.warranty-note {
+.location-warranty .warranty-note {
+	margin-top: calc( 1.5 * var(--gap));
 	margin-bottom: 0;
 
 	a {
+		font-size: var(--font-size-sm);
 		font-weight: 700;
-		white-space: nowrap;
+		color: var(--red);
 	}
 }
 @media screen and (max-width: 781px) {
-	.location-warranty .warranty-terms {
-		gap: var(--gap);
-	}
 	div.warranty-term:not(.alignfull):not(.alignwide) {
 		width: 100%;
 	}
 }
 
-/* Closing CTA — inherits .big-red-box, tightened for location pages */
-.location-cta > .wp-block-group__inner-container {
+/* TESTIMONIAL */
+.location-testimonial {
+	background: var(--grey-vlight);
 	text-align: center;
 }
-.location-cta-btn .wp-block-button__link {
-	background: var(--white);
-	color: var(--red);
-	border-color: var(--white);
-}
-.location-cta-btn .wp-block-button__link:hover,
-.location-cta-btn .wp-block-button__link:focus,
-.location-cta-btn .wp-block-button__link:active {
-	background: var(--grey-vlight);
-	color: var(--red);
-}
-.location-cta-phone {
-	margin-top: var(--gap);
-	margin-bottom: 0;
-	font-weight: 700;
-
-	a {
-		color: var(--white);
-		text-decoration: none;
-	}
-	a:hover,
-	a:focus {
-		text-decoration: underline;
-	}
-}
-
-/* Location page testimonial reuses the site testimonial treatment */
-.location-testimonial > .wp-block-group__inner-container {
-	max-width: var(--aligndefault);
-	margin-left: auto;
-	margin-right: auto;
-	padding-left: var(--page-margin);
-	padding-right: var(--page-margin);
+.location-testimonial h2 {
+	margin-top: 0;
+	margin-bottom: calc( 1.5 * var(--gap));
 }
 .location-testimonial .wp-block-quote {
+	background: var(--white);
+	border-left: 4px solid var(--gold);
+	border-radius: 0;
+	padding: calc( 1.25 * var(--gap)) calc( 1.5 * var(--gap));
+	margin: 0 auto;
+	max-width: 44em;
+	text-align: left;
+
 	p {
 		font-style: italic;
+		color: var(--grey-dark);
+	}
+	cite {
+		display: block;
+		font-style: normal;
+		font-weight: 700;
+		text-transform: uppercase;
+		font-size: var(--font-size-sm);
+		color: var(--grey-dark);
+		text-align: right;
+	}
+}
+
+/* RECENT WORK GALLERY — placeholders until real photos land */
+.location-gallery {
+	background: var(--white);
+	text-align: center;
+}
+.location-gallery h2 {
+	margin-top: 0;
+}
+.gallery-note {
+	font-size: var(--font-size-sm);
+	color: var(--grey);
+	max-width: 40em;
+	margin-left: auto;
+	margin-right: auto;
+}
+.location-gallery .gallery-grid {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: var(--gap);
+	margin-top: calc( 1.5 * var(--gap));
+	align-items: stretch;
+}
+.gallery-slot {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: var(--grey-vlight);
+	border: 2px dashed var(--grey-light);
+	border-radius: 4px;
+	min-height: 190px;
+	padding: var(--gap);
+
+	span {
+		font-size: var(--font-size-sm);
+		font-weight: 700;
+		text-transform: uppercase;
+		letter-spacing: 0.8px;
+		color: var(--grey);
+	}
+}
+.gallery-slot.is-wide {
+	flex: 1 1 clamp( 260px, calc( 50% - var(--gap)), 520px);
+}
+.gallery-slot.is-narrow {
+	flex: 1 1 clamp( 220px, calc( 33% - var(--gap)), 340px);
+	min-height: 150px;
+}
+
+/* TRUST BADGE BAR */
+.location-badges {
+	background: var(--white);
+	border-top: 1px solid var(--grey-light);
+}
+.location-badges > .wp-block-group__inner-container {
+	max-width: var(--alignwide);
+	margin-left: auto;
+	margin-right: auto;
+	padding: calc( 1.5 * var(--gap)) var(--page-margin);
+}
+.badges-label {
+	font-size: var(--font-size-sm);
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	color: var(--grey);
+	margin-bottom: var(--gap);
+}
+.location-badges .badges-row {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: calc( var(--gap) * 0.6 );
+	align-items: center;
+}
+div.trust-badge:not(.alignfull):not(.alignwide) {
+	width: auto;
+	background: var(--grey-vlight);
+	border: 1px solid var(--grey-light);
+	border-radius: 999px;
+	padding: 0.5em 1.1em;
+	font-size: var(--font-size-sm);
+	font-weight: 700;
+	color: var(--grey-dark);
+	white-space: nowrap;
+}
+@media screen and (max-width: 781px) {
+	.trust-badge {
+		white-space: normal;
 	}
 }
 

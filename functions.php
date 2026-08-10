@@ -260,6 +260,24 @@ require get_stylesheet_directory() . '/inc/block-patterns.php';
 /** Location / service area page patterns. */
 require get_stylesheet_directory() . '/inc/location-patterns.php';
 
+/**
+ * Flag location pages so the theme's red title band can be hidden — the H1
+ * lives inside the page's own hero section instead. Detected from the pattern
+ * markup, so no page-naming convention is required.
+ */
+function firstchoice_location_body_class( $classes ) {
+	if ( is_page() ) {
+		$post = get_post();
+
+		if ( $post && false !== strpos( $post->post_content, 'location-hero' ) ) {
+			$classes[] = 'location-page';
+		}
+	}
+
+	return $classes;
+}
+add_filter( 'body_class', 'firstchoice_location_body_class' );
+
 
 /*
 function yo_firstchoice_post_thumbnail() {
