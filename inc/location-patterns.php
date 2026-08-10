@@ -57,10 +57,13 @@ function firstchoice_location_warranty_terms() {
  *                   headings.
  *   intro     - array of paragraphs under the H1
  *   community - heading + array of paragraphs
- *   storm     - optional: heading + intro paragraphs + list + closing paragraph
- *   services  - heading + intro + list + difference paragraph
+ *   storm     - optional: heading + intro paragraphs; list and closing optional
+ *   services  - heading + intro + list + difference (string or array of paragraphs)
  *   cta       - heading + paragraph
  *   region    - text appended after the phone number in the CTA
+ *   order     - optional: section order. Defaults to intro, community, storm,
+ *               services, warranty, cta, testimonial. Content docs vary — Arnold
+ *               runs storm before services, Ballwin runs services first.
  */
 function firstchoice_location_data() {
 	$cities = array();
@@ -164,6 +167,61 @@ function firstchoice_location_data() {
 		'region' => 'Proudly serving Affton and south St. Louis County',
 	);
 
+	$cities['ballwin'] = array(
+		'city'  => 'Ballwin',
+		'slug'  => 'ballwin',
+		'h1'    => 'Roofing Company in Ballwin, MO',
+		'seo'   => array(
+			'title'       => 'Roofing Company in Ballwin, MO | 1st Choice Roofing and Construction',
+			'description' => '1st Choice Roofing and Construction serves Ballwin homeowners and businesses with expert roof repair, replacement, and storm damage service. Local crew, free estimates.',
+			'slug'        => '/roofing-ballwin-mo',
+			'keywords'    => 'roofing company Ballwin MO, roof repair Ballwin, roof replacement Ballwin MO, commercial roofing Ballwin, storm damage roofing Ballwin, Ballwin MO roofing contractor',
+		),
+		// Ballwin's doc runs services before storm damage.
+		'order' => array( 'intro', 'community', 'services', 'storm', 'warranty', 'cta', 'testimonial' ),
+		'intro' => array(
+			'Ballwin is one of St. Louis County&#8217;s most sought-after communities — well-maintained neighborhoods, top-rated schools, and the kind of pride in property that raises the bar for every contractor who works here. When Ballwin homeowners and business owners need a roofing company, they&#8217;re not just looking for the lowest bid. They&#8217;re looking for a crew they can trust to do the job right and stand behind it. That&#8217;s 1st Choice Roofing and Construction.',
+			'We serve residential and commercial properties throughout Ballwin and West St. Louis County, bringing the same standard of craftsmanship to every job — whether it&#8217;s a ranch home off Manchester Road or a commercial property on a busy corridor.',
+		),
+		'community' => array(
+			'heading'    => 'Roofing Ballwin Homeowners and Businesses Can Count On',
+			'paragraphs' => array(
+				'Ballwin has been one of West County&#8217;s premier communities for decades — a place where tree-lined streets, classic brick and Colonial Revival homes, and a genuine sense of community make it easy to see why families put down roots and stay. With top-performing Rockwood and Parkway school districts, beautiful parks like Castlewood and Queeny, and a thriving commercial corridor along Manchester Road, Ballwin has everything residents need close by.',
+				'That same investment in quality extends to the properties themselves. Ballwin homeowners maintain their homes, and the businesses along Manchester Road and throughout West County depend on their buildings to make a strong impression. 1st Choice Roofing and Construction understands those standards — and we hold our work to them. Whether it&#8217;s a full residential replacement or a commercial flat roof that needs attention, we bring the craftsmanship and accountability that Ballwin expects.',
+			),
+		),
+		'services' => array(
+			'heading'    => 'Residential and Commercial Roofing in Ballwin, MO',
+			'intro'      => 'From single-family homes to retail centers, office buildings, and multi-unit properties along the West County corridor, 1st Choice handles roofing for both residential and commercial clients in Ballwin. Our full range of services includes:',
+			'list'       => array(
+				'Residential roof replacement and repair',
+				'Commercial roof replacement and repair',
+				'Flat and low-slope roofing systems for commercial properties',
+				'Storm and hail damage repair — residential and commercial',
+				'Roof inspections and assessments for property managers and owners',
+				'Siding replacement',
+				'Gutters and downspouts',
+				'Free inspections and estimates',
+			),
+			'difference' => array(
+				'Commercial property owners and managers in Ballwin know that a roofing problem doesn&#8217;t just affect one unit — it affects tenants, operations, and the bottom line. We work efficiently to minimize disruption, communicate clearly throughout the project, and deliver results that protect your investment for the long haul.',
+				'For residential clients, every job comes with transparent estimates, premium materials backed by manufacturer warranties, and a crew that shows up and follows through. No surprises. No shortcuts.',
+			),
+		),
+		'storm' => array(
+			'heading' => 'Storm Damage Roofing for Ballwin Homes and Businesses',
+			'intro'   => array(
+				'West St. Louis County isn&#8217;t immune to Missouri&#8217;s severe weather. Hail, high winds, and fast-moving storms can leave behind damage that&#8217;s not always obvious from the ground — bruised shingles, lifted flashing, and compromised decking that won&#8217;t reveal itself until the next heavy rain.',
+				'1st Choice Roofing and Construction provides free post-storm inspections for Ballwin homeowners and commercial property owners. We document all damage thoroughly, walk you through our findings, and work directly with your insurance adjuster to help the claims process move as smoothly as possible. If your property took a hit, don&#8217;t wait — call us before you file.',
+			),
+		),
+		'cta' => array(
+			'heading'   => 'Serving Ballwin Homes and Businesses — Done Right the First Time',
+			'paragraph' => 'Whether you&#8217;re a Ballwin homeowner due for a roof replacement, a property manager with a commercial building that needs attention, or a business owner dealing with post-storm damage, 1st Choice Roofing and Construction is ready to help. We&#8217;re local, experienced, and committed to the kind of quality that Ballwin expects.',
+		),
+		'region' => 'Serving Ballwin and West St. Louis County',
+	);
+
 	return $cities;
 }
 
@@ -215,17 +273,40 @@ add_action( 'init', 'firstchoice_register_location_patterns' );
 function firstchoice_build_location_pattern( $data ) {
 	$company = firstchoice_location_company();
 
-	$out  = firstchoice_location_intro( $data );
-	$out .= firstchoice_location_community( $data );
+	$order = ! empty( $data['order'] )
+		? $data['order']
+		: array( 'intro', 'community', 'storm', 'services', 'warranty', 'cta', 'testimonial' );
 
-	if ( ! empty( $data['storm'] ) ) {
-		$out .= firstchoice_location_storm( $data );
+	$out = '';
+
+	foreach ( $order as $section ) {
+		switch ( $section ) {
+			case 'intro':
+				$out .= firstchoice_location_intro( $data );
+				break;
+			case 'community':
+				$out .= firstchoice_location_community( $data );
+				break;
+			case 'storm':
+				// Only cities with storm-specific copy get this section.
+				if ( ! empty( $data['storm'] ) ) {
+					$out .= firstchoice_location_storm( $data );
+				}
+				break;
+			case 'services':
+				$out .= firstchoice_location_services( $data );
+				break;
+			case 'warranty':
+				$out .= firstchoice_location_warranty( $company );
+				break;
+			case 'cta':
+				$out .= firstchoice_location_cta( $data, $company );
+				break;
+			case 'testimonial':
+				$out .= firstchoice_location_testimonial( $data );
+				break;
+		}
 	}
-
-	$out .= firstchoice_location_services( $data );
-	$out .= firstchoice_location_warranty( $company );
-	$out .= firstchoice_location_cta( $data, $company );
-	$out .= firstchoice_location_testimonial( $data );
 
 	return $out;
 }
@@ -297,6 +378,7 @@ function firstchoice_location_storm( $data ) {
 	<!-- /wp:paragraph -->
 	<?php endforeach; ?>
 
+	<?php if ( ! empty( $data['storm']['list'] ) ) : ?>
 	<!-- wp:list {"className":"location-checklist"} -->
 	<ul class="wp-block-list location-checklist">
 		<?php foreach ( $data['storm']['list'] as $item ) : ?>
@@ -306,10 +388,13 @@ function firstchoice_location_storm( $data ) {
 		<?php endforeach; ?>
 	</ul>
 	<!-- /wp:list -->
+	<?php endif; ?>
 
+	<?php if ( ! empty( $data['storm']['closing'] ) ) : ?>
 	<!-- wp:paragraph -->
 	<p><?php echo wp_kses_post( $data['storm']['closing'] ); ?></p>
 	<!-- /wp:paragraph -->
+	<?php endif; ?>
 </div>
 <!-- /wp:group -->
 
@@ -348,9 +433,11 @@ function firstchoice_location_services( $data ) {
 <!-- wp:group {"className":"location-difference alignfull","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull location-difference">
 	<div class="wp-block-group__inner-container">
+		<?php foreach ( (array) $data['services']['difference'] as $paragraph ) : ?>
 		<!-- wp:paragraph -->
-		<p><?php echo wp_kses_post( $data['services']['difference'] ); ?></p>
+		<p><?php echo wp_kses_post( $paragraph ); ?></p>
 		<!-- /wp:paragraph -->
+		<?php endforeach; ?>
 	</div>
 </div>
 <!-- /wp:group -->

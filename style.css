@@ -783,6 +783,8 @@ ul.wp-block-list.location-checklist {
 		color: var(--white);
 		font-size: var(--font-size-1);
 		line-height: 1.55;
+	}
+	p:last-child {
 		margin-bottom: 0;
 	}
 }

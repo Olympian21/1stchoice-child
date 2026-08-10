@@ -50,6 +50,20 @@ by "Residential and Commercial Roofing in Affton" as the intro H2. That comes
 from the optional `intro_heading` key — only set it when the two genuinely
 differ.
 
+### Ballwin
+
+| Field | Value |
+|---|---|
+| Page title / H1 | Roofing Company in Ballwin, MO |
+| SEO title | Roofing Company in Ballwin, MO \| 1st Choice Roofing and Construction |
+| URL slug | `/roofing-ballwin-mo` |
+| Meta description | 1st Choice Roofing and Construction serves Ballwin homeowners and businesses with expert roof repair, replacement, and storm damage service. Local crew, free estimates. |
+| Keywords | roofing company Ballwin MO, roof repair Ballwin, roof replacement Ballwin MO, commercial roofing Ballwin, storm damage roofing Ballwin, Ballwin MO roofing contractor |
+
+Ballwin leans harder on commercial work than the other pages, and its content
+doc runs the services section *before* storm damage, so it sets a custom
+`order`. Its storm section has no bullet list.
+
 ## Page structure
 
 | Section | Class | Treatment |
@@ -66,10 +80,18 @@ differ.
 ## Adding another city
 
 Add one entry to `firstchoice_location_data()` in
-`inc/location-patterns.php`. The `storm` key is optional — include it only for
-cities that have storm-specific copy. Everything else (warranty band, CTA
-button, phone number, testimonial scaffold) is generated automatically, so no
-new CSS or markup is needed.
+`inc/location-patterns.php`. Everything shared (warranty band, CTA button, phone
+number, testimonial scaffold) is generated automatically, so no new CSS or
+markup is needed.
+
+Optional keys that absorb the variation between content docs:
+
+| Key | Use |
+|---|---|
+| `intro_heading` | H2 above the intro, when Section 1's headline differs from the H1 |
+| `storm` | Omit entirely for cities with no storm copy; its `list` and `closing` are each optional |
+| `services.difference` | A string, or an array for multiple closing paragraphs |
+| `order` | Reorder sections when a doc doesn't follow the default flow |
 
 Shared company details (phone, email, estimate and warranty link targets) live
 in `firstchoice_location_company()` — update them in that one place.
