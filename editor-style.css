@@ -81,3 +81,8 @@
 	border-bottom: 5px solid var(--grey-vdark);
 	background: var(--grey-vlight);
 }
+.block-editor-block-list__layout .block-editor-block-list__block.wp-block-group.grey-vlight-bg {
+	border-top: 5px solid var(--grey);
+	border-bottom: 5px solid var(--grey);
+	background: var(--grey-vlight);
+}

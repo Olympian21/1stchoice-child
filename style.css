@@ -945,7 +945,8 @@ ul.checkmarks {
 		font-weight: bold;
 	}
 }
-ul.checkmarks.no-lpadding {
+ul.checkmarks.no-cols {
+	columns: unset;
 	padding-left: calc(1.5 * var(--gap)) !important;
 }
 
@@ -1010,8 +1011,60 @@ ul.checkmarks.no-lpadding {
 		margin-top: 0;
 	}
 
+	p {
+		text-align: center;
+		padding-left: calc( 2 * var(--gap));
+		padding-right: calc( 2 * var(--gap));
+	}
+
 	.cards,
 	.cards2 {
 		color: var(--text);
+
+		p {
+			text-align: left;
+			padding-left: 0;
+			padding-right: 0;
+		}
+	}
+}
+/* GREY VLIGHT SECTION */
+.grey-vlight-bg {
+	background: var(--grey-vlight);
+	margin-bottom: 0;
+	padding-top: calc( 2 * var(--gap));
+	padding-bottom: calc( 2 * var(--gap));
+
+	h2 {
+		text-align: center;
+		margin-top: 0;
+	}
+
+	p {
+		text-align: center;
+		padding-left: calc( 2 * var(--gap));
+		padding-right: calc( 2 * var(--gap));
+	}
+
+	.cards p,
+	.cards2 p,
+	.cards4 p {
+			text-align: left;
+			padding-left: 0;
+			padding-right: 0;
+		}
+}
+
+.img-separator {
+	margin-top: 0;
+	margin-bottom: 0;
+	height: 100px;
+	border-style: solid;
+	border-color: var(--grey-dark);
+	border-width: 2px 0;
+
+	img {
+		object-fit: cover;
+		height: 100% !important;
 	}
 }
