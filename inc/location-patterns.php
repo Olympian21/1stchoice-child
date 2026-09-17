@@ -96,6 +96,10 @@ function firstchoice_location_gallery_slots( $city ) {
  * Optional keys:
  *   state             - two-letter abbreviation, defaults to MO. Collinsville
  *                       is in Illinois.
+ *   pattern_note      - appended to the pattern name, to tell two patterns for
+ *                       the same city apart (Richmond Heights has two).
+ *   gallery_heading   - overrides the default "Recent Work in <City> &
+ *                       <service area>" heading.
  *   cta_button        - closing CTA button label. Defaults to "Request Your
  *                       Free Estimate"; Earth City asks for a commercial one.
  *   testimonial_cite  - text after the reviewer name in the citation. Defaults
@@ -1135,6 +1139,845 @@ function firstchoice_location_data() {
 		'region'       => 'Serving Maryland Heights and St. Louis County',
 		'order'        => $services_first,
 	);
+	$cities['oakville'] = array(
+		'city'         => 'Oakville',
+		'slug'         => 'oakville',
+		'h1'           => 'Roofing Company in Oakville, MO',
+		'service_area' => 'South St. Louis County',
+		'seo'          => array(
+			'title'       => 'Roofing Company in Oakville, MO | 1st Choice Roofing and Construction',
+			'description' => '1st Choice Roofing and Construction serves Oakville, MO with expert residential and commercial roofing — repairs, replacements, and storm damage service. Free estimates.',
+			'slug'        => '/roofing-oakville-mo',
+			'keywords'    => 'roofing company Oakville MO, roof repair Oakville, roof replacement Oakville MO, Oakville roofing contractor, storm damage roofing Oakville, South County roofing',
+		),
+		'intro'        => array(
+			'Oakville is one of South County&#8217;s most established and family-friendly communities — a large, welcoming area of well-kept neighborhoods tucked between the Mississippi and Meramec rivers. Homeowners here take real pride in their properties and expect quality from anyone they hire.',
+			'We provide residential and commercial roofing throughout Oakville and South St. Louis County, bringing the same craftsmanship and accountability to every project — from a family home near Cliff Cave Park to a business along Telegraph Road.',
+		),
+		'community'    => array(
+			'heading'    => 'Quality Roofing for Oakville Homes and Businesses',
+			'paragraphs' => array(
+				'One of the largest communities in South County, Oakville is known for its quiet, established neighborhoods, highly rated Mehlville School District, and beautiful green spaces like Cliff Cave Park and Bee Tree Park overlooking the Mississippi River. It&#8217;s the kind of area where families put down roots and stay for the long haul.',
+			),
+			'pull_quote' => 'Many Oakville homes were built from the 1970s through the 1990s, which means a lot of roofs in the area are now reaching the age where they need real attention. 1st Choice Roofing and Construction brings the experience and honest guidance to handle whatever your roof needs — a targeted repair or a full replacement built to last.',
+		),
+		'services'     => array(
+			'heading'    => 'Residential and Commercial Roofing in Oakville, Missouri',
+			'intro'      => 'Oakville is primarily residential, but we serve both homeowners and the local businesses along Telegraph Road, Lemay Ferry Road, and throughout the community. Our full range of services includes:',
+			'list'       => array(
+				'Residential roof replacement and repair',
+				'Storm and hail damage repair',
+				'Roof inspections and free estimates',
+				'Commercial roof replacement and repair',
+				'Flat and low-slope roofing systems for commercial buildings',
+				'Siding replacement',
+				'Gutters and downspouts',
+			),
+			'difference' => array(
+				'For Oakville&#8217;s local businesses, a roof problem can interrupt customers and daily operations — so we work efficiently, schedule around your hours, and keep the job site clean and professional. From flat commercial roofs to maintenance plans, we protect the buildings the community depends on.',
+				'And for homeowners, we keep it honest and straightforward — a clear estimate, premium materials backed by manufacturer warranties, and a crew that treats your home like it&#8217;s on their own street. Quality work from start to finish.',
+			),
+		),
+		'storm'        => array(
+			'heading' => 'Storm Damage and Your Oakville Roof',
+			'intro'   => array(
+				'Sitting between two rivers in South County, Oakville sees the full force of Missouri&#8217;s storm seasons — hail, high winds, and heavy rain that test every roof in the area. And the damage often hides until it&#8217;s too late: a few bruised shingles or a section of lifted flashing can hold until the next storm pushes water straight through.',
+				'A professional inspection is the surest way to know. 1st Choice Roofing and Construction offers free post-storm inspections for Oakville homeowners and businesses — you&#8217;ll know exactly where your roof stands, with photos and documentation ready for your insurance claim. Caught in a recent storm? Let us take a look before a small issue becomes an expensive one.',
+			),
+		),
+		'cta'          => array(
+			'heading'   => 'South County&#8217;s Roofing Company — Right Here in Oakville',
+			'paragraph' => 'Whether you&#8217;re a longtime Oakville homeowner due for a new roof or a business owner dealing with storm damage, 1st Choice Roofing and Construction is ready to help. We&#8217;re local, experienced, and committed to doing the job right. Reach out today for a free estimate and dependable work that lasts.',
+		),
+		'region'       => 'Serving Oakville and South St. Louis County',
+		'order'        => $services_first,
+	);
+
+	$cities['overland'] = array(
+		'city'         => 'Overland',
+		'slug'         => 'overland',
+		'h1'           => 'Roofing Company in Overland, MO',
+		'service_area' => 'St. Louis County',
+		'seo'          => array(
+			'title'       => 'Roofing Company in Overland, MO | 1st Choice Roofing and Construction',
+			'description' => '1st Choice Roofing and Construction serves Overland, MO with expert residential and commercial roofing — repairs, replacements, and storm damage service. Free estimates.',
+			'slug'        => '/roofing-overland-mo',
+			'keywords'    => 'roofing company Overland MO, roof repair Overland, roof replacement Overland MO, Overland roofing contractor, storm damage roofing Overland, brick home roofing Overland',
+		),
+		'intro'        => array(
+			'Overland is a friendly, close-knit community in mid St. Louis County — known for its walkable streets, well-kept older homes, and a strong sense of neighborly pride. Just minutes from Lambert International Airport, it&#8217;s a city where longtime residents care deeply about their properties.',
+			'We provide residential and commercial roofing throughout Overland and mid St. Louis County, bringing the same craftsmanship and accountability to every project — from a classic brick home on a quiet street to a business along Page Avenue or Woodson Road.',
+		),
+		'community'    => array(
+			'heading'    => 'Quality Roofing for Overland Homes and Businesses',
+			'paragraphs' => array(
+				'Incorporated in 1939 and named for the historic Overland Trail that once ran through the area, Overland is a community with real character. Its tree-lined streets are lined with well-built brick homes from the 1920s through the 1960s — the kind of solid, older housing that neighbors take genuine pride in maintaining, served by the Ritenour School District and a strong network of city parks.',
+			),
+			'pull_quote' => 'Those older homes have a lot of character — and roofs that often need experienced attention. 1st Choice Roofing and Construction brings the know-how to care for established homes, from a targeted repair to a full replacement, with honest guidance about what your roof actually needs.',
+		),
+		'services'     => array(
+			'heading'    => 'Residential and Commercial Roofing in Overland, Missouri',
+			'intro'      => 'Overland&#8217;s mix of residential streets and businesses along Page Avenue, Woodson Road, and Midland Boulevard keeps commercial roofing part of our work here, handled alongside our full residential services:',
+			'list'       => array(
+				'Residential roof replacement and repair',
+				'Roofing for established and older homes',
+				'Storm and hail damage repair — residential and commercial',
+				'Commercial roof replacement and repair',
+				'Flat and low-slope roofing systems for commercial buildings',
+				'Siding replacement',
+				'Gutters, downspouts, and free inspections and estimates',
+			),
+			'difference' => array(
+				'For Overland&#8217;s local businesses, a roof problem can quickly interrupt customers and daily operations. We keep disruption to a minimum — scheduling around your hours and communicating clearly from first inspection to final walkthrough. From flat commercial roofs to maintenance plans, we protect the buildings the community relies on.',
+				'And for homeowners, the standard holds steady — a fair estimate, premium materials backed by manufacturer warranties, and a crew that treats your home like it&#8217;s their own. Honest work, start to finish.',
+			),
+		),
+		'storm'        => array(
+			'heading' => 'Storm Damage and Overland&#8217;s Older Roofs',
+			'intro'   => array(
+				'Overland gets the same hail, high winds, and heavy rain that move across the rest of the region each storm season — and on older homes especially, the damage isn&#8217;t always visible from the ground. Cracked shingles, loosened flashing, or worn spots can sit quietly until water finds its way inside.',
+				'That&#8217;s why a professional inspection matters. 1st Choice Roofing and Construction offers free post-storm inspections for Overland homeowners and businesses — you&#8217;ll get a clear picture of your roof&#8217;s condition, with documentation ready for your insurance claim, and we&#8217;ll work directly with your adjuster. If the weather&#8217;s been rough lately, let us take a look before small problems grow.',
+			),
+		),
+		'cta'          => array(
+			'heading'   => 'A Roofing Company Overland Can Count On',
+			'paragraph' => 'Overland&#8217;s homes and businesses have stood the test of time — and they deserve roofing that does too. Whether you&#8217;re protecting a classic brick home, replacing an aging roof, or caring for a commercial property, 1st Choice Roofing and Construction is ready to help. Contact us today for your free estimate. We&#8217;ll take it from there.',
+		),
+		'region'       => 'Serving Overland and St. Louis County',
+		'order'        => $services_first,
+	);
+
+	$cities['ofallon-il'] = array(
+		'city'         => 'O’Fallon',
+		'slug'         => 'ofallon-il',
+		'h1'           => 'Roofing Company in O&#8217;Fallon, IL',
+		'state'        => 'IL',
+		'pattern_note' => 'Illinois',
+		'service_area' => 'the Metro East',
+		'seo'          => array(
+			'title'       => 'Roofing Company in O&#8217;Fallon, IL | 1st Choice Roofing and Construction',
+			'description' => '1st Choice Roofing and Construction serves O&#8217;Fallon, IL with expert residential and commercial roofing — repairs, replacements, and storm damage service. Free estimates.',
+			'slug'        => '/roofing-ofallon-il',
+			'keywords'    => 'roofing company O&#8217;Fallon IL, commercial roofing O&#8217;Fallon, roof repair O&#8217;Fallon IL, roof replacement O&#8217;Fallon, O&#8217;Fallon roofing contractor, Metro East roofing, storm damage roofing O&#8217;Fallon',
+		),
+		'intro'        => array(
+			'O&#8217;Fallon is the second-largest city in the Metro East and one of the most sought-after communities on the Illinois side of the St. Louis region. Just minutes from Scott Air Force Base and a short drive from downtown St. Louis, it blends a welcoming, family-friendly feel with steady growth and a strong local economy.',
+			'We provide residential and commercial roofing throughout O&#8217;Fallon and the Metro East, bringing the same craftsmanship and accountability to every project — from a home near the Downtown District to a business along the city&#8217;s growing commercial corridors.',
+		),
+		'community'    => array(
+			'heading'    => 'Quality Roofing for O&#8217;Fallon Homes and Businesses',
+			'paragraphs' => array(
+				'Founded in 1854 and shaped for over a century by its close ties to Scott Air Force Base, O&#8217;Fallon has grown into a thriving community of more than 30,000 residents. It&#8217;s known for its top-rated O&#8217;Fallon Township High School, an excellent network of public parks, a walkable downtown around Vine Street, and community traditions like the O&#8217;Fallon Farmers&#8217; Market and Celebration of Lights.',
+			),
+			'pull_quote' => 'That pride in community shows in how residents care for their homes — and it&#8217;s a standard 1st Choice Roofing and Construction is glad to meet. Whether it&#8217;s an established home, a newer build, or a commercial property, we bring the experience and lasting workmanship O&#8217;Fallon property owners count on.',
+		),
+		'services'     => array(
+			'heading'    => 'Residential and Commercial Roofing in O&#8217;Fallon, Illinois',
+			'intro'      => 'With more than 1,000 businesses and a growing commercial base tied to Scott Air Force Base and the region&#8217;s healthcare corridor, O&#8217;Fallon keeps commercial roofing an important part of our work here, handled alongside our full residential services:',
+			'list'       => $commercial_services,
+			'difference' => array(
+				'For O&#8217;Fallon&#8217;s businesses, a roof issue can disrupt customers, tenants, and daily operations — so we work cleanly, schedule around your hours, and keep you informed from first inspection to final walkthrough. From flat commercial roofs to maintenance plans, we protect what your business relies on.',
+				'Homeowners get that same dependable service: an honest estimate, premium materials backed by manufacturer warranties, and a crew that treats your home like its own.',
+			),
+		),
+		'storm'        => array(
+			'heading' => 'Metro East Storms and Your O&#8217;Fallon Roof',
+			'intro'   => array(
+				'The severe weather that batters the Missouri side of the metro hits the Illinois side just as hard. O&#8217;Fallon sees its share of hail, damaging winds, and heavy rain — and much of the damage hides in plain sight, sitting quietly for weeks before giving way in the next hard rain.',
+				'You can&#8217;t fix what you can&#8217;t see, so 1st Choice Roofing and Construction offers free post-storm inspections for O&#8217;Fallon homeowners and businesses. You&#8217;ll get a clear picture of your roof&#8217;s condition, with photos and documentation ready for your insurance claim, and we&#8217;ll coordinate directly with your adjuster. Catching damage now is far cheaper than discovering it later.',
+			),
+		),
+		'cta'          => array(
+			'heading'   => 'Your Metro East Roofing Partner in O&#8217;Fallon',
+			'paragraph' => 'From O&#8217;Fallon&#8217;s established neighborhoods to its newest developments, the properties here deserve roofing that lasts. Whether you&#8217;re dealing with storm damage, an aging roof, or a commercial building that needs a dependable hand, 1st Choice Roofing and Construction has the experience to get it right. Contact us today for your free estimate. We&#8217;ll take it from there.',
+		),
+		'region'       => 'Serving O&#8217;Fallon and the Metro East',
+		'order'        => $services_first,
+	);
+
+	$cities['ofallon-mo'] = array(
+		'city'         => 'O’Fallon',
+		'slug'         => 'ofallon-mo',
+		'h1'           => 'Roofing Company in O&#8217;Fallon, MO',
+		'pattern_note' => 'Missouri',
+		'service_area' => 'St. Charles County',
+		'seo'          => array(
+			'title'       => 'Roofing Company in O&#8217;Fallon, MO | 1st Choice Roofing and Construction',
+			'description' => '1st Choice Roofing and Construction serves O&#8217;Fallon, MO with expert residential and commercial roofing — repairs, replacements, and storm damage service. Free estimates.',
+			'slug'        => '/roofing-ofallon-mo',
+			'keywords'    => 'roofing company O&#8217;Fallon MO, commercial roofing O&#8217;Fallon, roof repair O&#8217;Fallon, roof replacement O&#8217;Fallon MO, O&#8217;Fallon roofing contractor, storm damage roofing O&#8217;Fallon',
+		),
+		'intro'        => array(
+			'O&#8217;Fallon is the largest city in St. Charles County and the biggest suburb in the entire St. Louis area — a fast-growing, family-focused community of new subdivisions, established neighborhoods, and a thriving local economy. With so much growth along the I-64 and I-70 corridors, O&#8217;Fallon is a city full of homes and businesses that depend on quality roofing.',
+			'We provide residential and commercial roofing throughout O&#8217;Fallon and St. Charles County, bringing the same craftsmanship and accountability to every project — from a newer home in one of the city&#8217;s growing subdivisions to a business along the Highway K corridor.',
+		),
+		'community'    => array(
+			'heading'    => 'Quality Roofing for O&#8217;Fallon Homes and Businesses',
+			'paragraphs' => array(
+				'Once a quiet railroad town founded in the 1850s, O&#8217;Fallon has become one of Missouri&#8217;s largest and fastest-growing cities, with a population that has soared past 90,000. It&#8217;s repeatedly ranked among the best places to live in America, thanks to its strong Fort Zumwalt and Francis Howell school districts, an impressive park system, and family favorites like the holiday display at Fort Zumwalt Park and the Alligator&#8217;s Creek water park.',
+			),
+			'pull_quote' => 'A community growing this quickly is full of homes — both newer builds and maturing subdivisions — that need dependable roofing. 1st Choice Roofing and Construction brings the experience, quality materials, and lasting workmanship O&#8217;Fallon property owners expect, whether it&#8217;s a home or a commercial building.',
+		),
+		'services'     => array(
+			'heading'    => 'Residential and Commercial Roofing in O&#8217;Fallon, Missouri',
+			'intro'      => 'O&#8217;Fallon&#8217;s rapid growth has brought a strong commercial base along Highway K, Highway N, and the interstate corridors — retail centers, restaurants, and offices that serve the whole county. That makes commercial roofing an important part of our work here, handled alongside our full residential services:',
+			'list'       => $commercial_services,
+			'difference' => array(
+				'For O&#8217;Fallon&#8217;s businesses, a roof problem can quickly become a business problem — disrupting customers, tenants, and daily operations. We keep that to a minimum, scheduling around your hours and communicating clearly from the first inspection to the final walkthrough. From flat commercial roofs to maintenance plans, we protect the buildings your business relies on.',
+				'Homeowners get that same care — an honest estimate, premium materials backed by manufacturer warranties, and a crew that respects your home and your time. Quality you can count on.',
+			),
+		),
+		'storm'        => array(
+			'heading' => 'Storm Damage Roofing in O&#8217;Fallon',
+			'intro'   => array(
+				'Out in St. Charles County, O&#8217;Fallon sees the full range of Missouri&#8217;s severe weather — hail, high winds, and heavy rain that put every roof to the test. The damage often hides in plain sight: cracked shingles or a section of lifted flashing can sit unnoticed for weeks, then give way the next time it rains hard.',
+				'That&#8217;s why a post-storm inspection is worth it. 1st Choice Roofing and Construction offers free inspections for O&#8217;Fallon homeowners and businesses — you&#8217;ll get a clear picture of your roof&#8217;s condition, with photos and documentation ready for your insurance claim, and we&#8217;ll coordinate directly with your adjuster. If the weather&#8217;s been rough lately, let us take a look while the damage is still easy to fix.',
+			),
+		),
+		'cta'          => array(
+			'heading'   => 'O&#8217;Fallon&#8217;s Roofing Company for Home and Business',
+			'paragraph' => 'As one of the region&#8217;s fastest-growing communities, O&#8217;Fallon depends on roofs that hold up — and 1st Choice Roofing and Construction is ready to deliver. Whether you&#8217;re facing storm damage, an aging roof, or a commercial property that needs attention, we bring the experience and follow-through to get it right. Reach out today for a free estimate and dependable work that lasts.',
+		),
+		'region'       => 'Serving O&#8217;Fallon and St. Charles County',
+		'order'        => $services_first,
+	);
+
+	$cities['richmond-heights'] = array(
+		'city'         => 'Richmond Heights',
+		'slug'         => 'richmond-heights',
+		'h1'           => 'Roofing Company in Richmond Heights, MO',
+		'service_area' => 'St. Louis County',
+		'seo'          => array(
+			'title'       => 'Roofing Company in Richmond Heights, MO | 1st Choice Roofing and Construction',
+			'description' => '1st Choice Roofing and Construction serves Richmond Heights, MO with expert residential and commercial roofing — repairs, replacements, and storm damage service. Free estimates.',
+			'slug'        => '/roofing-richmond-heights-mo',
+			'keywords'    => 'roofing company Richmond Heights MO, commercial roofing Richmond Heights, roof repair Richmond Heights, roof replacement Richmond Heights MO, Richmond Heights roofing contractor, storm damage roofing Richmond Heights',
+		),
+		'intro'        => array(
+			'Richmond Heights sits right in the center of the St. Louis metro — an inner-ring suburb next to Clayton that blends charming residential streets with one of the region&#8217;s premier shopping and commercial districts. From historic homes to the retail and office space around the Galleria and The Boulevard, this is a community full of roofs that matter.',
+			'We provide residential and commercial roofing throughout Richmond Heights and the surrounding area, bringing the same craftsmanship and accountability to every project — from a century-old home to a commercial property along Brentwood Boulevard.',
+		),
+		'community'    => array(
+			'heading'    => 'Quality Roofing for Richmond Heights Homes and Businesses',
+			'paragraphs' => array(
+				'Incorporated in 1913 and once known as a &#8220;city of homes,&#8221; Richmond Heights has grown into one of the most connected and convenient communities in St. Louis County — served by two MetroLink stations, Interstates 64 and 170, and an easy commute to Clayton and downtown. Its neighborhoods blend historic homes, mid-century residences, and modern living, all within walking distance of shopping and dining.',
+			),
+			'pull_quote' => 'That mix of established homes and a busy commercial core means roofing here calls for real versatility. 1st Choice Roofing and Construction brings the experience to handle both — preserving the character of an older home or delivering the reliable service a commercial property owner expects.',
+		),
+		'services'     => array(
+			'heading'    => 'Residential and Commercial Roofing in Richmond Heights, Missouri',
+			'intro'      => 'With premier destinations like the Saint Louis Galleria and The Boulevard — plus office space and businesses along Brentwood Boulevard and Hanley Road — Richmond Heights has one of the busiest commercial landscapes in the county. That makes commercial roofing a major focus of our work here, handled alongside our full residential services:',
+			'list'       => $commercial_services,
+			'difference' => array(
+				'For Richmond Heights&#8217; retail centers, offices, and mixed-use properties, a roof is part of the impression your business makes — and a leak or failing membrane is the last thing any owner or facility manager wants. We handle commercial roofing with precision: thorough inspections, clean job sites, scheduling that respects your operations, and clear updates from start to finish. From flat commercial systems to maintenance plans, we keep your property protected and performing.',
+				'Homeowners get that same dependable service — an honest estimate, premium materials backed by manufacturer warranties, and a crew that respects your home and your time. Quality you can count on.',
+			),
+		),
+		'storm'        => array(
+			'heading' => 'Storm Damage on Richmond Heights Roofs',
+			'intro'   => array(
+				'Sitting in the heart of the metro, Richmond Heights catches the same hail, high winds, and heavy rain that sweep across the region every storm season — and the damage isn&#8217;t always easy to see. A few cracked shingles or a small breach in a flat-roof membrane can hold for weeks before giving way the next time it rains hard.',
+				'You can&#8217;t fix what you can&#8217;t see — which is why 1st Choice Roofing and Construction offers free post-storm inspections for Richmond Heights homeowners and commercial property owners. You&#8217;ll get a clear picture of your roof&#8217;s condition, with photos and documentation ready for your insurance claim, and we&#8217;ll coordinate directly with your adjuster. Catching damage now is far cheaper than discovering it later.',
+			),
+		),
+		'cta'          => array(
+			'heading'   => 'Richmond Heights&#8217; Roofing Company for Home and Business',
+			'paragraph' => 'At the center of it all, Richmond Heights keeps a lot moving — and the roofs over its homes and businesses deserve work that keeps up. Whether you&#8217;re a homeowner, a property manager, or a business owner facing storm damage, 1st Choice Roofing and Construction has the experience to get it right. Reach out today for a free estimate and dependable work that lasts.',
+		),
+		'region'       => 'Serving Richmond Heights and St. Louis County',
+		'order'        => $services_first,
+	);
+
+	$cities['richmond-heights-commercial'] = array(
+		'city'         => 'Richmond Heights',
+		'slug'         => 'richmond-heights-commercial',
+		'h1'           => 'Commercial &amp; Flat Roofing in Richmond Heights, MO',
+		'pattern_note' => 'Commercial focus',
+		'gallery_heading' => 'Recent Commercial Work in Richmond Heights &amp; St. Louis County',
+		'service_area' => 'St. Louis County',
+		'seo'          => array(
+			'title'       => 'Commercial & Flat Roofing in Richmond Heights, MO | 1st Choice Roofing and Construction',
+			'description' => '1st Choice Roofing and Construction provides commercial and flat roofing for Richmond Heights businesses — retail centers, offices, and mixed-use buildings. Repairs, replacements, and free inspections.',
+			'slug'        => '/commercial-flat-roofing-richmond-heights-mo',
+			'keywords'    => 'commercial roofing Richmond Heights MO, flat roofing Richmond Heights, commercial roof repair Richmond Heights, retail roofing Richmond Heights, office building roofing Richmond Heights MO, flat roof replacement Richmond Heights',
+		),
+		'intro'        => array(
+			'Richmond Heights is one of the busiest commercial districts in St. Louis County — home to the Saint Louis Galleria, The Boulevard, and a dense concentration of retail centers, office buildings, and mixed-use properties. Buildings like these share one thing in common: large, flat, low-slope roofs that demand specialized expertise.',
+			'We deliver commercial and flat roofing services throughout Richmond Heights and the surrounding area, helping property owners, facility managers, and businesses protect the buildings their operations depend on.',
+		),
+		'community'    => array(
+			'eyebrow'    => 'Why Richmond Heights businesses choose 1st Choice',
+			'heading'    => 'Flat and Commercial Roofing Built for Richmond Heights',
+			'paragraphs' => array(
+				'With premier shopping destinations, corporate office space, and one of the highest concentrations of retail in the region, Richmond Heights is a commercial roofing market like few others in the county. It&#8217;s an environment where a roofing problem carries real consequences — for tenants, customers, and the bottom line.',
+			),
+			'pull_quote' => 'A failing roof over a retail center or office building isn&#8217;t just a maintenance issue — it puts inventory, operations, and your property&#8217;s reputation at risk. 1st Choice Roofing and Construction understands the stakes, and brings the experience, materials, and project management to handle commercial and flat roofing work with minimal disruption to your business.',
+		),
+		'services'     => array(
+			'eyebrow'    => 'Commercial roofing services',
+			'heading'    => 'Commercial &amp; Flat Roofing Services in Richmond Heights, MO',
+			'intro'      => 'From retail centers and restaurants to office buildings and mixed-use properties, we handle commercial roofing projects of every size and type across Richmond Heights:',
+			'list'       => array(
+				'Flat and low-slope commercial roofing systems',
+				'Commercial roof replacement and repair',
+				'Retail center, office, and mixed-use building roofing',
+				'Roof inspections and preventive maintenance plans',
+				'Storm, hail, and wind damage repair',
+				'Emergency roof repair and temporary protection',
+				'Free inspections and estimates for property owners and managers',
+			),
+			'difference' => array(
+				'Flat and low-slope roofs come with their own challenges — ponding water, seam separation, membrane punctures, and drainage issues that can quietly worsen for months before anyone notices. For property managers overseeing retail centers or multiple buildings, staying ahead of these problems is far cheaper than reacting to them. That&#8217;s why we emphasize routine inspections and preventive maintenance plans tailored to commercial roofs.',
+				'When a repair or replacement is needed, we work efficiently and on a schedule that respects your operations — coordinating around business hours, keeping the job site clean and safe, and communicating clearly from the first inspection through the final walkthrough. From a single building to an entire property portfolio, we protect the roofs your business runs under.',
+			),
+		),
+		'storm'        => array(
+			'heading' => 'Storm and Weather Damage on Richmond Heights Commercial Roofs',
+			'intro'   => array(
+				'Large flat roofs are especially vulnerable to Missouri&#8217;s severe weather. Hail can bruise and fracture a membrane, high winds can lift flashing and edge metal, and heavy rain exposes every drainage weakness at once. On a sprawling commercial roof, damage in one section can go undetected for a long time — until it shows up as a leak over a store, an office, or critical equipment below.',
+				'After any major storm, a professional inspection is the smartest investment a property manager can make. 1st Choice Roofing and Construction provides free post-storm roof inspections for Richmond Heights businesses. We assess the full roof system, document all damage, and coordinate directly with your insurance carrier or adjuster to keep your claim on track. If severe weather recently moved through, let us evaluate your roof before a small problem disrupts your operations.',
+			),
+		),
+		'cta'          => array(
+			'heading'   => 'Richmond Heights&#8217; Commercial Roofing Partner',
+			'paragraph' => 'In a district built on keeping business moving, 1st Choice Roofing and Construction is the roofing partner that helps you stay up and running. Whether you manage a single retail building or a portfolio of commercial properties, we bring the expertise, responsiveness, and follow-through to keep your roofs performing year-round. Contact us today for a free inspection or estimate.',
+		),
+		'cta_button'   => 'Request a Free Commercial Roof Inspection',
+		'testimonial_cite' => '[Company/Property], Richmond Heights, MO',
+		'region'       => 'Serving Richmond Heights and St. Louis County businesses',
+		'order'        => $services_first,
+	);
+
+	$cities['st-charles'] = array(
+		'city'         => 'St. Charles',
+		'slug'         => 'st-charles',
+		'h1'           => 'Roofing Company in St. Charles, MO',
+		'service_area' => 'St. Charles County',
+		'seo'          => array(
+			'title'       => 'Roofing Company in St. Charles, MO | 1st Choice Roofing and Construction',
+			'description' => '1st Choice Roofing and Construction serves St. Charles, MO with expert residential and commercial roofing — repairs, replacements, and storm damage service. Free estimates.',
+			'slug'        => '/roofing-st-charles-mo',
+			'keywords'    => 'roofing company St. Charles MO, commercial roofing St. Charles, roof repair St. Charles, roof replacement St. Charles MO, St. Charles roofing contractor, historic home roofing St. Charles, storm damage roofing St. Charles',
+		),
+		'intro'        => array(
+			'St. Charles is one of Missouri&#8217;s most historic and beloved communities — the state&#8217;s first capital, home to a famous cobblestone Main Street, and a thriving modern city all at once. From century-old homes near the riverfront to newer subdivisions and a busy commercial base, St. Charles is a community where roofs work hard and property owners expect quality.',
+			'We provide residential and commercial roofing throughout St. Charles and the surrounding area, bringing the same craftsmanship and accountability to every project — from a historic home near Main Street to a business along the I-70 corridor.',
+		),
+		'community'    => array(
+			'heading'    => 'Quality Roofing for St. Charles Homes and Businesses',
+			'paragraphs' => array(
+				'Founded in 1769 as the oldest city on the Missouri River, St. Charles carries a remarkable history — it served as Missouri&#8217;s first state capital from 1821 to 1826, launched the Lewis and Clark Expedition in 1804, and preserves one of the finest historic districts in the state along its famous brick Main Street. Today it&#8217;s a growing city of more than 70,000, blending that deep heritage with strong schools, riverfront parks, and a lively commercial scene.',
+			),
+			'pull_quote' => 'With so many historic and long-established homes, roofing in St. Charles often calls for a careful hand — matching the character of an older home while delivering modern protection. 1st Choice Roofing and Construction brings the experience to do exactly that, whether we&#8217;re working on a historic residence, a newer home, or a commercial property.',
+		),
+		'services'     => array(
+			'heading'    => 'Residential and Commercial Roofing in St. Charles, Missouri',
+			'intro'      => 'St. Charles has a strong commercial base — from the shops and restaurants of historic Main Street to retail centers and businesses along the I-70 corridor. That makes commercial roofing an important part of our work here, handled alongside our full residential services:',
+			'list'       => array(
+				'Commercial roof replacement and repair',
+				'Flat and low-slope roofing systems for commercial properties',
+				'Roof inspections and maintenance plans for property managers and owners',
+				'Residential roof replacement and repair',
+				'Roofing for historic and older homes',
+				'Storm and hail damage repair — residential and commercial',
+				'Siding replacement',
+				'Gutters, downspouts, and free inspections and estimates',
+			),
+			'difference' => array(
+				'For St. Charles businesses — from Main Street shops to commercial properties along the interstate — a roof problem can interrupt customers, tenants, and daily operations. We keep that disruption to a minimum, scheduling around your hours and communicating clearly from first inspection to final walkthrough. From flat commercial roofs to maintenance plans, we protect the buildings your business relies on.',
+				'Homeowners receive that same level of care — an honest estimate, premium materials backed by manufacturer warranties, and a crew that treats your home and its character with respect. Quality work, done right.',
+			),
+		),
+		'storm'        => array(
+			'heading' => 'Storm Damage Roofing in St. Charles',
+			'intro'   => array(
+				'St. Charles County sees the full range of Missouri&#8217;s severe weather — hail, high winds, and heavy rain that test every roof in the area. Much of that damage hides in plain sight: cracked shingles, loosened flashing, or a small puncture in a flat roof can sit quietly for weeks, then give way the next time it rains hard.',
+				'A professional inspection is the surest way to know. 1st Choice Roofing and Construction offers free post-storm inspections for St. Charles homeowners and businesses — you&#8217;ll get a clear picture of your roof&#8217;s condition, with photos and documentation ready for your insurance claim, and we&#8217;ll coordinate directly with your adjuster. If the weather&#8217;s been rough lately, let us take a look while the damage is still easy to fix.',
+			),
+		),
+		'cta'          => array(
+			'heading'   => 'Roofing Worthy of Missouri&#8217;s First Capital',
+			'paragraph' => 'From historic Main Street to its newest neighborhoods, St. Charles is a community that values quality — and so do we. Whether you&#8217;re caring for a historic home, a newer build, or a commercial property, 1st Choice Roofing and Construction brings the craftsmanship and follow-through the job deserves. Contact us today for your free estimate. We&#8217;ll take it from there.',
+		),
+		'region'       => 'Serving St. Charles and St. Charles County',
+		'order'        => $services_first,
+	);
+
+	$cities['st-peters'] = array(
+		'city'         => 'St. Peters',
+		'slug'         => 'st-peters',
+		'h1'           => 'Roofing Company in St. Peters, MO',
+		'service_area' => 'St. Charles County',
+		'seo'          => array(
+			'title'       => 'Roofing Company in St. Peters, MO | 1st Choice Roofing and Construction',
+			'description' => '1st Choice Roofing and Construction serves St. Peters, MO with expert residential and commercial roofing — repairs, replacements, and storm damage service. Free estimates.',
+			'slug'        => '/roofing-st-peters-mo',
+			'keywords'    => 'roofing company St. Peters MO, commercial roofing St. Peters, roof repair St. Peters, roof replacement St. Peters MO, St. Peters roofing contractor, storm damage roofing St. Peters',
+		),
+		'intro'        => array(
+			'St. Peters is one of St. Charles County&#8217;s largest and most family-friendly cities — a fast-grown suburb of well-planned neighborhoods, excellent amenities, and a busy commercial base. Repeatedly ranked among the best places to live in America, it&#8217;s a community where homeowners and businesses expect quality.',
+			'We provide residential and commercial roofing throughout St. Peters and St. Charles County, bringing the same craftsmanship and accountability to every project — from a family home near Spencer Creek to a business along the Mid Rivers Mall corridor.',
+		),
+		'community'    => array(
+			'heading'    => 'Quality Roofing for St. Peters Homes and Businesses',
+			'paragraphs' => array(
+				'Founded by French traders in the late 1700s and a small town of just 486 people as recently as 1970, St. Peters has grown into a city of nearly 60,000 — named to Money Magazine&#8217;s Best Places to Live list six times, including a #1 ranking in Missouri. It&#8217;s known for its strong Fort Zumwalt and Francis Howell schools, the world-class St. Peters Rec-Plex, and a park system spanning more than 1,200 acres.',
+			),
+			'pull_quote' => 'Much of the city&#8217;s housing was built from the 1970s onward, which means many St. Peters roofs are now at the age where they need real attention. 1st Choice Roofing and Construction brings the experience and honest guidance to handle whatever your roof needs — a targeted repair or a full replacement built to last.',
+		),
+		'services'     => array(
+			'heading'    => 'Residential and Commercial Roofing in St. Peters, Missouri',
+			'intro'      => 'St. Peters has a strong commercial base — anchored by Mid Rivers Mall, the largest mall in St. Charles County, plus retail corridors and logistics facilities at Premier 370. That makes commercial roofing an important part of our work here, handled alongside our full residential services:',
+			'list'       => $commercial_services,
+			'difference' => array(
+				'For St. Peters&#8217; retailers, offices, and warehouse facilities, a roof problem can put customers, tenants, and operations at risk — and on large flat roofs, trouble often starts small and spreads unseen. We stay ahead of it with thorough inspections and maintenance plans, and schedule repairs and replacements to keep your business moving.',
+				'Homeowners get that same dependable service: an honest estimate, premium materials backed by manufacturer warranties, and a crew that respects your home and your time.',
+			),
+		),
+		'storm'        => array(
+			'heading' => 'Storm Damage Roofing in St. Peters',
+			'intro'   => array(
+				'St. Charles County sits squarely in Missouri&#8217;s storm country, and St. Peters sees its share of hail, high winds, and heavy rain each season. The damage often hides in plain sight — a few bruised shingles or a section of lifted flashing can hold until the next storm drives water through and into your home or building.',
+				'That&#8217;s why a post-storm inspection is worth it. 1st Choice Roofing and Construction offers free inspections for St. Peters homeowners and businesses — you&#8217;ll get a clear picture of your roof&#8217;s condition, with photos and documentation ready for your insurance claim, and we&#8217;ll coordinate directly with your adjuster. Caught in a recent storm? Let us take a look before a small issue becomes an expensive one.',
+			),
+		),
+		'cta'          => array(
+			'heading'   => 'St. Peters&#8217; Roofing Company for Home and Business',
+			'paragraph' => 'From its family neighborhoods to the businesses along Mid Rivers, St. Peters runs on properties that need to stay protected year-round. Whether you&#8217;re facing storm damage, an aging roof, or a commercial building that needs attention, 1st Choice Roofing and Construction is ready to help. Reach out today for a free estimate and dependable work that lasts.',
+		),
+		'region'       => 'Serving St. Peters and St. Charles County',
+		'order'        => $services_first,
+	);
+
+	$cities['st-louis'] = array(
+		'city'         => 'St. Louis',
+		'slug'         => 'st-louis',
+		'h1'           => 'Roofing Company in St. Louis, MO',
+		'gallery_heading' => 'Recent Work in the City of St. Louis',
+		'service_area' => 'the City of St. Louis',
+		'seo'          => array(
+			'title'       => 'Roofing Company in St. Louis, MO | 1st Choice Roofing and Construction',
+			'description' => '1st Choice Roofing and Construction serves the City of St. Louis with expert residential and commercial roofing — repairs, replacements, and storm damage service. Free estimates.',
+			'slug'        => '/roofing-st-louis-mo',
+			'keywords'    => 'roofing company St. Louis MO, commercial roofing St. Louis, roof repair St. Louis, roof replacement St. Louis MO, St. Louis roofing contractor, brick home roofing St. Louis, historic home roofing St. Louis, storm damage roofing St. Louis',
+		),
+		'intro'        => array(
+			'St. Louis is a city of brick — block after block of historic homes, storefronts, and buildings that have defined its neighborhoods for well over a century. From the rowhouses of Soulard and the bungalows of south city to the grand homes near Tower Grove and Forest Park, this is a place where roofs protect real history.',
+			'We provide residential and commercial roofing throughout the City of St. Louis, bringing the same craftsmanship and accountability to every project — from a historic brick home to a storefront or commercial building.',
+		),
+		'community'    => array(
+			'heading'    => 'Quality Roofing for St. Louis Homes and Businesses',
+			'paragraphs' => array(
+				'St. Louis is famously a brick city — after an 1849 fire, the city built almost exclusively in brick for the next century, leaving behind an unmatched collection of historic neighborhoods, from the Second Empire rowhouses of Lafayette Square to the Foursquares of Tower Grove and the bungalows of south city. With 79 official neighborhoods, 14 local historic districts, and the iconic Gateway Arch on its riverfront, the city&#8217;s architecture is part of its identity.',
+			),
+			'pull_quote' => 'Older brick homes call for a careful, experienced hand — the flashing, the tie-ins, the details that keep a century-old structure watertight. 1st Choice Roofing and Construction brings the know-how to handle historic and established homes, whether it&#8217;s a targeted repair or a full replacement built to last.',
+		),
+		'services'     => array(
+			'heading'    => 'Residential and Commercial Roofing in St. Louis, Missouri',
+			'intro'      => 'From neighborhood storefronts and restaurants to office buildings and multi-family properties, the City of St. Louis has a deep and varied commercial base — which makes commercial roofing an important part of our work here, handled alongside our full residential services:',
+			'list'       => array(
+				'Residential roof replacement and repair',
+				'Roofing for historic and brick homes',
+				'Commercial roof replacement and repair',
+				'Flat and low-slope roofing systems for commercial properties',
+				'Storm and hail damage repair — residential and commercial',
+				'Roof inspections and maintenance plans for property owners and managers',
+				'Siding replacement',
+				'Gutters, downspouts, and free inspections and estimates',
+			),
+			'difference' => array(
+				'For St. Louis businesses — storefronts, restaurants, offices, and multi-family buildings — a roof problem can mean lost business, unhappy tenants, and interrupted operations. We work to prevent that with thorough inspections and maintenance plans, and when a repair or replacement is needed, we schedule around your hours and keep the job site clean and professional. From flat commercial roofs to maintenance plans, we protect the buildings the city runs on.',
+				'Homeowners get that same care — an honest estimate, premium materials backed by manufacturer warranties, and a crew that treats your home and its character with the respect it deserves. Quality work you can count on.',
+			),
+		),
+		'storm'        => array(
+			'heading' => 'Storm Damage on St. Louis Roofs',
+			'intro'   => array(
+				'The City of St. Louis takes the same hail, high winds, and heavy rain that move across the region every storm season — and on older homes and flat roofs especially, the damage isn&#8217;t always visible from the ground. Cracked shingles, loosened flashing, or a small breach in a flat roof can hold for weeks before giving way in the next hard rain.',
+				'You can&#8217;t fix what you can&#8217;t see — which is why 1st Choice Roofing and Construction offers free post-storm inspections for St. Louis homeowners and commercial property owners. You&#8217;ll get a clear picture of your roof&#8217;s condition, with photos and documentation ready for your insurance claim, and we&#8217;ll coordinate directly with your adjuster. Catching damage now is far cheaper than discovering it later.',
+			),
+		),
+		'cta'          => array(
+			'heading'   => 'Roofing for the Brick City',
+			'paragraph' => 'St. Louis homes and businesses carry real history — and they deserve roofing built to protect it. Whether you own a historic brick home, a newer property, or a commercial building, 1st Choice Roofing and Construction brings the experience and care the job calls for. Contact us today for your free estimate. We&#8217;ll take it from there.',
+		),
+		'region'       => 'Serving the City of St. Louis and the surrounding area',
+		'order'        => $services_first,
+	);
+
+	$cities['sunset-hills'] = array(
+		'city'         => 'Sunset Hills',
+		'slug'         => 'sunset-hills',
+		'h1'           => 'Roofing Company in Sunset Hills, MO',
+		'service_area' => 'South St. Louis County',
+		'seo'          => array(
+			'title'       => 'Roofing Company in Sunset Hills, MO | 1st Choice Roofing and Construction',
+			'description' => '1st Choice Roofing and Construction serves Sunset Hills, MO with expert residential and commercial roofing — repairs, replacements, and storm damage service. Free estimates.',
+			'slug'        => '/roofing-sunset-hills-mo',
+			'keywords'    => 'roofing company Sunset Hills MO, commercial roofing Sunset Hills, roof repair Sunset Hills, roof replacement Sunset Hills MO, Sunset Hills roofing contractor, storm damage roofing Sunset Hills',
+		),
+		'intro'        => array(
+			'Sunset Hills is one of South County&#8217;s most desirable communities — a well-kept, established city known for its quiet neighborhoods, strong schools, and beautiful green spaces. Homeowners here take real pride in their properties and expect quality from the people they hire.',
+			'We provide residential and commercial roofing throughout Sunset Hills and South St. Louis County, bringing the same craftsmanship and accountability to every project — from a family home near Watson Trail Park to a business along the Lindbergh corridor.',
+		),
+		'community'    => array(
+			'heading'    => 'Quality Roofing for Sunset Hills Homes and Businesses',
+			'paragraphs' => array(
+				'Sitting along the historic Route 66 corridor in South County, Sunset Hills is known for its established neighborhoods, well-regarded Lindbergh and Kirkwood schools, and standout amenities like Laumeier Sculpture Park — a nationally recognized outdoor art museum — and the scenic parks overlooking the Meramec River. It&#8217;s the kind of community where residents settle in for the long haul.',
+			),
+			'pull_quote' => 'That pride in the community shows in how homeowners care for their properties — and it&#8217;s a standard 1st Choice Roofing and Construction is glad to meet. Whether you&#8217;re maintaining an established home or caring for a commercial property, we bring the experience and lasting workmanship Sunset Hills expects.',
+		),
+		'services'     => array(
+			'heading'    => 'Residential and Commercial Roofing in Sunset Hills, Missouri',
+			'intro'      => 'The Lindbergh and Watson Road corridors give Sunset Hills a steady commercial base — retail centers, restaurants, and businesses that serve South County. That makes commercial roofing an important part of our work here, handled alongside our full residential services:',
+			'list'       => $commercial_services,
+			'difference' => array(
+				'For Sunset Hills&#8217; businesses, a roof problem rarely stays just a roof problem — it can interrupt customers, tenants, and daily operations. We keep that disruption to a minimum, scheduling around your hours and communicating clearly from first inspection to final walkthrough. From flat commercial roofs to maintenance plans, we protect the buildings your business relies on.',
+				'And for homeowners, the standard holds steady — a fair estimate, premium materials backed by manufacturer warranties, and a crew that treats your home like it&#8217;s their own. Honest work, start to finish.',
+			),
+		),
+		'storm'        => array(
+			'heading' => 'Storm Damage and Your Sunset Hills Roof',
+			'intro'   => array(
+				'Sunset Hills sees the full range of Missouri&#8217;s severe weather — hail, high winds, and heavy rain that test every roof in South County. The damage often isn&#8217;t obvious right away: bruised shingles or lifted flashing can sit unnoticed until water works its way inside.',
+				'That&#8217;s why a post-storm inspection is worth it. 1st Choice Roofing and Construction offers free inspections for Sunset Hills homeowners and businesses — documenting any damage and coordinating directly with your insurance adjuster. If severe weather just rolled through, a quick inspection now can save you a major repair later.',
+			),
+		),
+		'cta'          => array(
+			'heading'   => 'A Roofing Company Sunset Hills Can Rely On',
+			'paragraph' => 'Sunset Hills takes pride in its homes, its businesses, and its community — and 1st Choice Roofing and Construction takes that same pride in its work. Whether you&#8217;re recovering from a storm, replacing an aging roof, or maintaining a commercial property, we bring the experience and follow-through to get it right. Contact us today for your free estimate. We&#8217;ll take it from there.',
+		),
+		'region'       => 'Serving Sunset Hills and South St. Louis County',
+		'order'        => $services_first,
+	);
+
+	$cities['town-and-country'] = array(
+		'city'         => 'Town and Country',
+		'slug'         => 'town-and-country',
+		'h1'           => 'Roofing Company in Town and Country, MO',
+		'service_area' => 'West St. Louis County',
+		'seo'          => array(
+			'title'       => 'Roofing Company in Town and Country, MO | 1st Choice Roofing and Construction',
+			'description' => '1st Choice Roofing and Construction serves Town and Country, MO with expert residential roofing for the area&#8217;s finest homes — repairs, replacements, and storm damage service. Free estimates.',
+			'slug'        => '/roofing-town-and-country-mo',
+			'keywords'    => 'roofing company Town and Country MO, roof repair Town and Country, roof replacement Town and Country MO, Town and Country roofing contractor, luxury home roofing Town and Country, estate roofing Town and Country, storm damage roofing Town and Country',
+		),
+		'intro'        => array(
+			'Town and Country is one of Missouri&#8217;s most prestigious communities — known for its sprawling estates, large wooded lots, and some of the finest homes in the St. Louis region. With property like this, quality isn&#8217;t optional. Homeowners here expect roofing work that protects their investment and matches the caliber of their homes.',
+			'We provide residential and commercial roofing throughout Town and Country and West St. Louis County, bringing meticulous craftsmanship and genuine accountability to every project — from a wooded estate to a commercial property.',
+		),
+		'community'    => array(
+			'heading'    => 'Quality Roofing for Town and Country Homes',
+			'paragraphs' => array(
+				'Incorporated in 1950 specifically to preserve its low-density, residential character, Town and Country is defined by its one-acre-and-larger lots, winding tree-lined roads, and estate homes set well back from the street. It&#8217;s the wealthiest municipality in Missouri with a population over 10,000, served by the nationally ranked Parkway School District and home to the historic Bellerive Country Club.',
+			),
+			'pull_quote' => 'Estate homes call for a roofer who understands what&#8217;s at stake — the scale, the architecture, and the standard of finish. 1st Choice Roofing and Construction brings the experience, premium materials, and careful workmanship that homes of this caliber demand, with the same accountability on a repair as on a full replacement.',
+		),
+		'services'     => array(
+			'heading'    => 'Residential and Commercial Roofing in Town and Country, Missouri',
+			'intro'      => 'Town and Country is almost entirely residential, and protecting its homes is the heart of our work here — though we also serve the limited commercial properties along its edges on Manchester Road and Highway 141. Our full range of services includes:',
+			'list'       => array(
+				'Residential roof replacement and repair',
+				'Roofing for estate and luxury homes',
+				'Storm and hail damage repair',
+				'Roof inspections and free estimates',
+				'Commercial roof replacement and repair',
+				'Siding replacement',
+				'Gutters and downspouts',
+			),
+			'difference' => array(
+				'On a large estate home, a roof is a major investment — and one that deserves to be done right. We give you an honest assessment of what your roof actually needs, use premium materials backed by manufacturer warranties, and treat your property and your time with the discretion and respect you expect. From detailed repairs to complete replacements, our work is held to the standard Town and Country is known for.',
+				'For the area&#8217;s commercial property owners, we bring that same precision to flat and low-slope roofs, with repairs, replacements, and maintenance handled cleanly and professionally.',
+			),
+		),
+		'storm'        => array(
+			'heading' => 'Storm Damage and Town and Country&#8217;s Wooded Lots',
+			'intro'   => array(
+				'Town and Country&#8217;s large wooded lots are part of its beauty — but in a storm, those mature oaks and maples become a risk, dropping heavy limbs onto the roofs below. Combined with hail and high winds, that can leave damage that&#8217;s hard to spot from the ground, especially on large or complex rooflines.',
+				'After a storm, a professional inspection is the smart move. 1st Choice Roofing and Construction offers free post-storm inspections for Town and Country homeowners — with photos and documentation ready for your insurance claim and direct coordination with your adjuster. Catching damage early is far cheaper than finding it later.',
+			),
+		),
+		'cta'          => array(
+			'heading'   => 'Roofing Worthy of Town and Country&#8217;s Finest Homes',
+			'paragraph' => 'Your home is one of your most valuable investments — and it deserves roofing that reflects it. Whether you need a repair, a full replacement, or a post-storm inspection, 1st Choice Roofing and Construction delivers the craftsmanship and care Town and Country expects. Contact us today for your free estimate.',
+		),
+		'region'       => 'Serving Town and Country and West St. Louis County',
+		'order'        => $services_first,
+	);
+
+	$cities['university-city'] = array(
+		'city'         => 'University City',
+		'slug'         => 'university-city',
+		'h1'           => 'Roofing Company in University City, MO',
+		'service_area' => 'St. Louis County',
+		'seo'          => array(
+			'title'       => 'Roofing Company in University City, MO | 1st Choice Roofing and Construction',
+			'description' => '1st Choice Roofing and Construction serves University City, MO with expert residential and commercial roofing — repairs, replacements, and storm damage service. Free estimates.',
+			'slug'        => '/roofing-university-city-mo',
+			'keywords'    => 'roofing company University City MO, commercial roofing University City, roof repair University City, roof replacement University City MO, U City roofing contractor, historic home roofing University City, storm damage roofing University City',
+		),
+		'intro'        => array(
+			'University City — known to locals as U City — is one of St. Louis&#8217; most vibrant and historic suburbs, home to the famous Delmar Loop, tree-lined streets of Tudor and Colonial homes, and a rich cultural life anchored by nearby Washington University. From century-old residences to the businesses along the Loop, U City is a community that takes pride in its character.',
+			'We provide residential and commercial roofing throughout University City and the surrounding area, bringing the same craftsmanship and accountability to every project — from a historic home near the Loop to a commercial property along Delmar or Olive Boulevard.',
+		),
+		'community'    => array(
+			'heading'    => 'Quality Roofing for University City Homes and Businesses',
+			'paragraphs' => array(
+				'Founded in 1902 and shaped by the 1904 World&#8217;s Fair, University City is a community of remarkable architecture — its historic homes, many built in the 1920s and 1930s, showcase Tudor, Colonial Revival, and Maritz & Young designs in brick, stone, and stucco. At its heart, the nationally recognized Delmar Loop offers live music, dining, and the St. Louis Walk of Fame, while the presence of Washington University lends the city a cosmopolitan, creative energy.',
+			),
+			'pull_quote' => 'Older and historic homes call for a careful, experienced hand. 1st Choice Roofing and Construction brings the know-how to care for U City&#8217;s distinctive housing — preserving a home&#8217;s character while delivering modern protection, whether it&#8217;s a targeted repair or a full replacement.',
+		),
+		'services'     => array(
+			'heading'    => 'Residential and Commercial Roofing in University City, Missouri',
+			'intro'      => 'The Delmar Loop and the Olive Boulevard corridor give University City a lively commercial core — restaurants, shops, galleries, and offices — which makes commercial roofing an important part of our work here, handled alongside our full residential services:',
+			'list'       => array(
+				'Residential roof replacement and repair',
+				'Roofing for historic and older homes',
+				'Commercial roof replacement and repair',
+				'Flat and low-slope roofing systems for commercial properties',
+				'Storm and hail damage repair — residential and commercial',
+				'Roof inspections and maintenance plans for property owners and managers',
+				'Siding replacement',
+				'Gutters, downspouts, and free inspections and estimates',
+			),
+			'difference' => array(
+				'For the businesses that make the Delmar Loop a destination, a roof problem can mean lost foot traffic, unhappy tenants, and interrupted business. We work to prevent that with thorough inspections and maintenance plans, and when a repair or replacement is needed, we schedule around your hours and keep the job site clean and professional. From flat commercial roofs to maintenance plans, we protect the buildings that keep U City vibrant.',
+				'Homeowners receive that same level of care — an honest estimate, premium materials backed by manufacturer warranties, and a crew that treats your home and its character with the respect it deserves. Quality work, done right.',
+			),
+		),
+		'storm'        => array(
+			'heading' => 'Protecting University City&#8217;s Homes From Storm Damage',
+			'intro'   => array(
+				'University City&#8217;s mature, tree-lined streets are part of its charm — but those large trees become a liability when Missouri&#8217;s storms roll through, dropping heavy limbs onto roofs below. Add hail and high winds, and even a well-built roof can take damage that&#8217;s hard to spot from the ground, especially on older homes.',
+				'After a storm, a professional inspection gives you peace of mind. 1st Choice Roofing and Construction offers free post-storm inspections for University City homeowners and commercial property owners — you&#8217;ll get a clear picture of your roof&#8217;s condition, with photos and documentation ready for your insurance claim, and we&#8217;ll coordinate directly with your adjuster. Catching damage now is far cheaper than discovering it later.',
+			),
+		),
+		'cta'          => array(
+			'heading'   => 'Roofing That Lives Up to U City',
+			'paragraph' => 'University City&#8217;s homes and Loop have real character — and they deserve roofing that protects it. Whether you own a historic home, a newer property, or a commercial building along Delmar, 1st Choice Roofing and Construction brings the care and craftsmanship the job calls for. Contact us today for your free estimate. We&#8217;ll take it from there.',
+		),
+		'region'       => 'Serving University City and St. Louis County',
+		'order'        => $services_first,
+	);
+
+	$cities['valley-park'] = array(
+		'city'         => 'Valley Park',
+		'slug'         => 'valley-park',
+		'h1'           => 'Roofing Company in Valley Park, MO',
+		'service_area' => 'southwest St. Louis County',
+		'seo'          => array(
+			'title'       => 'Roofing Company in Valley Park, MO | 1st Choice Roofing and Construction',
+			'description' => '1st Choice Roofing and Construction serves Valley Park, MO with expert residential and commercial roofing — repairs, replacements, and storm damage service. Free estimates.',
+			'slug'        => '/roofing-valley-park-mo',
+			'keywords'    => 'roofing company Valley Park MO, commercial roofing Valley Park, roof repair Valley Park, roof replacement Valley Park MO, Valley Park roofing contractor, storm damage roofing Valley Park',
+		),
+		'intro'        => array(
+			'Valley Park is a close-knit community in southwest St. Louis County — a small city along the Meramec River with deep roots, established neighborhoods, and a growing commercial and industrial presence. Homeowners and businesses here value dependability.',
+			'We provide residential and commercial roofing throughout Valley Park and the surrounding area, bringing the same craftsmanship and accountability to every project — from a family home in an established neighborhood to a business or warehouse near the I-44 corridor.',
+		),
+		'community'    => array(
+			'heading'    => 'Quality Roofing for Valley Park Homes and Businesses',
+			'paragraphs' => array(
+				'Nestled along the Meramec River in southwest St. Louis County, Valley Park is a historic small town that has grown into a community blending established residential neighborhoods with a busy commercial and industrial base near Highway 141 and I-44. It&#8217;s served by the Valley Park and Rockwood school districts and offers the kind of tight-knit, hometown feel that keeps residents rooted here.',
+			),
+			'pull_quote' => 'Whether it&#8217;s a longtime family home or a commercial building, Valley Park property owners need a roofer they can count on. 1st Choice Roofing and Construction brings the experience and lasting workmanship to handle both, with honest guidance about what your roof actually needs.',
+		),
+		'services'     => array(
+			'heading'    => 'Residential and Commercial Roofing in Valley Park, Missouri',
+			'intro'      => 'Valley Park&#8217;s location near Highway 141 and I-44 supports a strong base of businesses, warehouses, and light industrial buildings — which makes commercial roofing an important part of our work here, handled alongside our full residential services:',
+			'list'       => array(
+				'Commercial roof replacement and repair',
+				'Flat and low-slope roofing systems for commercial and industrial buildings',
+				'Roof inspections and maintenance plans for property managers and owners',
+				'Residential roof replacement and repair',
+				'Storm and hail damage repair — residential and commercial',
+				'Siding replacement',
+				'Gutters and downspouts',
+				'Free inspections and estimates',
+			),
+			'difference' => array(
+				'For Valley Park&#8217;s businesses and warehouses, a roof problem can put inventory, equipment, and operations at risk — and on large flat roofs, trouble often starts small and spreads unseen. We stay ahead of it with thorough inspections and maintenance plans, and schedule repairs and replacements to keep your business moving.',
+				'Homeowners receive that same dependable service — an honest estimate, premium materials backed by manufacturer warranties, and a crew that respects your home and your time. Quality work you can count on.',
+			),
+		),
+		'storm'        => array(
+			'heading' => 'River-Valley Weather and Your Valley Park Roof',
+			'intro'   => array(
+				'Set along the Meramec River, Valley Park is no stranger to hail, high winds, and driving rain — the kind of weather that finds the weak spot in any roof. And the damage often hides in plain sight: a section of lifted flashing or a small puncture in a flat roof can go unnoticed for weeks before water finally works its way inside.',
+				'That&#8217;s why a professional inspection matters after any major storm. 1st Choice Roofing and Construction offers free post-storm inspections for Valley Park homeowners and businesses — you&#8217;ll know exactly where your roof stands, with photos and documentation ready for your insurance claim, and we&#8217;ll coordinate with your adjuster. Caught in a recent storm? Let us take a look before a small issue becomes an expensive one.',
+			),
+		),
+		'cta'          => array(
+			'heading'   => 'Valley Park&#8217;s Roofing Company for Home and Business',
+			'paragraph' => 'Whether you own a home in one of Valley Park&#8217;s established neighborhoods or run a business near the I-44 corridor, 1st Choice Roofing and Construction has the experience to handle it. We&#8217;re local, dependable, and committed to getting the job done right. Reach out today for a free estimate and dependable work that lasts.',
+		),
+		'region'       => 'Serving Valley Park and southwest St. Louis County',
+		'order'        => $services_first,
+	);
+
+	$cities['webster-groves'] = array(
+		'city'         => 'Webster Groves',
+		'slug'         => 'webster-groves',
+		'h1'           => 'Roofing Company in Webster Groves, MO',
+		'service_area' => 'St. Louis County',
+		'seo'          => array(
+			'title'       => 'Roofing Company in Webster Groves, MO | 1st Choice Roofing and Construction',
+			'description' => '1st Choice Roofing and Construction serves Webster Groves, MO with expert residential and commercial roofing — repairs, replacements, and storm damage service. Free estimates.',
+			'slug'        => '/roofing-webster-groves-mo',
+			'keywords'    => 'roofing company Webster Groves MO, commercial roofing Webster Groves, roof repair Webster Groves, roof replacement Webster Groves MO, Webster Groves roofing contractor, historic home roofing Webster Groves, storm damage roofing Webster Groves',
+		),
+		'intro'        => array(
+			'Webster Groves is one of St. Louis&#8217; most charming and historic suburbs — a walkable, tree-lined community of century-old homes, thriving business districts, and a strong sense of community. From Victorian and Tudor homes to the shops along its historic Main Street districts, Webster Groves is a place where property owners take real pride in their buildings.',
+			'We provide residential and commercial roofing throughout Webster Groves and the surrounding area, bringing the same craftsmanship and accountability to every project — from a historic home in Webster Park to a storefront or commercial building downtown.',
+		),
+		'community'    => array(
+			'heading'    => 'Quality Roofing for Webster Groves Homes and Businesses',
+			'paragraphs' => array(
+				'Established alongside the Pacific Railroad in the 1800s and once marketed as the &#8220;Queen of the Suburbs,&#8221; Webster Groves is a community rich in history — with over a dozen districts and buildings on the National Register of Historic Places, more than 50 city-designated landmarks, and gracious homes ranging from Queen Anne Victorians to Tudors and bungalows. It&#8217;s served by the &#8220;Triple A&#8221;-rated Webster Groves School District and is home to Webster University.',
+			),
+			'pull_quote' => 'With so many historic and long-established homes, roofing in Webster Groves often calls for a careful hand — matching the character of an older home while delivering modern protection. 1st Choice Roofing and Construction brings the experience to do exactly that, whether we&#8217;re working on a historic residence, a newer home, or a commercial property.',
+		),
+		'services'     => array(
+			'heading'    => 'Residential and Commercial Roofing in Webster Groves, Missouri',
+			'intro'      => 'Webster Groves&#8217; historic business districts — full of restaurants, shops, and local institutions — give the city a vibrant commercial core. That makes commercial roofing an important part of our work here, handled alongside our full residential services:',
+			'list'       => array(
+				'Residential roof replacement and repair',
+				'Roofing for historic and older homes',
+				'Commercial roof replacement and repair',
+				'Flat and low-slope roofing systems for commercial properties',
+				'Storm and hail damage repair — residential and commercial',
+				'Roof inspections and maintenance plans for property owners and managers',
+				'Siding replacement',
+				'Gutters, downspouts, and free inspections and estimates',
+			),
+			'difference' => array(
+				'For the businesses that anchor Webster Groves&#8217; historic districts, a roof problem can mean lost foot traffic, unhappy tenants, and interrupted business. We work to prevent that with thorough inspections and maintenance plans, and when a repair or replacement is needed, we schedule around your hours and keep the job site clean and professional. From flat commercial roofs to maintenance plans, we protect the buildings that give the city its character.',
+				'Homeowners receive that same level of care — an honest estimate, premium materials backed by manufacturer warranties, and a crew that treats your home and its character with the respect it deserves. Quality work, done right.',
+			),
+		),
+		'storm'        => array(
+			'heading' => 'Protecting Webster Groves&#8217; Homes From Storm Damage',
+			'intro'   => array(
+				'Webster Groves&#8217; mature tree canopy is one of its defining features — but those towering oaks and maples become a liability when storms roll through, dropping limbs onto roofs below. Add hail and high winds, and even a well-built roof can take damage that&#8217;s hard to spot from the ground, especially on older homes.',
+				'After a storm, a professional inspection gives you peace of mind. 1st Choice Roofing and Construction offers free post-storm inspections for Webster Groves homeowners and businesses — you&#8217;ll get a clear picture of your roof&#8217;s condition, with photos and documentation ready for your insurance claim, and we&#8217;ll coordinate directly with your adjuster. Catching damage now is far cheaper than discovering it later, especially on a home you&#8217;ve worked hard to maintain.',
+			),
+		),
+		'cta'          => array(
+			'heading'   => 'Roofing Worthy of Webster Groves',
+			'paragraph' => 'Webster Groves&#8217; homes and business districts have stood the test of time — and they deserve roofing that does too. Whether you own a historic residence, a newer home, or a commercial property, 1st Choice Roofing and Construction brings the care and craftsmanship the job calls for. Contact us today for your free estimate. We&#8217;ll take it from there.',
+		),
+		'region'       => 'Serving Webster Groves and St. Louis County',
+		'order'        => $services_first,
+	);
+
+	$cities['wentzville'] = array(
+		'city'         => 'Wentzville',
+		'slug'         => 'wentzville',
+		'h1'           => 'Roofing Company in Wentzville, MO',
+		'service_area' => 'St. Charles County',
+		'seo'          => array(
+			'title'       => 'Roofing Company in Wentzville, MO | 1st Choice Roofing and Construction',
+			'description' => '1st Choice Roofing and Construction serves Wentzville, MO with expert residential and commercial roofing — repairs, replacements, and storm damage service. Free estimates.',
+			'slug'        => '/roofing-wentzville-mo',
+			'keywords'    => 'roofing company Wentzville MO, commercial roofing Wentzville, roof repair Wentzville, roof replacement Wentzville MO, Wentzville roofing contractor, storm damage roofing Wentzville',
+		),
+		'intro'        => array(
+			'Wentzville is the fastest-growing city in Missouri — a booming St. Charles County community of new subdivisions, expanding businesses, and a major manufacturing base, all at the crossroads of I-70 and Highway 61. With growth like this, Wentzville is full of homes and businesses that need dependable roofing.',
+			'We provide residential and commercial roofing throughout Wentzville and St. Charles County, bringing the same craftsmanship and accountability to every project — from a newer home in a growing subdivision to a business or industrial building near the interstate.',
+		),
+		'community'    => array(
+			'heading'    => 'Quality Roofing for Wentzville Homes and Businesses',
+			'paragraphs' => array(
+				'Founded in 1855 as a railroad town and known as the &#8220;Crossroads of the Nation,&#8221; Wentzville has grown explosively — from under 7,000 residents in 2000 to nearly 50,000 today, making it Missouri&#8217;s fastest-growing city. It&#8217;s anchored by the massive General Motors Wentzville Assembly plant, a strong network of parks, and highly regarded Wentzville School District schools that continue to draw families to the area.',
+			),
+			'pull_quote' => 'A community growing this fast is full of newer homes and subdivisions that need dependable roofing from the start. 1st Choice Roofing and Construction brings the experience, quality materials, and lasting workmanship Wentzville property owners expect — for homes and commercial buildings alike.',
+		),
+		'services'     => array(
+			'heading'    => 'Residential and Commercial Roofing in Wentzville, Missouri',
+			'intro'      => 'Wentzville&#8217;s rapid growth — anchored by the GM assembly plant and an expanding base of retail, warehouse, and industrial buildings — makes commercial roofing a major part of our work here, handled alongside our full residential services:',
+			'list'       => array(
+				'Commercial roof replacement and repair',
+				'Flat and low-slope roofing systems for commercial and industrial buildings',
+				'Roof inspections and maintenance plans for property managers and owners',
+				'Residential roof replacement and repair',
+				'Storm and hail damage repair — residential and commercial',
+				'Siding replacement',
+				'Gutters and downspouts',
+				'Free inspections and estimates',
+			),
+			'difference' => array(
+				'For Wentzville&#8217;s businesses, warehouses, and industrial buildings, a roof problem can put inventory, equipment, and operations at risk — and on large flat roofs, trouble often starts small and spreads unseen. We stay ahead of it with thorough inspections and maintenance plans, and schedule repairs and replacements to keep your business moving.',
+				'Homeowners get that same dependable service — an honest estimate, premium materials backed by manufacturer warranties, and a crew that respects your home and your time. Quality you can count on.',
+			),
+		),
+		'storm'        => array(
+			'heading' => 'Storm Damage Roofing in Wentzville',
+			'intro'   => array(
+				'Out on the western edge of the metro, Wentzville sees the full force of Missouri&#8217;s storm seasons — hail, high winds, and heavy rain that test every roof in town. Much of that damage hides in plain sight: cracked shingles or a small puncture in a flat roof can sit quietly for weeks, then give way the next time it rains hard.',
+				'You can&#8217;t fix what you can&#8217;t see, so 1st Choice Roofing and Construction offers free post-storm inspections for Wentzville homeowners and businesses. You&#8217;ll get a clear picture of your roof&#8217;s condition, with photos and documentation ready for your insurance claim, and we&#8217;ll coordinate directly with your adjuster. If a storm just rolled through, let us take a look before a small problem grows.',
+			),
+		),
+		'cta'          => array(
+			'heading'   => 'Wentzville&#8217;s Roofing Company for Home and Business',
+			'paragraph' => 'As Missouri&#8217;s fastest-growing city, Wentzville depends on roofs that hold up — and 1st Choice Roofing and Construction is ready to deliver. Whether you&#8217;re facing storm damage, protecting a newer home, or caring for a commercial building, we bring the experience and follow-through to get it right. Contact us today for your free estimate. We&#8217;ll take it from there.',
+		),
+		'region'       => 'Serving Wentzville and St. Charles County',
+		'order'        => $services_first,
+	);
+
+	$cities['wildwood'] = array(
+		'city'         => 'Wildwood',
+		'slug'         => 'wildwood',
+		'h1'           => 'Roofing Company in Wildwood, MO',
+		'service_area' => 'West St. Louis County',
+		'seo'          => array(
+			'title'       => 'Roofing Company in Wildwood, MO | 1st Choice Roofing and Construction',
+			'description' => '1st Choice Roofing and Construction serves Wildwood, MO with expert residential and commercial roofing — repairs, replacements, and storm damage service. Free estimates.',
+			'slug'        => '/roofing-wildwood-mo',
+			'keywords'    => 'roofing company Wildwood MO, commercial roofing Wildwood, roof repair Wildwood, roof replacement Wildwood MO, Wildwood roofing contractor, storm damage roofing Wildwood',
+		),
+		'intro'        => array(
+			'Wildwood is the largest city by area in St. Louis County — a scenic, semi-rural community on the county&#8217;s western edge, known for its rolling hills, wooded lots, and thoughtfully planned neighborhoods. Homeowners here choose Wildwood for its space and natural beauty, and they expect quality from anyone they hire.',
+			'We provide residential and commercial roofing throughout Wildwood and West St. Louis County, bringing the same craftsmanship and accountability to every project — from an estate-style home on a wooded lot to a business in the Town Center.',
+		),
+		'community'    => array(
+			'heading'    => 'Quality Roofing for Wildwood Homes and Businesses',
+			'paragraphs' => array(
+				'Incorporated in 1995 by residents who wanted a say in how their community would grow, Wildwood covers 68 square miles at the foothills of the Ozarks — the third-largest city by area in all of Missouri. It&#8217;s known for its estate-style lifestyle, 11 square miles of protected parkland and open space, an extensive trail system, and the AAA-rated Rockwood School District, all while keeping a peaceful, rural feel just a short drive from the metro.',
+			),
+			'pull_quote' => 'Larger homes on wooded lots call for a roofer who understands scale and quality. 1st Choice Roofing and Construction brings the experience, premium materials, and careful workmanship Wildwood homeowners expect — whether it&#8217;s a repair or a full replacement built to last.',
+		),
+		'services'     => array(
+			'heading'    => 'Residential and Commercial Roofing in Wildwood, Missouri',
+			'intro'      => 'Wildwood balances its rural character with commercial growth around the Town Center and along Manchester Road and Highway 109 — which keeps commercial roofing part of our work here, handled alongside our full residential services:',
+			'list'       => array(
+				'Residential roof replacement and repair',
+				'Roofing for estate and larger homes',
+				'Storm and hail damage repair — residential and commercial',
+				'Commercial roof replacement and repair',
+				'Flat and low-slope roofing systems for commercial properties',
+				'Siding replacement',
+				'Gutters, downspouts, and free inspections and estimates',
+			),
+			'difference' => array(
+				'For Wildwood&#8217;s businesses around the Town Center and along the main corridors, a roof problem can interrupt customers and daily operations. We keep disruption to a minimum — scheduling around your hours and communicating clearly from first inspection to final walkthrough. From flat commercial roofs to maintenance plans, we protect the buildings the community relies on.',
+				'And for homeowners, we bring roofing they don&#8217;t have to think twice about — an honest estimate, premium materials backed by manufacturer warranties, and expert installation that lasts. Quality work, start to finish.',
+			),
+		),
+		'storm'        => array(
+			'heading' => 'Storm Damage and Wildwood&#8217;s Wooded Lots',
+			'intro'   => array(
+				'Wildwood&#8217;s wooded, rolling landscape is part of its appeal — but in a storm, those mature trees become a risk, dropping heavy limbs onto the roofs below. Combined with hail and high winds, that can leave damage that&#8217;s hard to spot from the ground, especially on large or complex rooflines.',
+				'After a storm, a professional inspection is the smart move. 1st Choice Roofing and Construction offers free post-storm inspections for Wildwood homeowners and businesses — with photos and documentation ready for your insurance claim and direct coordination with your adjuster. Catching damage early is far cheaper than finding it later.',
+			),
+		),
+		'cta'          => array(
+			'heading'   => 'A Roofing Company as Solid as Wildwood',
+			'paragraph' => 'Wildwood is a community that values quality and careful planning — and so do we. Whether you&#8217;re protecting an estate home, replacing an aging roof, or caring for a commercial property, 1st Choice Roofing and Construction brings the experience and follow-through to get it right. Contact us today for your free estimate. We&#8217;ll take it from there.',
+		),
+		'region'       => 'Serving Wildwood and West St. Louis County',
+		'order'        => $services_first,
+	);
 	return $cities;
 }
 
@@ -1176,10 +2019,11 @@ function firstchoice_register_location_patterns() {
 			'firstchoice/location-' . $data['slug'],
 			array(
 				'title'       => sprintf(
-					/* translators: 1: city name, 2: state abbreviation */
-					__( 'Location Page — %1$s, %2$s', 'firstchoice' ),
+					/* translators: 1: city name, 2: state abbreviation, 3: optional note */
+					__( 'Location Page — %1$s, %2$s%3$s', 'firstchoice' ),
 					$data['city'],
-					firstchoice_location_state( $data )
+					firstchoice_location_state( $data ),
+					! empty( $data['pattern_note'] ) ? ' (' . $data['pattern_note'] . ')' : ''
 				),
 				'description' => sprintf(
 					/* translators: 1: page title, 2: URL slug */
@@ -1629,13 +2473,17 @@ function firstchoice_location_testimonial( $data ) {
 function firstchoice_location_gallery( $data ) {
 	$slots = firstchoice_location_gallery_slots( $data['city'] );
 
+	$gallery_heading = ! empty( $data['gallery_heading'] )
+		? $data['gallery_heading']
+		: sprintf( 'Recent Work in %1$s &amp; %2$s', $data['city'], $data['service_area'] );
+
 	ob_start();
 	?>
 <!-- wp:group {"className":"location-gallery alignfull","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull location-gallery">
 	<div class="wp-block-group__inner-container">
 		<!-- wp:heading {"textAlign":"center"} -->
-		<h2 class="wp-block-heading has-text-align-center">Recent Work in <?php echo esc_html( $data['city'] ); ?> &amp; <?php echo esc_html( $data['service_area'] ); ?></h2>
+		<h2 class="wp-block-heading has-text-align-center"><?php echo wp_kses_post( $gallery_heading ); ?></h2>
 		<!-- /wp:heading -->
 
 		<!-- wp:paragraph {"align":"center","className":"gallery-note"} -->

@@ -302,6 +302,176 @@ live.
 | Meta description | 1st Choice Roofing and Construction serves Maryland Heights with expert residential and commercial roofing — repairs, replacements, and storm damage service. Free estimates. |
 | Keywords | roofing company Maryland Heights MO, commercial roofing Maryland Heights, roof repair Maryland Heights, roof replacement Maryland Heights MO, Maryland Heights roofing contractor, storm damage roofing Maryland Heights |
 
+### Oakville
+
+| Field | Value |
+|---|---|
+| Page title / H1 | Roofing Company in Oakville, MO |
+| SEO title | Roofing Company in Oakville, MO \| 1st Choice Roofing and Construction |
+| URL slug | `/roofing-oakville-mo` |
+| Meta description | 1st Choice Roofing and Construction serves Oakville, MO with expert residential and commercial roofing — repairs, replacements, and storm damage service. Free estimates. |
+| Keywords | roofing company Oakville MO, roof repair Oakville, roof replacement Oakville MO, Oakville roofing contractor, storm damage roofing Oakville, South County roofing |
+
+### O'Fallon, IL
+
+**Second Illinois page — confirm IL licensing before publishing**, same as Collinsville. This O'Fallon is in St. Clair County, Illinois; do not confuse it with O'Fallon, MO. The two are separate pages with separate slugs, and their patterns are labelled "(Illinois)" and "(Missouri)" so they can be told apart in the inserter.
+
+| Field | Value |
+|---|---|
+| Page title / H1 | Roofing Company in O'Fallon, IL |
+| SEO title | Roofing Company in O'Fallon, IL \| 1st Choice Roofing and Construction |
+| URL slug | `/roofing-ofallon-il` |
+| Meta description | 1st Choice Roofing and Construction serves O'Fallon, IL with expert residential and commercial roofing — repairs, replacements, and storm damage service. Free estimates. |
+| Keywords | roofing company O'Fallon IL, commercial roofing O'Fallon, roof repair O'Fallon IL, roof replacement O'Fallon, O'Fallon roofing contractor, Metro East roofing, storm damage roofing O'Fallon |
+
+### O'Fallon, MO
+
+| Field | Value |
+|---|---|
+| Page title / H1 | Roofing Company in O'Fallon, MO |
+| SEO title | Roofing Company in O'Fallon, MO \| 1st Choice Roofing and Construction |
+| URL slug | `/roofing-ofallon-mo` |
+| Meta description | 1st Choice Roofing and Construction serves O'Fallon, MO with expert residential and commercial roofing — repairs, replacements, and storm damage service. Free estimates. |
+| Keywords | roofing company O'Fallon MO, commercial roofing O'Fallon, roof repair O'Fallon, roof replacement O'Fallon MO, O'Fallon roofing contractor, storm damage roofing O'Fallon |
+
+### Overland
+
+| Field | Value |
+|---|---|
+| Page title / H1 | Roofing Company in Overland, MO |
+| SEO title | Roofing Company in Overland, MO \| 1st Choice Roofing and Construction |
+| URL slug | `/roofing-overland-mo` |
+| Meta description | 1st Choice Roofing and Construction serves Overland, MO with expert residential and commercial roofing — repairs, replacements, and storm damage service. Free estimates. |
+| Keywords | roofing company Overland MO, roof repair Overland, roof replacement Overland MO, Overland roofing contractor, storm damage roofing Overland, brick home roofing Overland |
+
+### Richmond Heights
+
+Richmond Heights has **two pages** — this standard one and a commercial-focused one below. Its doc states they are deliberately separate.
+
+| Field | Value |
+|---|---|
+| Page title / H1 | Roofing Company in Richmond Heights, MO |
+| SEO title | Roofing Company in Richmond Heights, MO \| 1st Choice Roofing and Construction |
+| URL slug | `/roofing-richmond-heights-mo` |
+| Meta description | 1st Choice Roofing and Construction serves Richmond Heights, MO with expert residential and commercial roofing — repairs, replacements, and storm damage service. Free estimates. |
+| Keywords | roofing company Richmond Heights MO, commercial roofing Richmond Heights, roof repair Richmond Heights, roof replacement Richmond Heights MO, Richmond Heights roofing contractor, storm damage roofing Richmond Heights |
+
+### Richmond Heights — commercial focus
+
+The second Richmond Heights page, aimed at property and facility managers. Like Earth City it has its own service list, a commercial CTA button, and a testimonial citation that names a company. Its pattern is labelled "(Commercial focus)" to distinguish it from the standard page.
+
+| Field | Value |
+|---|---|
+| Page title / H1 | Commercial & Flat Roofing in Richmond Heights, MO |
+| SEO title | Commercial & Flat Roofing in Richmond Heights, MO \| 1st Choice Roofing and Construction |
+| URL slug | `/commercial-flat-roofing-richmond-heights-mo` |
+| Meta description | 1st Choice Roofing and Construction provides commercial and flat roofing for Richmond Heights businesses — retail centers, offices, and mixed-use buildings. Repairs, replacements, and free inspections. |
+| Keywords | commercial roofing Richmond Heights MO, flat roofing Richmond Heights, commercial roof repair Richmond Heights, retail roofing Richmond Heights, office building roofing Richmond Heights MO, flat roof replacement Richmond Heights |
+
+### St. Charles
+
+| Field | Value |
+|---|---|
+| Page title / H1 | Roofing Company in St. Charles, MO |
+| SEO title | Roofing Company in St. Charles, MO \| 1st Choice Roofing and Construction |
+| URL slug | `/roofing-st-charles-mo` |
+| Meta description | 1st Choice Roofing and Construction serves St. Charles, MO with expert residential and commercial roofing — repairs, replacements, and storm damage service. Free estimates. |
+| Keywords | roofing company St. Charles MO, commercial roofing St. Charles, roof repair St. Charles, roof replacement St. Charles MO, St. Charles roofing contractor, historic home roofing St. Charles, storm damage roofing St. Charles |
+
+### St. Louis — the city
+
+Covers the City of St. Louis rather than a suburb, so it uses a `gallery_heading` override — the default "<City> & <service area>" would have read "St. Louis & the City of St. Louis".
+
+| Field | Value |
+|---|---|
+| Page title / H1 | Roofing Company in St. Louis, MO |
+| SEO title | Roofing Company in St. Louis, MO \| 1st Choice Roofing and Construction |
+| URL slug | `/roofing-st-louis-mo` |
+| Meta description | 1st Choice Roofing and Construction serves the City of St. Louis with expert residential and commercial roofing — repairs, replacements, and storm damage service. Free estimates. |
+| Keywords | roofing company St. Louis MO, commercial roofing St. Louis, roof repair St. Louis, roof replacement St. Louis MO, St. Louis roofing contractor, brick home roofing St. Louis, historic home roofing St. Louis, storm damage roofing St. Louis |
+
+### St. Peters
+
+| Field | Value |
+|---|---|
+| Page title / H1 | Roofing Company in St. Peters, MO |
+| SEO title | Roofing Company in St. Peters, MO \| 1st Choice Roofing and Construction |
+| URL slug | `/roofing-st-peters-mo` |
+| Meta description | 1st Choice Roofing and Construction serves St. Peters, MO with expert residential and commercial roofing — repairs, replacements, and storm damage service. Free estimates. |
+| Keywords | roofing company St. Peters MO, commercial roofing St. Peters, roof repair St. Peters, roof replacement St. Peters MO, St. Peters roofing contractor, storm damage roofing St. Peters |
+
+### Sunset Hills
+
+| Field | Value |
+|---|---|
+| Page title / H1 | Roofing Company in Sunset Hills, MO |
+| SEO title | Roofing Company in Sunset Hills, MO \| 1st Choice Roofing and Construction |
+| URL slug | `/roofing-sunset-hills-mo` |
+| Meta description | 1st Choice Roofing and Construction serves Sunset Hills, MO with expert residential and commercial roofing — repairs, replacements, and storm damage service. Free estimates. |
+| Keywords | roofing company Sunset Hills MO, commercial roofing Sunset Hills, roof repair Sunset Hills, roof replacement Sunset Hills MO, Sunset Hills roofing contractor, storm damage roofing Sunset Hills |
+
+### Town and Country
+
+| Field | Value |
+|---|---|
+| Page title / H1 | Roofing Company in Town and Country, MO |
+| SEO title | Roofing Company in Town and Country, MO \| 1st Choice Roofing and Construction |
+| URL slug | `/roofing-town-and-country-mo` |
+| Meta description | 1st Choice Roofing and Construction serves Town and Country, MO with expert residential roofing for the area's finest homes — repairs, replacements, and storm damage service. Free estimates. |
+| Keywords | roofing company Town and Country MO, roof repair Town and Country, roof replacement Town and Country MO, Town and Country roofing contractor, luxury home roofing Town and Country, estate roofing Town and Country, storm damage roofing Town and Country |
+
+### University City
+
+| Field | Value |
+|---|---|
+| Page title / H1 | Roofing Company in University City, MO |
+| SEO title | Roofing Company in University City, MO \| 1st Choice Roofing and Construction |
+| URL slug | `/roofing-university-city-mo` |
+| Meta description | 1st Choice Roofing and Construction serves University City, MO with expert residential and commercial roofing — repairs, replacements, and storm damage service. Free estimates. |
+| Keywords | roofing company University City MO, commercial roofing University City, roof repair University City, roof replacement University City MO, U City roofing contractor, historic home roofing University City, storm damage roofing University City |
+
+### Valley Park
+
+| Field | Value |
+|---|---|
+| Page title / H1 | Roofing Company in Valley Park, MO |
+| SEO title | Roofing Company in Valley Park, MO \| 1st Choice Roofing and Construction |
+| URL slug | `/roofing-valley-park-mo` |
+| Meta description | 1st Choice Roofing and Construction serves Valley Park, MO with expert residential and commercial roofing — repairs, replacements, and storm damage service. Free estimates. |
+| Keywords | roofing company Valley Park MO, commercial roofing Valley Park, roof repair Valley Park, roof replacement Valley Park MO, Valley Park roofing contractor, storm damage roofing Valley Park |
+
+### Webster Groves
+
+| Field | Value |
+|---|---|
+| Page title / H1 | Roofing Company in Webster Groves, MO |
+| SEO title | Roofing Company in Webster Groves, MO \| 1st Choice Roofing and Construction |
+| URL slug | `/roofing-webster-groves-mo` |
+| Meta description | 1st Choice Roofing and Construction serves Webster Groves, MO with expert residential and commercial roofing — repairs, replacements, and storm damage service. Free estimates. |
+| Keywords | roofing company Webster Groves MO, commercial roofing Webster Groves, roof repair Webster Groves, roof replacement Webster Groves MO, Webster Groves roofing contractor, historic home roofing Webster Groves, storm damage roofing Webster Groves |
+
+### Wentzville
+
+Its doc reads "a expanding base" in the services intro; corrected to "an expanding base".
+
+| Field | Value |
+|---|---|
+| Page title / H1 | Roofing Company in Wentzville, MO |
+| SEO title | Roofing Company in Wentzville, MO \| 1st Choice Roofing and Construction |
+| URL slug | `/roofing-wentzville-mo` |
+| Meta description | 1st Choice Roofing and Construction serves Wentzville, MO with expert residential and commercial roofing — repairs, replacements, and storm damage service. Free estimates. |
+| Keywords | roofing company Wentzville MO, commercial roofing Wentzville, roof repair Wentzville, roof replacement Wentzville MO, Wentzville roofing contractor, storm damage roofing Wentzville |
+
+### Wildwood
+
+| Field | Value |
+|---|---|
+| Page title / H1 | Roofing Company in Wildwood, MO |
+| SEO title | Roofing Company in Wildwood, MO \| 1st Choice Roofing and Construction |
+| URL slug | `/roofing-wildwood-mo` |
+| Meta description | 1st Choice Roofing and Construction serves Wildwood, MO with expert residential and commercial roofing — repairs, replacements, and storm damage service. Free estimates. |
+| Keywords | roofing company Wildwood MO, commercial roofing Wildwood, roof repair Wildwood, roof replacement Wildwood MO, Wildwood roofing contractor, storm damage roofing Wildwood |
+
 ## Adding another city
 
 Add one entry to `firstchoice_location_data()` in
@@ -317,7 +487,9 @@ Optional keys that absorb the variation between content docs:
 | Key | Use |
 |---|---|
 | `state` | Two-letter abbreviation, defaults to `MO`. Set `IL` for Collinsville |
-| `cta_button` | Closing CTA and hero button label; Earth City uses a commercial one |
+| `cta_button` | Closing CTA and hero button label; the commercial pages use their own |
+| `pattern_note` | Appended to the pattern name, to tell two patterns for one city apart |
+| `gallery_heading` | Overrides the default "Recent Work in &lt;City&gt; &amp; &lt;service area&gt;" |
 | `testimonial_cite` | Text after the reviewer name; Earth City names a company |
 | `home_base` | Arnold only; changes the hero badge and first trust bar item |
 | `intro_heading` | Gold kicker under the H1, when Section 1's headline differs from the H1 |
@@ -332,6 +504,13 @@ Shared company details (phone, email, estimate and warranty link targets) live
 in `firstchoice_location_company()` — update them in that one place. The
 credential list is in `firstchoice_location_trust_badges()`, and the warranty
 terms are in `firstchoice_location_warranty_terms()`.
+
+## Apostrophes
+
+Fields printed with `esc_html()` — `city`, `cta_button`, `pattern_note` — must
+use a literal `’` character, not the `&#8217;` entity, or WordPress escapes the
+ampersand and the raw entity shows on the page. Body copy goes through
+`wp_kses_post()`, where either form is fine.
 
 ## A note on the CSS
 
