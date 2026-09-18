@@ -135,6 +135,7 @@ function firstchoice_location_data() {
 
 	$cities['arnold'] = array(
 		'city'         => 'Arnold',
+		'group'         => 'Jefferson County',
 		'slug'         => 'arnold',
 		'h1'           => 'Roofing Company in Arnold, MO',
 		'home_base'    => true,
@@ -198,6 +199,7 @@ function firstchoice_location_data() {
 
 	$cities['affton'] = array(
 		'city'          => 'Affton',
+		'group'          => 'South St. Louis County',
 		'slug'          => 'affton',
 		'h1'            => 'Roofing Company in Affton, MO',
 		'service_area'  => 'South St. Louis County',
@@ -241,6 +243,7 @@ function firstchoice_location_data() {
 
 	$cities['ballwin'] = array(
 		'city'         => 'Ballwin',
+		'group'         => 'West St. Louis County',
 		'slug'         => 'ballwin',
 		'h1'           => 'Roofing Company in Ballwin, MO',
 		'service_area' => 'West St. Louis County',
@@ -295,6 +298,7 @@ function firstchoice_location_data() {
 
 	$cities['brentwood'] = array(
 		'city'         => 'Brentwood',
+		'group'         => 'Mid &amp; Central St. Louis County',
 		'slug'         => 'brentwood',
 		'h1'           => 'Roofing Company in Brentwood, MO',
 		'service_area' => 'St. Louis County',
@@ -340,6 +344,7 @@ function firstchoice_location_data() {
 
 	$cities['bridgeton'] = array(
 		'city'         => 'Bridgeton',
+		'group'         => 'North &amp; Northwest St. Louis County',
 		'slug'         => 'bridgeton',
 		'h1'           => 'Roofing Company in Bridgeton, MO',
 		'service_area' => 'North St. Louis County',
@@ -385,6 +390,7 @@ function firstchoice_location_data() {
 
 	$cities['chesterfield'] = array(
 		'city'         => 'Chesterfield',
+		'group'         => 'West St. Louis County',
 		'slug'         => 'chesterfield',
 		'h1'           => 'Roofing Company in Chesterfield, MO',
 		'service_area' => 'West St. Louis County',
@@ -430,6 +436,7 @@ function firstchoice_location_data() {
 
 	$cities['clayton'] = array(
 		'city'         => 'Clayton',
+		'group'         => 'Mid &amp; Central St. Louis County',
 		'slug'         => 'clayton',
 		'h1'           => 'Roofing Company in Clayton, MO',
 		'service_area' => 'St. Louis County',
@@ -476,6 +483,7 @@ function firstchoice_location_data() {
 
 	$cities['collinsville'] = array(
 		'city'         => 'Collinsville',
+		'group'         => 'Metro East, Illinois',
 		'slug'         => 'collinsville',
 		'h1'           => 'Roofing Company in Collinsville, IL',
 		'state'        => 'IL',
@@ -523,6 +531,7 @@ function firstchoice_location_data() {
 
 	$cities['crestwood'] = array(
 		'city'         => 'Crestwood',
+		'group'         => 'South St. Louis County',
 		'slug'         => 'crestwood',
 		'h1'           => 'Roofing Company in Crestwood',
 		'service_area' => 'South St. Louis County',
@@ -569,6 +578,7 @@ function firstchoice_location_data() {
 
 	$cities['creve-coeur'] = array(
 		'city'         => 'Creve Coeur',
+		'group'         => 'Mid &amp; Central St. Louis County',
 		'slug'         => 'creve-coeur',
 		'h1'           => 'Roofing Company in Creve Coeur, MO',
 		'service_area' => 'Central St. Louis County',
@@ -615,6 +625,7 @@ function firstchoice_location_data() {
 
 	$cities['des-peres'] = array(
 		'city'         => 'Des Peres',
+		'group'         => 'West St. Louis County',
 		'slug'         => 'des-peres',
 		'h1'           => 'Roofing Company in Des Peres, MO',
 		'service_area' => 'West St. Louis County',
@@ -661,6 +672,7 @@ function firstchoice_location_data() {
 
 	$cities['earth-city'] = array(
 		'city'         => 'Earth City',
+		'group'         => 'North &amp; Northwest St. Louis County',
 		'slug'         => 'earth-city',
 		'h1'           => 'Commercial &amp; Flat Roofing in Earth City, MO',
 		'service_area' => 'St. Louis County',
@@ -720,6 +732,7 @@ function firstchoice_location_data() {
 
 	$cities['ellisville'] = array(
 		'city'         => 'Ellisville',
+		'group'         => 'West St. Louis County',
 		'slug'         => 'ellisville',
 		'h1'           => 'Roofing Company in Ellisville, MO',
 		'service_area' => 'West St. Louis County',
@@ -766,6 +779,7 @@ function firstchoice_location_data() {
 
 	$cities['fenton'] = array(
 		'city'         => 'Fenton',
+		'group'         => 'West St. Louis County',
 		'slug'         => 'fenton',
 		'h1'           => 'Roofing Company in Fenton, MO',
 		'service_area' => 'West St. Louis County',
@@ -821,6 +835,7 @@ function firstchoice_location_data() {
 
 	$cities['hazelwood'] = array(
 		'city'         => 'Hazelwood',
+		'group'         => 'North &amp; Northwest St. Louis County',
 		'slug'         => 'hazelwood',
 		'h1'           => 'Roofing Company in Hazelwood, MO',
 		'service_area' => 'North St. Louis County',
@@ -876,6 +891,7 @@ function firstchoice_location_data() {
 
 	$cities['high-ridge'] = array(
 		'city'         => 'High Ridge',
+		'group'         => 'Jefferson County',
 		'slug'         => 'high-ridge',
 		'h1'           => 'Roofing Company in High Ridge, MO',
 		'service_area' => 'Jefferson County',
@@ -931,6 +947,7 @@ function firstchoice_location_data() {
 
 	$cities['kirkwood'] = array(
 		'city'         => 'Kirkwood',
+		'group'         => 'Mid &amp; Central St. Louis County',
 		'slug'         => 'kirkwood',
 		'h1'           => 'Roofing Company in Kirkwood, MO',
 		'service_area' => 'St. Louis County',
@@ -986,6 +1003,7 @@ function firstchoice_location_data() {
 
 	$cities['ladue'] = array(
 		'city'         => 'Ladue',
+		'group'         => 'Mid &amp; Central St. Louis County',
 		'slug'         => 'ladue',
 		'h1'           => 'Roofing Company in Ladue',
 		'service_area' => 'St. Louis County',
@@ -1041,6 +1059,7 @@ function firstchoice_location_data() {
 
 	$cities['manchester'] = array(
 		'city'         => 'Manchester',
+		'group'         => 'West St. Louis County',
 		'slug'         => 'manchester',
 		'h1'           => 'Roofing Company in Manchester, MO',
 		'service_area' => 'West St. Louis County',
@@ -1087,6 +1106,7 @@ function firstchoice_location_data() {
 
 	$cities['maryland-heights'] = array(
 		'city'         => 'Maryland Heights',
+		'group'         => 'North &amp; Northwest St. Louis County',
 		'slug'         => 'maryland-heights',
 		'h1'           => 'Roofing Company in Maryland Heights, MO',
 		'service_area' => 'St. Louis County',
@@ -1141,6 +1161,7 @@ function firstchoice_location_data() {
 	);
 	$cities['oakville'] = array(
 		'city'         => 'Oakville',
+		'group'         => 'South St. Louis County',
 		'slug'         => 'oakville',
 		'h1'           => 'Roofing Company in Oakville, MO',
 		'service_area' => 'South St. Louis County',
@@ -1195,6 +1216,7 @@ function firstchoice_location_data() {
 
 	$cities['overland'] = array(
 		'city'         => 'Overland',
+		'group'         => 'Mid &amp; Central St. Louis County',
 		'slug'         => 'overland',
 		'h1'           => 'Roofing Company in Overland, MO',
 		'service_area' => 'St. Louis County',
@@ -1249,6 +1271,7 @@ function firstchoice_location_data() {
 
 	$cities['ofallon-il'] = array(
 		'city'         => 'O’Fallon',
+		'group'         => 'Metro East, Illinois',
 		'slug'         => 'ofallon-il',
 		'h1'           => 'Roofing Company in O&#8217;Fallon, IL',
 		'state'        => 'IL',
@@ -1297,6 +1320,7 @@ function firstchoice_location_data() {
 
 	$cities['ofallon-mo'] = array(
 		'city'         => 'O’Fallon',
+		'group'         => 'St. Charles County',
 		'slug'         => 'ofallon-mo',
 		'h1'           => 'Roofing Company in O&#8217;Fallon, MO',
 		'pattern_note' => 'Missouri',
@@ -1344,6 +1368,7 @@ function firstchoice_location_data() {
 
 	$cities['richmond-heights'] = array(
 		'city'         => 'Richmond Heights',
+		'group'         => 'Mid &amp; Central St. Louis County',
 		'slug'         => 'richmond-heights',
 		'h1'           => 'Roofing Company in Richmond Heights, MO',
 		'service_area' => 'St. Louis County',
@@ -1390,6 +1415,7 @@ function firstchoice_location_data() {
 
 	$cities['richmond-heights-commercial'] = array(
 		'city'         => 'Richmond Heights',
+		'group'         => 'Mid &amp; Central St. Louis County',
 		'slug'         => 'richmond-heights-commercial',
 		'h1'           => 'Commercial &amp; Flat Roofing in Richmond Heights, MO',
 		'pattern_note' => 'Commercial focus',
@@ -1450,6 +1476,7 @@ function firstchoice_location_data() {
 
 	$cities['st-charles'] = array(
 		'city'         => 'St. Charles',
+		'group'         => 'St. Charles County',
 		'slug'         => 'st-charles',
 		'h1'           => 'Roofing Company in St. Charles, MO',
 		'service_area' => 'St. Charles County',
@@ -1505,6 +1532,7 @@ function firstchoice_location_data() {
 
 	$cities['st-peters'] = array(
 		'city'         => 'St. Peters',
+		'group'         => 'St. Charles County',
 		'slug'         => 'st-peters',
 		'h1'           => 'Roofing Company in St. Peters, MO',
 		'service_area' => 'St. Charles County',
@@ -1551,6 +1579,7 @@ function firstchoice_location_data() {
 
 	$cities['st-louis'] = array(
 		'city'         => 'St. Louis',
+		'group'         => 'City of St. Louis',
 		'slug'         => 'st-louis',
 		'h1'           => 'Roofing Company in St. Louis, MO',
 		'gallery_heading' => 'Recent Work in the City of St. Louis',
@@ -1607,6 +1636,7 @@ function firstchoice_location_data() {
 
 	$cities['sunset-hills'] = array(
 		'city'         => 'Sunset Hills',
+		'group'         => 'South St. Louis County',
 		'slug'         => 'sunset-hills',
 		'h1'           => 'Roofing Company in Sunset Hills, MO',
 		'service_area' => 'South St. Louis County',
@@ -1653,6 +1683,7 @@ function firstchoice_location_data() {
 
 	$cities['town-and-country'] = array(
 		'city'         => 'Town and Country',
+		'group'         => 'West St. Louis County',
 		'slug'         => 'town-and-country',
 		'h1'           => 'Roofing Company in Town and Country, MO',
 		'service_area' => 'West St. Louis County',
@@ -1707,6 +1738,7 @@ function firstchoice_location_data() {
 
 	$cities['university-city'] = array(
 		'city'         => 'University City',
+		'group'         => 'Mid &amp; Central St. Louis County',
 		'slug'         => 'university-city',
 		'h1'           => 'Roofing Company in University City, MO',
 		'service_area' => 'St. Louis County',
@@ -1762,6 +1794,7 @@ function firstchoice_location_data() {
 
 	$cities['valley-park'] = array(
 		'city'         => 'Valley Park',
+		'group'         => 'West St. Louis County',
 		'slug'         => 'valley-park',
 		'h1'           => 'Roofing Company in Valley Park, MO',
 		'service_area' => 'southwest St. Louis County',
@@ -1817,6 +1850,7 @@ function firstchoice_location_data() {
 
 	$cities['webster-groves'] = array(
 		'city'         => 'Webster Groves',
+		'group'         => 'Mid &amp; Central St. Louis County',
 		'slug'         => 'webster-groves',
 		'h1'           => 'Roofing Company in Webster Groves, MO',
 		'service_area' => 'St. Louis County',
@@ -1872,6 +1906,7 @@ function firstchoice_location_data() {
 
 	$cities['wentzville'] = array(
 		'city'         => 'Wentzville',
+		'group'         => 'St. Charles County',
 		'slug'         => 'wentzville',
 		'h1'           => 'Roofing Company in Wentzville, MO',
 		'service_area' => 'St. Charles County',
@@ -1927,6 +1962,7 @@ function firstchoice_location_data() {
 
 	$cities['wildwood'] = array(
 		'city'         => 'Wildwood',
+		'group'         => 'West St. Louis County',
 		'slug'         => 'wildwood',
 		'h1'           => 'Roofing Company in Wildwood, MO',
 		'service_area' => 'West St. Louis County',
@@ -2018,6 +2054,16 @@ function firstchoice_register_location_patterns() {
 	register_block_pattern_category(
 		'firstchoice-locations',
 		array( 'label' => __( '1st Choice — Location Pages', 'firstchoice' ) )
+	);
+
+	register_block_pattern(
+		'firstchoice/service-areas',
+		array(
+			'title'       => __( 'Service Areas — all locations', 'firstchoice' ),
+			'description' => __( 'Hub page listing every location page, grouped by region. Suggested URL: /service-areas', 'firstchoice' ),
+			'categories'  => array( 'firstchoice-locations' ),
+			'content'     => firstchoice_build_service_areas_pattern(),
+		)
 	);
 
 	foreach ( firstchoice_location_data() as $data ) {
@@ -2548,6 +2594,222 @@ function firstchoice_location_badges() {
 </div>
 <!-- /wp:group -->
 	<?php
+	return ob_get_clean();
+}
+
+/**
+ * Order the service area groups run in on the hub page, closest to home first.
+ * Anything not listed falls to the end, alphabetically.
+ */
+function firstchoice_location_group_order() {
+	return array(
+		'Jefferson County',
+		'City of St. Louis',
+		'South St. Louis County',
+		'West St. Louis County',
+		'Mid &amp; Central St. Louis County',
+		'North &amp; Northwest St. Louis County',
+		'St. Charles County',
+		'Metro East, Illinois',
+	);
+}
+
+/**
+ * Cities keyed by group, in the order above, each group's cities alphabetical.
+ */
+function firstchoice_location_groups() {
+	$grouped = array();
+
+	foreach ( firstchoice_location_data() as $data ) {
+		$group = ! empty( $data['group'] ) ? $data['group'] : $data['service_area'];
+		$grouped[ $group ][] = $data;
+	}
+
+	$ordered = array();
+
+	foreach ( firstchoice_location_group_order() as $group ) {
+		if ( isset( $grouped[ $group ] ) ) {
+			$ordered[ $group ] = $grouped[ $group ];
+			unset( $grouped[ $group ] );
+		}
+	}
+
+	ksort( $grouped );
+
+	foreach ( $grouped as $group => $cities ) {
+		$ordered[ $group ] = $cities;
+	}
+
+	foreach ( $ordered as $group => $cities ) {
+		// Sort on the label shown in the directory, not the H1 — the commercial
+		// pages open with "Commercial &amp; Flat Roofing" and would otherwise
+		// jump to the front instead of sitting beside their own city.
+		usort(
+			$cities,
+			function ( $a, $b ) {
+				return strcmp(
+					firstchoice_location_directory_label( $a ),
+					firstchoice_location_directory_label( $b )
+				);
+			}
+		);
+		$ordered[ $group ] = $cities;
+	}
+
+	return $ordered;
+}
+
+/**
+ * The label a city gets in the directory: its name, plus a short qualifier when
+ * the name alone would be ambiguous or the page is a second one for that city.
+ */
+function firstchoice_location_directory_label( $data ) {
+	$label = $data['city'];
+	$state = firstchoice_location_state( $data );
+
+	if ( 'MO' !== $state ) {
+		$label .= ', ' . $state;
+	}
+
+	if ( ! empty( $data['pattern_note'] ) && false === strpos( $data['pattern_note'], 'Missouri' ) && false === strpos( $data['pattern_note'], 'Illinois' ) ) {
+		$label .= ' — ' . $data['pattern_note'];
+	}
+
+	return $label;
+}
+
+/**
+ * Service Areas hub — one card per location page, grouped by region.
+ *
+ * Built from the same data as the location pages, so a new city appears here
+ * as soon as it is added, with no separate list to keep in step.
+ */
+function firstchoice_build_service_areas_pattern() {
+	$company = firstchoice_location_company();
+	$groups  = firstchoice_location_groups();
+	$total   = 0;
+
+	foreach ( $groups as $cities ) {
+		$total += count( $cities );
+	}
+
+	$trust = array(
+		'Based in Arnold, MO',
+		'Free storm damage inspections',
+		'Insurance claim coordination',
+		'Licensed &amp; insured',
+		sprintf( '%d service areas', $total ),
+	);
+
+	ob_start();
+	?>
+<!-- wp:group {"className":"location-hero alignfull","layout":{"type":"constrained"}} -->
+<div class="wp-block-group alignfull location-hero">
+	<div class="wp-block-group__inner-container">
+		<!-- wp:paragraph {"className":"location-hero-badge"} -->
+		<p class="location-hero-badge">Serving the St. Louis metro</p>
+		<!-- /wp:paragraph -->
+
+		<!-- wp:heading {"level":1,"className":"location-hero-title"} -->
+		<h1 class="wp-block-heading location-hero-title">Service Areas</h1>
+		<!-- /wp:heading -->
+
+		<!-- wp:paragraph {"className":"location-hero-intro"} -->
+		<p class="location-hero-intro">1st Choice Roofing and Construction serves homeowners and commercial property owners across the St. Louis region — from our home base in Arnold through Jefferson County, St. Louis County and the city, St. Charles County, and across the river into the Metro East. Find your community below.</p>
+		<!-- /wp:paragraph -->
+
+		<!-- wp:buttons {"className":"location-hero-buttons"} -->
+		<div class="wp-block-buttons location-hero-buttons">
+			<!-- wp:button {"className":"btn-primary-red"} -->
+			<div class="wp-block-button btn-primary-red"><a class="wp-block-button__link wp-element-button" href="<?php echo esc_url( $company['estimate'] ); ?>">Request Your Free Estimate</a></div>
+			<!-- /wp:button -->
+			<!-- wp:button {"className":"btn-outline-white"} -->
+			<div class="wp-block-button btn-outline-white"><a class="wp-block-button__link wp-element-button" href="tel:<?php echo esc_attr( $company['phone_href'] ); ?>"><?php echo esc_html( $company['phone'] ); ?></a></div>
+			<!-- /wp:button -->
+		</div>
+		<!-- /wp:buttons -->
+	</div>
+</div>
+<!-- /wp:group -->
+
+<!-- wp:group {"className":"location-trustbar alignfull","layout":{"type":"constrained"}} -->
+<div class="wp-block-group alignfull location-trustbar">
+	<div class="wp-block-group__inner-container">
+		<!-- wp:group {"className":"trustbar-items","layout":{"type":"flex","flexWrap":"wrap"}} -->
+		<div class="wp-block-group trustbar-items">
+			<?php foreach ( $trust as $item ) : ?>
+			<!-- wp:paragraph {"className":"trustbar-item"} -->
+			<p class="trustbar-item"><?php echo wp_kses_post( $item ); ?></p>
+			<!-- /wp:paragraph -->
+			<?php endforeach; ?>
+		</div>
+		<!-- /wp:group -->
+	</div>
+</div>
+<!-- /wp:group -->
+
+<!-- wp:group {"className":"service-areas alignfull","layout":{"type":"constrained"}} -->
+<div class="wp-block-group alignfull service-areas">
+	<div class="wp-block-group__inner-container">
+		<!-- wp:paragraph {"align":"center","className":"section-eyebrow"} -->
+		<p class="has-text-align-center section-eyebrow">Where we work</p>
+		<!-- /wp:paragraph -->
+
+		<!-- wp:heading {"textAlign":"center"} -->
+		<h2 class="wp-block-heading has-text-align-center">Communities We Serve</h2>
+		<!-- /wp:heading -->
+
+		<!-- wp:paragraph {"align":"center","className":"service-areas-intro"} -->
+		<p class="has-text-align-center service-areas-intro">Every city below has its own page covering the roofing work we do there. Don&#8217;t see your community? Call us at <a href="tel:<?php echo esc_attr( $company['phone_href'] ); ?>"><?php echo esc_html( $company['phone'] ); ?></a> — we serve the wider St. Louis area too.</p>
+		<!-- /wp:paragraph -->
+
+		<?php foreach ( $groups as $group => $cities ) : ?>
+		<!-- wp:group {"className":"service-area-group","layout":{"type":"constrained"}} -->
+		<div class="wp-block-group service-area-group">
+			<!-- wp:heading {"level":3,"className":"service-area-group-title"} -->
+			<h3 class="wp-block-heading service-area-group-title"><?php echo wp_kses_post( $group ); ?></h3>
+			<!-- /wp:heading -->
+
+			<div class="service-area-list">
+				<?php foreach ( $cities as $city ) : ?>
+				<a class="service-area-link" href="<?php echo esc_url( $city['seo']['slug'] ); ?>"><?php echo esc_html( firstchoice_location_directory_label( $city ) ); ?></a>
+				<?php endforeach; ?>
+			</div>
+		</div>
+		<!-- /wp:group -->
+		<?php endforeach; ?>
+	</div>
+</div>
+<!-- /wp:group -->
+
+<!-- wp:group {"className":"location-cta alignfull","layout":{"type":"constrained"}} -->
+<div class="wp-block-group alignfull location-cta">
+	<div class="wp-block-group__inner-container">
+		<!-- wp:heading {"textAlign":"center"} -->
+		<h2 class="wp-block-heading has-text-align-center">Not Sure If We Cover Your Area?</h2>
+		<!-- /wp:heading -->
+
+		<!-- wp:paragraph {"align":"center"} -->
+		<p class="has-text-align-center">We work throughout the greater St. Louis region, and the list above is where we work most often. Give us a call and we&#8217;ll tell you straight away whether we can get to you — and book your free inspection while we&#8217;re at it.</p>
+		<!-- /wp:paragraph -->
+
+		<!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
+		<div class="wp-block-buttons">
+			<!-- wp:button {"className":"btn-primary-red"} -->
+			<div class="wp-block-button btn-primary-red"><a class="wp-block-button__link wp-element-button" href="<?php echo esc_url( $company['estimate'] ); ?>">Request Your Free Estimate</a></div>
+			<!-- /wp:button -->
+		</div>
+		<!-- /wp:buttons -->
+
+		<!-- wp:paragraph {"align":"center","className":"location-cta-phone"} -->
+		<p class="has-text-align-center location-cta-phone">Call us: <a href="tel:<?php echo esc_attr( $company['phone_href'] ); ?>"><?php echo esc_html( $company['phone'] ); ?></a>  |  Serving the greater St. Louis area</p>
+		<!-- /wp:paragraph -->
+	</div>
+</div>
+<!-- /wp:group -->
+
+<?php
+	echo firstchoice_location_badges(); // phpcs:ignore WordPress.Security.EscapeOutput
 	return ob_get_clean();
 }
 

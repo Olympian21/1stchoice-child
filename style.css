@@ -1294,6 +1294,63 @@ p.warranty-term-badge:not(.alignfull):not(.alignwide) {
 	min-height: 150px;
 }
 
+/* SERVICE AREAS HUB — directory of every location page */
+.service-areas {
+	background: var(--white);
+}
+.service-areas h2 {
+	margin-top: 0;
+}
+.service-areas-intro {
+	max-width: 46em;
+	margin-left: auto;
+	margin-right: auto;
+	color: var(--grey);
+}
+.service-area-group {
+	margin-top: calc( 2 * var(--gap));
+}
+.service-area-group:first-of-type {
+	margin-top: calc( 1.5 * var(--gap));
+}
+h3.service-area-group-title {
+	font-size: var(--font-size-sm);
+	text-transform: uppercase;
+	letter-spacing: 1.2px;
+	color: var(--grey-dark);
+	padding-bottom: calc( var(--gap) * 0.4 );
+	margin-bottom: var(--gap);
+	border-bottom: 2px solid var(--red);
+}
+.service-area-list {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+	gap: calc( var(--gap) * 0.5 );
+}
+a.service-area-link {
+	display: block;
+	box-sizing: border-box;
+	width: auto;
+	background: var(--grey-vlight);
+	border: 1px solid var(--grey-light);
+	border-left: 3px solid var(--red);
+	border-radius: 3px;
+	padding: calc( var(--gap) * 0.6 ) calc( var(--gap) * 0.75 );
+	font-weight: 700;
+	color: var(--grey-dark);
+	text-decoration: none;
+}
+a.service-area-link:hover,
+a.service-area-link:focus {
+	background: var(--white);
+	border-color: var(--red);
+	color: var(--red);
+}
+a.service-area-link:focus-visible {
+	outline: 2px solid var(--red);
+	outline-offset: 2px;
+}
+
 /* TRUST BADGE BAR */
 .location-badges {
 	background: var(--white);

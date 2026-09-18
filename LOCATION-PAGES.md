@@ -472,6 +472,58 @@ Its doc reads "a expanding base" in the services intro; corrected to "an expandi
 | Meta description | 1st Choice Roofing and Construction serves Wildwood, MO with expert residential and commercial roofing — repairs, replacements, and storm damage service. Free estimates. |
 | Keywords | roofing company Wildwood MO, commercial roofing Wildwood, roof repair Wildwood, roof replacement Wildwood MO, Wildwood roofing contractor, storm damage roofing Wildwood |
 
+## The Service Areas hub page
+
+`Service Areas — all locations` is a pattern like any other, but it builds its
+directory from the same `firstchoice_location_data()` the city pages use. Add a
+city and it appears here automatically — there is no second list to maintain.
+
+Build it the same way as a city page:
+
+1. New page, title **Service Areas**, slug **`/service-areas`**.
+2. Insert the `Service Areas — all locations` pattern.
+3. Fill in Yoast. Suggested title: *Service Areas | 1st Choice Roofing and
+   Construction*. Suggested description: *1st Choice Roofing and Construction
+   serves 36 communities across Jefferson County, St. Louis County and the city,
+   St. Charles County, and the Metro East. Find your community.*
+
+### Grouping
+
+Cities are grouped by a `group` key, ordered by
+`firstchoice_location_group_order()` — closest to home first — with cities
+alphabetical inside each group. The groups are:
+
+| Group | Cities |
+|---|---|
+| Jefferson County | 2 |
+| City of St. Louis | 1 |
+| South St. Louis County | 4 |
+| West St. Louis County | 9 |
+| Mid &amp; Central St. Louis County | 10 |
+| North &amp; Northwest St. Louis County | 4 |
+| St. Charles County | 4 |
+| Metro East, Illinois | 2 |
+
+The county names come from the content docs, but **which group each city falls
+into is an editorial judgement, not something the docs state** — particularly
+the "Mid &amp; Central" and "North &amp; Northwest" groupings. Change any city's
+`group` value to re-file it; the hub and its ordering follow automatically.
+
+Cities outside Missouri get their state appended in the directory, and the
+second Richmond Heights page is labelled with its `pattern_note`, so the two
+entries are distinguishable.
+
+### Putting the pages in the menu
+
+The location pages keep their own top-level slugs (`/roofing-arnold-mo`, not
+`/service-areas/roofing-arnold-mo`), because those slugs are fixed by the SEO
+fields in the tables below. **Do not set the location pages' Page Parent to
+Service Areas** — that would rewrite every URL and break the SEO plan.
+
+Nest them in the menu instead: **Appearance → Menus**, add the Service Areas
+page, then add the location pages beneath it and drag each one right to indent
+it as a sub-item. The menu structure is independent of the URL structure.
+
 ## Adding another city
 
 Add one entry to `firstchoice_location_data()` in
@@ -490,6 +542,7 @@ Optional keys that absorb the variation between content docs:
 | `cta_button` | Closing CTA and hero button label; the commercial pages use their own |
 | `pattern_note` | Appended to the pattern name, to tell two patterns for one city apart |
 | `gallery_heading` | Overrides the default "Recent Work in &lt;City&gt; &amp; &lt;service area&gt;" |
+| `group` | Which region the city files under on the Service Areas hub; defaults to `service_area` |
 | `testimonial_cite` | Text after the reviewer name; Earth City names a company |
 | `home_base` | Arnold only; changes the hero badge and first trust bar item |
 | `intro_heading` | Gold kicker under the H1, when Section 1's headline differs from the H1 |
