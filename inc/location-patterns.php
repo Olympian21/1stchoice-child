@@ -1994,20 +1994,26 @@ function firstchoice_location_state( $data ) {
 /**
  * Register one block pattern per service area.
  *
- * Patterns are only ever used in the block editor, and building twenty-plus
- * of them on a front-end request would be wasted work, so registration is
- * limited to admin requests and the REST endpoint the editor loads them from.
+ * Patterns are only ever used in the block editor, so this is hooked to admin
+ * page loads and to rest_api_init rather than every front-end request. It has
+ * to be both: the editor's inserter fetches patterns from the REST endpoint,
+ * where is_admin() is false, and REST_REQUEST is not yet defined at init —
+ * it is defined on parse_request, which runs later. Gating on REST_REQUEST at
+ * init silently registers nothing for the editor.
  */
 function firstchoice_register_location_patterns() {
 	if ( ! function_exists( 'register_block_pattern' ) ) {
 		return;
 	}
 
-	$is_editor_request = is_admin() || ( defined( 'REST_REQUEST' ) && REST_REQUEST );
+	// Registering twice is harmless but wasteful; this runs on two hooks.
+	static $registered = false;
 
-	if ( ! $is_editor_request ) {
+	if ( $registered ) {
 		return;
 	}
+
+	$registered = true;
 
 	register_block_pattern_category(
 		'firstchoice-locations',
@@ -2037,7 +2043,18 @@ function firstchoice_register_location_patterns() {
 		);
 	}
 }
-add_action( 'init', 'firstchoice_register_location_patterns' );
+/**
+ * Admin screens: register on init, but only for admin requests.
+ */
+function firstchoice_register_location_patterns_admin() {
+	if ( is_admin() ) {
+		firstchoice_register_location_patterns();
+	}
+}
+add_action( 'init', 'firstchoice_register_location_patterns_admin' );
+
+// The block editor's inserter loads patterns over REST, not from the admin page.
+add_action( 'rest_api_init', 'firstchoice_register_location_patterns' );
 
 /**
  * Build the complete block markup for one location page.
