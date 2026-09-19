@@ -2679,6 +2679,17 @@ function firstchoice_location_directory_label( $data ) {
 }
 
 /**
+ * Roof mark used on the Service Areas cards.
+ */
+function firstchoice_location_roof_icon() {
+	return '<svg viewBox="0 0 48 48" width="34" height="34" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">'
+		. '<path d="M4 24 24 7l20 17" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>'
+		. '<path d="M10 22v18h28V22" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>'
+		. '<path d="M20 40V29h8v11" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/>'
+		. '</svg>';
+}
+
+/**
  * Service Areas hub — one card per location page, grouped by region.
  *
  * Built from the same data as the location pages, so a new city appears here
@@ -2770,9 +2781,13 @@ function firstchoice_build_service_areas_pattern() {
 			<h3 class="wp-block-heading service-area-group-title"><?php echo wp_kses_post( $group ); ?></h3>
 			<!-- /wp:heading -->
 
-			<div class="service-area-list">
+			<div class="service-area-grid">
 				<?php foreach ( $cities as $city ) : ?>
-				<a class="service-area-link" href="<?php echo esc_url( $city['seo']['slug'] ); ?>"><?php echo esc_html( firstchoice_location_directory_label( $city ) ); ?></a>
+				<a class="service-area-card" href="<?php echo esc_url( $city['seo']['slug'] ); ?>">
+					<span class="service-area-card-icon"><?php echo firstchoice_location_roof_icon(); // phpcs:ignore WordPress.Security.EscapeOutput ?></span>
+					<span class="service-area-card-name"><?php echo esc_html( firstchoice_location_directory_label( $city ) ); ?></span>
+					<span class="service-area-card-cta">Learn more</span>
+				</a>
 				<?php endforeach; ?>
 			</div>
 		</div>
