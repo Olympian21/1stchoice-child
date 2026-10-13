@@ -2679,6 +2679,34 @@ function firstchoice_location_directory_label( $data ) {
 }
 
 /**
+ * The URL a directory card points at.
+ *
+ * The configured slug is what we would like the page to live at, but WordPress
+ * derives a slug from the page title unless someone overrides it, so a page
+ * titled "Roofing Company in Creve Coeur, MO" ends up at
+ * /roofing-company-in-creve-coeur-mo/ instead. Look for the real page first —
+ * by the configured slug, then by the H1 the page was titled with — and only
+ * fall back to the configured slug when neither turns one up.
+ */
+function firstchoice_location_page_url( $data ) {
+	$slug = ltrim( $data['seo']['slug'], '/' );
+
+	if ( function_exists( 'get_page_by_path' ) ) {
+		$page = get_page_by_path( $slug );
+
+		if ( ! $page && function_exists( 'get_page_by_title' ) && ! empty( $data['h1'] ) ) {
+			$page = get_page_by_title( $data['h1'], OBJECT, 'page' );
+		}
+
+		if ( $page && 'publish' === get_post_status( $page ) ) {
+			return get_permalink( $page );
+		}
+	}
+
+	return home_url( '/' . $slug . '/' );
+}
+
+/**
  * Roof mark used on the Service Areas cards.
  */
 function firstchoice_location_roof_icon() {
@@ -2783,7 +2811,7 @@ function firstchoice_build_service_areas_pattern() {
 
 			<div class="service-area-grid">
 				<?php foreach ( $cities as $city ) : ?>
-				<a class="service-area-card" href="<?php echo esc_url( $city['seo']['slug'] ); ?>">
+				<a class="service-area-card" href="<?php echo esc_url( firstchoice_location_page_url( $city ) ); ?>">
 					<span class="service-area-card-icon"><?php echo firstchoice_location_roof_icon(); // phpcs:ignore WordPress.Security.EscapeOutput ?></span>
 					<span class="service-area-card-name"><?php echo esc_html( firstchoice_location_directory_label( $city ) ); ?></span>
 					<span class="service-area-card-cta">Learn more</span>
