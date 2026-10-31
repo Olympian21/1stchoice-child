@@ -390,6 +390,11 @@ function firstchoice_location_data() {
 
 	$cities['chesterfield'] = array(
 		'city'         => 'Chesterfield',
+		'gallery'      => array(
+			 array( 'file' => 'chesterfield-1.webp', 'alt' => 'Aerial view of a completed architectural shingle roof replacement on a two-story home in Chesterfield, MO' ),
+			 array( 'file' => 'chesterfield-2.webp', 'alt' => 'Side angle of the finished roof and dormers on a Chesterfield, MO home' ),
+			 array( 'file' => 'chesterfield-3.webp', 'alt' => 'Front elevation of a Chesterfield, MO home after a full roof replacement by 1st Choice' ),
+		),
 		'group'         => 'West St. Louis County',
 		'slug'         => 'chesterfield',
 		'h1'           => 'Roofing Company in Chesterfield, MO',
@@ -1320,6 +1325,11 @@ function firstchoice_location_data() {
 
 	$cities['ofallon-mo'] = array(
 		'city'         => 'O’Fallon',
+		'gallery'      => array(
+			 array( 'file' => 'ofallon-1.webp', 'alt' => 'Completed roof replacement on a ranch home in O’Fallon, MO' ),
+			 array( 'file' => 'ofallon-2.webp', 'alt' => 'New shingle roof on a two-story brick home in O’Fallon, MO' ),
+			 array( 'file' => 'ofallon-3.webp', 'alt' => 'Aerial view of a finished roof on a brick ranch in O’Fallon, MO' ),
+		),
 		'group'         => 'St. Charles County',
 		'slug'         => 'ofallon-mo',
 		'h1'           => 'Roofing Company in O&#8217;Fallon, MO',
@@ -1476,6 +1486,11 @@ function firstchoice_location_data() {
 
 	$cities['st-charles'] = array(
 		'city'         => 'St. Charles',
+		'gallery'      => array(
+			 array( 'file' => 'stcharles-1.webp', 'alt' => 'Completed roof replacement on a home with a covered front porch in St. Charles, MO' ),
+			 array( 'file' => 'stcharles-2.webp', 'alt' => 'New roof and dormer work on a St. Charles, MO home' ),
+			 array( 'file' => 'stcharles-3.webp', 'alt' => 'Finished shingle roof on a two-story home in St. Charles, MO' ),
+		),
 		'group'         => 'St. Charles County',
 		'slug'         => 'st-charles',
 		'h1'           => 'Roofing Company in St. Charles, MO',
@@ -1906,6 +1921,10 @@ function firstchoice_location_data() {
 
 	$cities['wentzville'] = array(
 		'city'         => 'Wentzville',
+		'gallery'      => array(
+			 array( 'file' => 'wentzville-1.webp', 'alt' => 'Completed roof replacement on a brick and stone home in Wentzville, MO' ),
+			 array( 'file' => 'wentzville-2.webp', 'alt' => 'Aerial view of a finished shingle roof on a Wentzville, MO home' ),
+		),
 		'group'         => 'St. Charles County',
 		'slug'         => 'wentzville',
 		'h1'           => 'Roofing Company in Wentzville, MO',
@@ -1962,6 +1981,10 @@ function firstchoice_location_data() {
 
 	$cities['wildwood'] = array(
 		'city'         => 'Wildwood',
+		'gallery'      => array(
+			 array( 'file' => 'wildwood-1.webp', 'alt' => 'Aerial view of a completed roof replacement on a large home in Wildwood, MO' ),
+			 array( 'file' => 'wildwood-2.webp', 'alt' => 'Finished hip roof and chimney on a Wildwood, MO home' ),
+		),
 		'group'         => 'West St. Louis County',
 		'slug'         => 'wildwood',
 		'h1'           => 'Roofing Company in Wildwood, MO',
@@ -2534,7 +2557,8 @@ function firstchoice_location_testimonial( $data ) {
  * Recent work gallery — dashed placeholders until real job photos are added.
  */
 function firstchoice_location_gallery( $data ) {
-	$slots = firstchoice_location_gallery_slots( $data['city'] );
+	$photos = ! empty( $data['gallery'] ) ? $data['gallery'] : array();
+	$slots  = $photos ? array() : firstchoice_location_gallery_slots( $data['city'] );
 
 	$gallery_heading = ! empty( $data['gallery_heading'] )
 		? $data['gallery_heading']
@@ -2549,12 +2573,19 @@ function firstchoice_location_gallery( $data ) {
 		<h2 class="wp-block-heading has-text-align-center"><?php echo wp_kses_post( $gallery_heading ); ?></h2>
 		<!-- /wp:heading -->
 
+		<?php if ( ! $photos ) : ?>
 		<!-- wp:paragraph {"align":"center","className":"gallery-note"} -->
 		<p class="has-text-align-center gallery-note">Placeholder gallery — swap in real completed job photos from <?php echo esc_html( $data['city'] ); ?>-area customers before publishing.</p>
 		<!-- /wp:paragraph -->
+		<?php endif; ?>
 
-		<!-- wp:group {"className":"gallery-grid","layout":{"type":"flex","flexWrap":"wrap","justifyContent":"center"}} -->
-		<div class="wp-block-group gallery-grid">
+		<!-- wp:group {"className":"gallery-grid is-count-<?php echo esc_attr( $photos ? count( $photos ) : count( $slots ) ); ?>","layout":{"type":"flex","flexWrap":"wrap","justifyContent":"center"}} -->
+		<div class="wp-block-group gallery-grid is-count-<?php echo esc_attr( $photos ? count( $photos ) : count( $slots ) ); ?>">
+			<?php foreach ( $photos as $photo ) : ?>
+			<!-- wp:image {"className":"gallery-photo"} -->
+			<figure class="wp-block-image gallery-photo"><img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/inc/img/locations/' . $photo['file'] ); ?>" alt="<?php echo esc_attr( $photo['alt'] ); ?>" loading="lazy" decoding="async" width="1200" height="800" /></figure>
+			<!-- /wp:image -->
+			<?php endforeach; ?>
 			<?php foreach ( $slots as $slot ) : ?>
 			<div class="gallery-slot is-<?php echo esc_attr( $slot['size'] ); ?>"><span><?php echo esc_html( $slot['caption'] ); ?></span></div>
 			<?php endforeach; ?>

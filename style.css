@@ -1294,6 +1294,26 @@ p.warranty-term-badge:not(.alignfull):not(.alignwide) {
 	min-height: 150px;
 }
 
+/* Real job photos. The grid carries an is-count-N class so a city with two or
+   three photos fills the row evenly instead of leaving a ragged gap. */
+figure.gallery-photo:not(.alignfull):not(.alignwide) {
+	flex: 1 1 clamp( 260px, calc( 50% - var(--gap)), 520px);
+	margin: 0;
+	border-radius: 4px;
+	overflow: hidden;
+	box-shadow: 0 2px 10px rgba( 0, 0, 0, 0.12 );
+}
+.gallery-grid.is-count-3 figure.gallery-photo:not(.alignfull):not(.alignwide) {
+	flex-basis: clamp( 240px, calc( 33.333% - var(--gap)), 400px);
+}
+.gallery-photo img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	min-height: 190px;
+	object-fit: cover;
+}
+
 /* SERVICE AREAS HUB — directory of every location page */
 .service-areas {
 	background: var(--white);
