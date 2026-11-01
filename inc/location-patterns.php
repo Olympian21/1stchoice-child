@@ -1329,6 +1329,7 @@ function firstchoice_location_data() {
 			 array( 'file' => 'ofallon-1.webp', 'alt' => 'Completed roof replacement on a ranch home in O’Fallon, MO' ),
 			 array( 'file' => 'ofallon-2.webp', 'alt' => 'New shingle roof on a two-story brick home in O’Fallon, MO' ),
 			 array( 'file' => 'ofallon-3.webp', 'alt' => 'Aerial view of a finished roof on a brick ranch in O’Fallon, MO' ),
+			 array( 'file' => 'stpeters-5.webp', 'alt' => 'Completed roof replacement on a brick home in nearby St. Peters, MO, St. Charles County' ),
 		),
 		'group'         => 'St. Charles County',
 		'slug'         => 'ofallon-mo',
@@ -1490,6 +1491,7 @@ function firstchoice_location_data() {
 			 array( 'file' => 'stcharles-1.webp', 'alt' => 'Completed roof replacement on a home with a covered front porch in St. Charles, MO' ),
 			 array( 'file' => 'stcharles-2.webp', 'alt' => 'New roof and dormer work on a St. Charles, MO home' ),
 			 array( 'file' => 'stcharles-3.webp', 'alt' => 'Finished shingle roof on a two-story home in St. Charles, MO' ),
+			 array( 'file' => 'stpeters-6.webp', 'alt' => 'Completed roof replacement on a split-level home in nearby St. Peters, MO, St. Charles County' ),
 		),
 		'group'         => 'St. Charles County',
 		'slug'         => 'st-charles',
@@ -1547,6 +1549,12 @@ function firstchoice_location_data() {
 
 	$cities['st-peters'] = array(
 		'city'         => 'St. Peters',
+		'gallery'      => array(
+			 array( 'file' => 'stpeters-1.webp', 'alt' => 'Aerial view of a completed roof replacement on a split-level home in St. Peters, MO' ),
+			 array( 'file' => 'stpeters-2.webp', 'alt' => 'New shingle roof on a two-story brick home in St. Peters, MO' ),
+			 array( 'file' => 'stpeters-3.webp', 'alt' => 'Completed roof replacement on a navy split-level home in St. Peters, MO' ),
+			 array( 'file' => 'stpeters-4.webp', 'alt' => 'Side angle of a finished roof on a St. Peters, MO home' ),
+		),
 		'group'         => 'St. Charles County',
 		'slug'         => 'st-peters',
 		'h1'           => 'Roofing Company in St. Peters, MO',
@@ -1924,6 +1932,8 @@ function firstchoice_location_data() {
 		'gallery'      => array(
 			 array( 'file' => 'wentzville-1.webp', 'alt' => 'Completed roof replacement on a brick and stone home in Wentzville, MO' ),
 			 array( 'file' => 'wentzville-2.webp', 'alt' => 'Aerial view of a finished shingle roof on a Wentzville, MO home' ),
+			 array( 'file' => 'wentzville-3.webp', 'alt' => 'Overhead view of a newly installed shingle roof on a Wentzville, MO home' ),
+			 array( 'file' => 'wentzville-4.webp', 'alt' => 'Completed roof replacement on a stone-front home in Wentzville, MO' ),
 		),
 		'group'         => 'St. Charles County',
 		'slug'         => 'wentzville',
