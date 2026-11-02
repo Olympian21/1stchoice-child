@@ -737,6 +737,11 @@ function firstchoice_location_data() {
 
 	$cities['ellisville'] = array(
 		'city'         => 'Ellisville',
+		'gallery'      => array(
+			 array( 'file' => 'ellisville-1.webp', 'alt' => 'Completed brown architectural shingle roof replacement on a two-story home in Ellisville, MO' ),
+			 array( 'file' => 'ellisville-2.webp', 'alt' => 'New shingle roof on a brick ranch home in Ellisville, MO' ),
+			 array( 'file' => 'ellisville-3.webp', 'alt' => 'Aerial view of a finished roof replacement on a brick home in Ellisville, MO' ),
+		),
 		'group'         => 'West St. Louis County',
 		'slug'         => 'ellisville',
 		'h1'           => 'Roofing Company in Ellisville, MO',
