@@ -913,6 +913,50 @@ div.warranty-images:not(.alignfull):not(.alignwide) {
 	margin-top: calc( 1.5 * var(--gap));
 	flex-wrap: wrap;
 }
+/* Hero photo. The figure fills the band behind the copy; its ::after lays a
+   dark scrim over the photo so the white text keeps its contrast. */
+/* Keyed off the photo itself rather than a class on the hero, so the layout
+   cannot desync from the markup, and forced past the theme's own image and
+   width rules, which are broad and load after this file. */
+.location-hero:has( figure.location-hero-photo ) {
+	background-image: none;
+}
+.location-hero figure.location-hero-photo,
+.location-hero figure.location-hero-photo:not(.alignfull):not(.alignwide) {
+	position: absolute !important;
+	top: 0 !important;
+	right: 0 !important;
+	bottom: 0 !important;
+	left: 0 !important;
+	width: 100% !important;
+	height: 100% !important;
+	max-width: none !important;
+	margin: 0 !important;
+	padding: 0 !important;
+	overflow: hidden;
+	border-radius: 0;
+	z-index: 0;
+}
+.location-hero figure.location-hero-photo img {
+	display: block;
+	width: 100% !important;
+	height: 100% !important;
+	max-width: none !important;
+	margin: 0 !important;
+	object-fit: cover;
+	object-position: center 40%;
+	border-radius: 0;
+}
+.location-hero figure.location-hero-photo::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background: linear-gradient( 100deg, rgba( 26, 26, 26, 0.92 ) 0%, rgba( 26, 26, 26, 0.78 ) 45%, rgba( 26, 26, 26, 0.45 ) 100% );
+}
+.location-hero > .wp-block-group__inner-container > *:not(.location-hero-photo) {
+	position: relative;
+	z-index: 1;
+}
 .location-hero-photo-note {
 	font-size: var(--font-size-sm);
 	text-transform: uppercase;
@@ -1292,6 +1336,124 @@ p.warranty-term-badge:not(.alignfull):not(.alignwide) {
 .gallery-slot.is-narrow {
 	flex: 1 1 clamp( 220px, calc( 33% - var(--gap)), 340px);
 	min-height: 150px;
+}
+
+/* Real job photos. The grid carries an is-count-N class so a city with two or
+   three photos fills the row evenly instead of leaving a ragged gap. */
+figure.gallery-photo:not(.alignfull):not(.alignwide) {
+	flex: 1 1 clamp( 260px, calc( 50% - var(--gap)), 520px);
+	margin: 0;
+	border-radius: 4px;
+	overflow: hidden;
+	box-shadow: 0 2px 10px rgba( 0, 0, 0, 0.12 );
+}
+.gallery-grid.is-count-3 figure.gallery-photo:not(.alignfull):not(.alignwide) {
+	flex-basis: clamp( 240px, calc( 33.333% - var(--gap)), 400px);
+}
+.gallery-photo img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	min-height: 190px;
+	object-fit: cover;
+}
+
+/* SERVICE AREAS HUB — directory of every location page */
+.service-areas {
+	background: var(--white);
+}
+.service-areas h2 {
+	margin-top: 0;
+}
+.service-areas-intro {
+	max-width: 46em;
+	margin-left: auto;
+	margin-right: auto;
+	color: var(--grey);
+}
+.service-area-group {
+	margin-top: calc( 2 * var(--gap));
+}
+.service-area-group:first-of-type {
+	margin-top: calc( 1.5 * var(--gap));
+}
+h3.service-area-group-title {
+	font-size: var(--font-size-sm);
+	text-transform: uppercase;
+	letter-spacing: 1.2px;
+	color: var(--grey-dark);
+	padding-bottom: calc( var(--gap) * 0.4 );
+	margin-bottom: var(--gap);
+	border-bottom: 2px solid var(--red);
+}
+
+/* Uniform cards, four across on a wide screen, reflowing down to one. */
+.service-area-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+	gap: var(--gap);
+}
+a.service-area-card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	gap: calc( var(--gap) * 0.5 );
+	box-sizing: border-box;
+	width: auto;
+	height: 100%;
+	background: var(--white);
+	border: 1px solid var(--grey-light);
+	border-top: 3px solid var(--red);
+	border-radius: 3px;
+	padding: calc( var(--gap) * 1.1 ) var(--gap);
+	text-align: center;
+	text-decoration: none;
+	color: var(--grey-dark);
+}
+a.service-area-card:hover,
+a.service-area-card:focus {
+	border-color: var(--grey-light);
+	border-top-color: var(--red);
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.09);
+	color: var(--grey-dark);
+}
+a.service-area-card:focus-visible {
+	outline: 2px solid var(--red);
+	outline-offset: 2px;
+}
+.service-area-card-icon {
+	display: block;
+	color: var(--red);
+	line-height: 0;
+}
+.service-area-card-name {
+	display: block;
+	font-weight: 700;
+	line-height: 1.3;
+	color: var(--grey-vdark);
+	/* Keeps every card's button on the same baseline when a name wraps. */
+	flex-grow: 1;
+}
+.service-area-card-cta {
+	display: inline-block;
+	background: var(--red);
+	color: var(--white);
+	font-size: var(--font-size-sm);
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.6px;
+	border-radius: var(--border-radius);
+	padding: 0.45em 1.1em;
+}
+a.service-area-card:hover .service-area-card-cta,
+a.service-area-card:focus .service-area-card-cta {
+	background: var(--link-hover-color);
+}
+@media screen and (max-width: 480px) {
+	.service-area-grid {
+		grid-template-columns: 1fr;
+	}
 }
 
 /* TRUST BADGE BAR */
