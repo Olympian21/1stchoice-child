@@ -135,6 +135,12 @@ function firstchoice_location_data() {
 
 	$cities['arnold'] = array(
 		'city'         => 'Arnold',
+		'gallery'      => array(
+			 array( 'file' => 'jefferson-1.webp', 'alt' => 'Completed roof replacement on a two-story brick home in Jefferson County, MO' ),
+			 array( 'file' => 'jefferson-2.webp', 'alt' => 'Overhead view of a new shingle roof on a brick ranch home with a detached garage in Jefferson County, MO' ),
+			 array( 'file' => 'jefferson-3.webp', 'alt' => 'Aerial view of a finished roof replacement on a two-story brick home in Jefferson County, MO' ),
+			 array( 'file' => 'jefferson-4.webp', 'alt' => 'Completed roof replacement on a brick ranch home in Jefferson County, MO' ),
+		),
 		'group'         => 'Jefferson County',
 		'slug'         => 'arnold',
 		'h1'           => 'Roofing Company in Arnold, MO',
@@ -921,6 +927,12 @@ function firstchoice_location_data() {
 
 	$cities['high-ridge'] = array(
 		'city'         => 'High Ridge',
+		'gallery'      => array(
+			 array( 'file' => 'jefferson-1.webp', 'alt' => 'Completed roof replacement on a two-story brick home in Jefferson County, MO' ),
+			 array( 'file' => 'jefferson-2.webp', 'alt' => 'Overhead view of a new shingle roof on a brick ranch home with a detached garage in Jefferson County, MO' ),
+			 array( 'file' => 'jefferson-3.webp', 'alt' => 'Aerial view of a finished roof replacement on a two-story brick home in Jefferson County, MO' ),
+			 array( 'file' => 'jefferson-4.webp', 'alt' => 'Completed roof replacement on a brick ranch home in Jefferson County, MO' ),
+		),
 		'group'         => 'Jefferson County',
 		'slug'         => 'high-ridge',
 		'h1'           => 'Roofing Company in High Ridge, MO',
