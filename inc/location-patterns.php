@@ -2258,11 +2258,23 @@ function firstchoice_location_hero( $data, $company ) {
 		? sprintf( 'Home base — %1$s, %2$s', $data['city'], $state )
 		: sprintf( 'Serving %1$s, %2$s', $data['city'], $state );
 
+	// The first gallery photo doubles as the hero image. It is rendered as a
+	// real image block rather than an inline background so the markup stays
+	// valid in the editor, and sits behind the copy under a dark scrim.
+	$hero  = ! empty( $data['gallery'] ) ? $data['gallery'][0] : null;
+	$class = $hero ? 'location-hero has-hero-photo' : 'location-hero';
+
 	ob_start();
 	?>
-<!-- wp:group {"className":"location-hero alignfull","layout":{"type":"constrained"}} -->
-<div class="wp-block-group alignfull location-hero">
+<!-- wp:group {"className":"<?php echo esc_attr( $class ); ?> alignfull","layout":{"type":"constrained"}} -->
+<div class="wp-block-group alignfull <?php echo esc_attr( $class ); ?>">
 	<div class="wp-block-group__inner-container">
+		<?php if ( $hero ) : ?>
+		<!-- wp:image {"className":"location-hero-photo"} -->
+		<figure class="wp-block-image location-hero-photo"><img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/inc/img/locations/' . $hero['file'] ); ?>" alt="<?php echo esc_attr( $hero['alt'] ); ?>" fetchpriority="high" decoding="async" width="1200" height="800" /></figure>
+		<!-- /wp:image -->
+		<?php endif; ?>
+
 		<!-- wp:paragraph {"className":"location-hero-badge"} -->
 		<p class="location-hero-badge"><?php echo esc_html( $badge ); ?></p>
 		<!-- /wp:paragraph -->
@@ -2294,9 +2306,11 @@ function firstchoice_location_hero( $data, $company ) {
 		</div>
 		<!-- /wp:buttons -->
 
+		<?php if ( ! $hero ) : ?>
 		<!-- wp:paragraph {"className":"location-hero-photo-note"} -->
 		<p class="location-hero-photo-note">Photo to be selected — hero photo, shingle or local job site</p>
 		<!-- /wp:paragraph -->
+		<?php endif; ?>
 	</div>
 </div>
 <!-- /wp:group -->

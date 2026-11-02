@@ -913,6 +913,36 @@ div.warranty-images:not(.alignfull):not(.alignwide) {
 	margin-top: calc( 1.5 * var(--gap));
 	flex-wrap: wrap;
 }
+/* Hero photo. The figure fills the band behind the copy; its ::after lays a
+   dark scrim over the photo so the white text keeps its contrast. */
+.location-hero.has-hero-photo {
+	background-image: none;
+}
+figure.location-hero-photo:not(.alignfull):not(.alignwide) {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	margin: 0;
+	overflow: hidden;
+	z-index: 0;
+}
+.location-hero-photo img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	object-position: center 40%;
+}
+.location-hero-photo::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background: linear-gradient( 100deg, rgba( 26, 26, 26, 0.92 ) 0%, rgba( 26, 26, 26, 0.78 ) 45%, rgba( 26, 26, 26, 0.45 ) 100% );
+}
+.location-hero.has-hero-photo > .wp-block-group__inner-container > *:not(.location-hero-photo) {
+	position: relative;
+	z-index: 1;
+}
 .location-hero-photo-note {
 	font-size: var(--font-size-sm);
 	text-transform: uppercase;
