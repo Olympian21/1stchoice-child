@@ -244,8 +244,10 @@ function firstchoice_location_data() {
 	$cities['ballwin'] = array(
 		'city'         => 'Ballwin',
 		'gallery'      => array(
-			 array( 'file' => 'ballwin-1.webp', 'alt' => 'Completed roof replacement on a red brick colonial home in nearby Chesterfield, MO, West St. Louis County' ),
-			 array( 'file' => 'ballwin-2.webp', 'alt' => 'Aerial view of a finished roof on a brick colonial in nearby Chesterfield, MO, West St. Louis County' ),
+			 array( 'file' => 'chesterfield-10.webp', 'alt' => 'Photo of a completed roof replacement on a red brick colonial home in nearby Chesterfield, MO, West St. Louis County' ),
+			 array( 'file' => 'chesterfield-11.webp', 'alt' => 'Photo of an aerial view of a finished roof on a brick colonial in nearby Chesterfield, MO, West St. Louis County' ),
+			 array( 'file' => 'chesterfield-1.webp', 'alt' => 'Photo of a completed architectural shingle roof replacement on a two-story home in nearby Chesterfield, MO, West St. Louis County' ),
+			 array( 'file' => 'wildwood-1.webp', 'alt' => 'Photo of a completed roof replacement on a large home in nearby Wildwood, MO, West St. Louis County' ),
 		),
 		'group'         => 'West St. Louis County',
 		'slug'         => 'ballwin',
@@ -395,10 +397,10 @@ function firstchoice_location_data() {
 	$cities['chesterfield'] = array(
 		'city'         => 'Chesterfield',
 		'gallery'      => array(
-			 array( 'file' => 'chesterfield-1.webp', 'alt' => 'Aerial view of a completed architectural shingle roof replacement on a two-story home in Chesterfield, MO' ),
-			 array( 'file' => 'chesterfield-2.webp', 'alt' => 'Side angle of the finished roof and dormers on a Chesterfield, MO home' ),
-			 array( 'file' => 'chesterfield-3.webp', 'alt' => 'Front elevation of a Chesterfield, MO home after a full roof replacement by 1st Choice' ),
-			 array( 'file' => 'chesterfield-4.webp', 'alt' => 'Completed roof replacement on a brick two-story home with a columned portico in Chesterfield, MO' ),
+			 array( 'file' => 'chesterfield-1.webp', 'alt' => 'Photo of a completed architectural shingle roof replacement on a two-story home in Chesterfield, MO' ),
+			 array( 'file' => 'chesterfield-2.webp', 'alt' => 'Photo of a finished roof and dormers in Chesterfield, MO' ),
+			 array( 'file' => 'chesterfield-3.webp', 'alt' => 'Photo of a home after a full roof replacement in Chesterfield, MO' ),
+			 array( 'file' => 'chesterfield-4.webp', 'alt' => 'Photo of a completed roof on a brick two-story home with a columned portico in Chesterfield, MO' ),
 		),
 		'group'         => 'West St. Louis County',
 		'slug'         => 'chesterfield',
@@ -635,6 +637,12 @@ function firstchoice_location_data() {
 
 	$cities['des-peres'] = array(
 		'city'         => 'Des Peres',
+		'gallery'      => array(
+			 array( 'file' => 'chesterfield-2.webp', 'alt' => 'Photo of a finished roof and dormers in nearby Chesterfield, MO, West St. Louis County' ),
+			 array( 'file' => 'chesterfield-5.webp', 'alt' => 'Photo of a completed roof replacement on a red brick two-story home in nearby Chesterfield, MO, West St. Louis County' ),
+			 array( 'file' => 'ellisville-2.webp', 'alt' => 'Photo of a new shingle roof on a brick ranch home in nearby Ellisville, MO, West St. Louis County' ),
+			 array( 'file' => 'wildwood-2.webp', 'alt' => 'Photo of a finished hip roof and chimney in nearby Wildwood, MO, West St. Louis County' ),
+		),
 		'group'         => 'West St. Louis County',
 		'slug'         => 'des-peres',
 		'h1'           => 'Roofing Company in Des Peres, MO',
@@ -743,10 +751,10 @@ function firstchoice_location_data() {
 	$cities['ellisville'] = array(
 		'city'         => 'Ellisville',
 		'gallery'      => array(
-			 array( 'file' => 'ellisville-1.webp', 'alt' => 'Completed brown architectural shingle roof replacement on a two-story home in Ellisville, MO' ),
-			 array( 'file' => 'ellisville-2.webp', 'alt' => 'New shingle roof on a brick ranch home in Ellisville, MO' ),
-			 array( 'file' => 'ellisville-3.webp', 'alt' => 'Aerial view of a finished roof replacement on a brick home in Ellisville, MO' ),
-			 array( 'file' => 'ellisville-4.webp', 'alt' => 'Completed roof replacement on a red brick two-story home in nearby Chesterfield, MO, West St. Louis County' ),
+			 array( 'file' => 'ellisville-1.webp', 'alt' => 'Photo of a completed brown architectural shingle roof on a two-story home in Ellisville, MO' ),
+			 array( 'file' => 'ellisville-2.webp', 'alt' => 'Photo of a new shingle roof on a brick ranch home in Ellisville, MO' ),
+			 array( 'file' => 'ellisville-3.webp', 'alt' => 'Photo of an aerial view of a finished roof replacement on a brick home in Ellisville, MO' ),
+			 array( 'file' => 'chesterfield-5.webp', 'alt' => 'Photo of a completed roof replacement on a red brick two-story home in nearby Chesterfield, MO, West St. Louis County' ),
 		),
 		'group'         => 'West St. Louis County',
 		'slug'         => 'ellisville',
@@ -795,6 +803,12 @@ function firstchoice_location_data() {
 
 	$cities['fenton'] = array(
 		'city'         => 'Fenton',
+		'gallery'      => array(
+			 array( 'file' => 'chesterfield-3.webp', 'alt' => 'Photo of a home after a full roof replacement in nearby Chesterfield, MO, West St. Louis County' ),
+			 array( 'file' => 'chesterfield-6.webp', 'alt' => 'Photo of a new shingle roof on a large home in nearby Chesterfield, MO, West St. Louis County' ),
+			 array( 'file' => 'ellisville-3.webp', 'alt' => 'Photo of an aerial view of a finished roof replacement on a brick home in nearby Ellisville, MO, West St. Louis County' ),
+			 array( 'file' => 'clarkson-valley-1.webp', 'alt' => 'Photo of a completed roof replacement on a white colonial home in nearby Clarkson Valley, MO, West St. Louis County' ),
+		),
 		'group'         => 'West St. Louis County',
 		'slug'         => 'fenton',
 		'h1'           => 'Roofing Company in Fenton, MO',
@@ -1075,6 +1089,12 @@ function firstchoice_location_data() {
 
 	$cities['manchester'] = array(
 		'city'         => 'Manchester',
+		'gallery'      => array(
+			 array( 'file' => 'chesterfield-4.webp', 'alt' => 'Photo of a completed roof on a brick two-story home with a columned portico in nearby Chesterfield, MO, West St. Louis County' ),
+			 array( 'file' => 'chesterfield-7.webp', 'alt' => 'Photo of a completed roof replacement on a brick two-story home in nearby Chesterfield, MO, West St. Louis County' ),
+			 array( 'file' => 'chesterfield-10.webp', 'alt' => 'Photo of a completed roof replacement on a red brick colonial home in nearby Chesterfield, MO, West St. Louis County' ),
+			 array( 'file' => 'ellisville-1.webp', 'alt' => 'Photo of a completed brown architectural shingle roof on a two-story home in nearby Ellisville, MO, West St. Louis County' ),
+		),
 		'group'         => 'West St. Louis County',
 		'slug'         => 'manchester',
 		'h1'           => 'Roofing Company in Manchester, MO',
@@ -1718,9 +1738,10 @@ function firstchoice_location_data() {
 	$cities['town-and-country'] = array(
 		'city'         => 'Town and Country',
 		'gallery'      => array(
-			 array( 'file' => 'town-and-country-1.webp', 'alt' => 'Completed roof replacement on a brick two-story home in nearby Chesterfield, MO, West St. Louis County' ),
-			 array( 'file' => 'town-and-country-2.webp', 'alt' => 'Front elevation of a finished roof on a brick home in nearby Chesterfield, MO, West St. Louis County' ),
-			 array( 'file' => 'town-and-country-3.webp', 'alt' => 'Aerial view of a completed roof replacement in nearby Chesterfield, MO, West St. Louis County' ),
+			 array( 'file' => 'chesterfield-7.webp', 'alt' => 'Photo of a completed roof replacement on a brick two-story home in nearby Chesterfield, MO, West St. Louis County' ),
+			 array( 'file' => 'chesterfield-8.webp', 'alt' => 'Photo of the front elevation of a finished roof on a brick home in nearby Chesterfield, MO, West St. Louis County' ),
+			 array( 'file' => 'chesterfield-9.webp', 'alt' => 'Photo of an aerial view of a completed roof replacement in nearby Chesterfield, MO, West St. Louis County' ),
+			 array( 'file' => 'ellisville-1.webp', 'alt' => 'Photo of a completed brown architectural shingle roof on a two-story home in nearby Ellisville, MO, West St. Louis County' ),
 		),
 		'group'         => 'West St. Louis County',
 		'slug'         => 'town-and-country',
@@ -1833,6 +1854,12 @@ function firstchoice_location_data() {
 
 	$cities['valley-park'] = array(
 		'city'         => 'Valley Park',
+		'gallery'      => array(
+			 array( 'file' => 'chesterfield-8.webp', 'alt' => 'Photo of the front elevation of a finished roof on a brick home in nearby Chesterfield, MO, West St. Louis County' ),
+			 array( 'file' => 'chesterfield-11.webp', 'alt' => 'Photo of an aerial view of a finished roof on a brick colonial in nearby Chesterfield, MO, West St. Louis County' ),
+			 array( 'file' => 'chesterfield-2.webp', 'alt' => 'Photo of a finished roof and dormers in nearby Chesterfield, MO, West St. Louis County' ),
+			 array( 'file' => 'wildwood-1.webp', 'alt' => 'Photo of a completed roof replacement on a large home in nearby Wildwood, MO, West St. Louis County' ),
+		),
 		'group'         => 'West St. Louis County',
 		'slug'         => 'valley-park',
 		'h1'           => 'Roofing Company in Valley Park, MO',
@@ -2008,10 +2035,10 @@ function firstchoice_location_data() {
 	$cities['wildwood'] = array(
 		'city'         => 'Wildwood',
 		'gallery'      => array(
-			 array( 'file' => 'wildwood-1.webp', 'alt' => 'Aerial view of a completed roof replacement on a large home in Wildwood, MO' ),
-			 array( 'file' => 'wildwood-2.webp', 'alt' => 'Finished hip roof and chimney on a Wildwood, MO home' ),
-			 array( 'file' => 'wildwood-3.webp', 'alt' => 'Completed roof replacement on a white colonial home in nearby Clarkson Valley, MO, West St. Louis County' ),
-			 array( 'file' => 'wildwood-4.webp', 'alt' => 'New shingle roof on a large home in nearby Chesterfield, MO, West St. Louis County' ),
+			 array( 'file' => 'wildwood-1.webp', 'alt' => 'Photo of a completed roof replacement on a large home in Wildwood, MO' ),
+			 array( 'file' => 'wildwood-2.webp', 'alt' => 'Photo of a finished hip roof and chimney in Wildwood, MO' ),
+			 array( 'file' => 'clarkson-valley-1.webp', 'alt' => 'Photo of a completed roof replacement on a white colonial home in nearby Clarkson Valley, MO, West St. Louis County' ),
+			 array( 'file' => 'chesterfield-6.webp', 'alt' => 'Photo of a new shingle roof on a large home in nearby Chesterfield, MO, West St. Louis County' ),
 		),
 		'group'         => 'West St. Louis County',
 		'slug'         => 'wildwood',
