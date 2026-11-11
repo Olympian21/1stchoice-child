@@ -205,6 +205,10 @@ function firstchoice_location_data() {
 
 	$cities['affton'] = array(
 		'city'          => 'Affton',
+		'gallery'      => array(
+			 array( 'file' => 'pdf-01.webp', 'alt' => 'Completed roof replacement on a two-story home with stone and siding' ),
+			 array( 'file' => 'pdf-02.webp', 'alt' => 'Overhead view of a newly installed architectural shingle roof' ),
+		),
 		'group'          => 'South St. Louis County',
 		'slug'          => 'affton',
 		'h1'            => 'Roofing Company in Affton, MO',
@@ -310,6 +314,10 @@ function firstchoice_location_data() {
 
 	$cities['brentwood'] = array(
 		'city'         => 'Brentwood',
+		'gallery'      => array(
+			 array( 'file' => 'pdf-03.webp', 'alt' => 'Completed roof replacement on a home with a detached garage' ),
+			 array( 'file' => 'pdf-04.webp', 'alt' => 'New shingle roof on a brick ranch home with a circular driveway' ),
+		),
 		'group'         => 'Mid &amp; Central St. Louis County',
 		'slug'         => 'brentwood',
 		'h1'           => 'Roofing Company in Brentwood, MO',
@@ -356,6 +364,10 @@ function firstchoice_location_data() {
 
 	$cities['bridgeton'] = array(
 		'city'         => 'Bridgeton',
+		'gallery'      => array(
+			 array( 'file' => 'pdf-03.webp', 'alt' => 'Completed roof replacement on a home with a detached garage' ),
+			 array( 'file' => 'pdf-05.webp', 'alt' => 'Overhead view of a finished dark shingle roof on a two-story home' ),
+		),
 		'group'         => 'North &amp; Northwest St. Louis County',
 		'slug'         => 'bridgeton',
 		'h1'           => 'Roofing Company in Bridgeton, MO',
@@ -454,6 +466,10 @@ function firstchoice_location_data() {
 
 	$cities['clayton'] = array(
 		'city'         => 'Clayton',
+		'gallery'      => array(
+			 array( 'file' => 'pdf-06.webp', 'alt' => 'Aerial view of a completed roof replacement on a home with a pool' ),
+			 array( 'file' => 'pdf-07.webp', 'alt' => 'Completed roof replacement on a white two-story colonial home' ),
+		),
 		'group'         => 'Mid &amp; Central St. Louis County',
 		'slug'         => 'clayton',
 		'h1'           => 'Roofing Company in Clayton, MO',
@@ -501,6 +517,10 @@ function firstchoice_location_data() {
 
 	$cities['collinsville'] = array(
 		'city'         => 'Collinsville',
+		'gallery'      => array(
+			 array( 'file' => 'pdf-08.webp', 'alt' => 'New roofs on brick two-story homes in an established neighborhood' ),
+			 array( 'file' => 'pdf-09.webp', 'alt' => 'Completed roof replacement on a brick ranch home' ),
+		),
 		'group'         => 'Metro East, Illinois',
 		'slug'         => 'collinsville',
 		'h1'           => 'Roofing Company in Collinsville, IL',
@@ -549,6 +569,10 @@ function firstchoice_location_data() {
 
 	$cities['crestwood'] = array(
 		'city'         => 'Crestwood',
+		'gallery'      => array(
+			 array( 'file' => 'pdf-10.webp', 'alt' => 'New shingle roof on a brick home with an arched entry' ),
+			 array( 'file' => 'pdf-11.webp', 'alt' => 'Completed roof replacement on a long brick ranch home with dormers' ),
+		),
 		'group'         => 'South St. Louis County',
 		'slug'         => 'crestwood',
 		'h1'           => 'Roofing Company in Crestwood',
@@ -596,6 +620,10 @@ function firstchoice_location_data() {
 
 	$cities['creve-coeur'] = array(
 		'city'         => 'Creve Coeur',
+		'gallery'      => array(
+			 array( 'file' => 'pdf-12.webp', 'alt' => 'Aerial view of a finished roof on a two-story home with a curved drive' ),
+			 array( 'file' => 'pdf-13.webp', 'alt' => 'Completed roof replacement on a Tudor-style brick home' ),
+		),
 		'group'         => 'Mid &amp; Central St. Louis County',
 		'slug'         => 'creve-coeur',
 		'h1'           => 'Roofing Company in Creve Coeur, MO',
@@ -644,10 +672,8 @@ function firstchoice_location_data() {
 	$cities['des-peres'] = array(
 		'city'         => 'Des Peres',
 		'gallery'      => array(
-			 array( 'file' => 'chesterfield-2.webp', 'alt' => 'Photo of a finished roof and dormers in nearby Chesterfield, MO, West St. Louis County' ),
-			 array( 'file' => 'chesterfield-5.webp', 'alt' => 'Photo of a completed roof replacement on a red brick two-story home in nearby Chesterfield, MO, West St. Louis County' ),
-			 array( 'file' => 'ellisville-2.webp', 'alt' => 'Photo of a new shingle roof on a brick ranch home in nearby Ellisville, MO, West St. Louis County' ),
-			 array( 'file' => 'wildwood-2.webp', 'alt' => 'Photo of a finished hip roof and chimney in nearby Wildwood, MO, West St. Louis County' ),
+			 array( 'file' => 'pdf-14.webp', 'alt' => 'New brown shingle roof on a two-story home with a bay window' ),
+			 array( 'file' => 'pdf-15.webp', 'alt' => 'Completed roof replacement on a red brick two-story home' ),
 		),
 		'group'         => 'West St. Louis County',
 		'slug'         => 'des-peres',
@@ -696,6 +722,10 @@ function firstchoice_location_data() {
 
 	$cities['earth-city'] = array(
 		'city'         => 'Earth City',
+		'gallery'      => array(
+			 array( 'file' => 'pdf-03.webp', 'alt' => 'Completed roof replacement on a home with a detached garage' ),
+			 array( 'file' => 'pdf-02.webp', 'alt' => 'Overhead view of a newly installed architectural shingle roof' ),
+		),
 		'group'         => 'North &amp; Northwest St. Louis County',
 		'slug'         => 'earth-city',
 		'h1'           => 'Commercial &amp; Flat Roofing in Earth City, MO',
@@ -810,10 +840,8 @@ function firstchoice_location_data() {
 	$cities['fenton'] = array(
 		'city'         => 'Fenton',
 		'gallery'      => array(
-			 array( 'file' => 'chesterfield-3.webp', 'alt' => 'Photo of a home after a full roof replacement in nearby Chesterfield, MO, West St. Louis County' ),
-			 array( 'file' => 'chesterfield-6.webp', 'alt' => 'Photo of a new shingle roof on a large home in nearby Chesterfield, MO, West St. Louis County' ),
-			 array( 'file' => 'ellisville-3.webp', 'alt' => 'Photo of an aerial view of a finished roof replacement on a brick home in nearby Ellisville, MO, West St. Louis County' ),
-			 array( 'file' => 'clarkson-valley-1.webp', 'alt' => 'Photo of a completed roof replacement on a white colonial home in nearby Clarkson Valley, MO, West St. Louis County' ),
+			 array( 'file' => 'pdf-14.webp', 'alt' => 'New brown shingle roof on a two-story home with a bay window' ),
+			 array( 'file' => 'pdf-08.webp', 'alt' => 'New roofs on brick two-story homes in an established neighborhood' ),
 		),
 		'group'         => 'West St. Louis County',
 		'slug'         => 'fenton',
@@ -871,6 +899,10 @@ function firstchoice_location_data() {
 
 	$cities['hazelwood'] = array(
 		'city'         => 'Hazelwood',
+		'gallery'      => array(
+			 array( 'file' => 'pdf-03.webp', 'alt' => 'Completed roof replacement on a home with a detached garage' ),
+			 array( 'file' => 'pdf-16.webp', 'alt' => 'Aerial view of a new roof on a large ranch home on a wooded lot' ),
+		),
 		'group'         => 'North &amp; Northwest St. Louis County',
 		'slug'         => 'hazelwood',
 		'h1'           => 'Roofing Company in Hazelwood, MO',
@@ -989,6 +1021,10 @@ function firstchoice_location_data() {
 
 	$cities['kirkwood'] = array(
 		'city'         => 'Kirkwood',
+		'gallery'      => array(
+			 array( 'file' => 'pdf-17.webp', 'alt' => 'Completed roof replacement on a navy two-story home with a covered porch' ),
+			 array( 'file' => 'pdf-18.webp', 'alt' => 'New shingle roof on a two-story home with stone accents' ),
+		),
 		'group'         => 'Mid &amp; Central St. Louis County',
 		'slug'         => 'kirkwood',
 		'h1'           => 'Roofing Company in Kirkwood, MO',
@@ -1045,6 +1081,10 @@ function firstchoice_location_data() {
 
 	$cities['ladue'] = array(
 		'city'         => 'Ladue',
+		'gallery'      => array(
+			 array( 'file' => 'pdf-19.webp', 'alt' => 'Completed roof replacement on a home with a gravel circular drive' ),
+			 array( 'file' => 'pdf-04.webp', 'alt' => 'New shingle roof on a brick ranch home with a circular driveway' ),
+		),
 		'group'         => 'Mid &amp; Central St. Louis County',
 		'slug'         => 'ladue',
 		'h1'           => 'Roofing Company in Ladue',
@@ -1102,10 +1142,8 @@ function firstchoice_location_data() {
 	$cities['manchester'] = array(
 		'city'         => 'Manchester',
 		'gallery'      => array(
-			 array( 'file' => 'chesterfield-4.webp', 'alt' => 'Photo of a completed roof on a brick two-story home with a columned portico in nearby Chesterfield, MO, West St. Louis County' ),
-			 array( 'file' => 'chesterfield-7.webp', 'alt' => 'Photo of a completed roof replacement on a brick two-story home in nearby Chesterfield, MO, West St. Louis County' ),
-			 array( 'file' => 'chesterfield-10.webp', 'alt' => 'Photo of a completed roof replacement on a red brick colonial home in nearby Chesterfield, MO, West St. Louis County' ),
-			 array( 'file' => 'ellisville-1.webp', 'alt' => 'Photo of a completed brown architectural shingle roof on a two-story home in nearby Ellisville, MO, West St. Louis County' ),
+			 array( 'file' => 'pdf-20.webp', 'alt' => 'New roof on a white brick two-story home with dark shutters' ),
+			 array( 'file' => 'pdf-21.webp', 'alt' => 'Completed roof replacement on a brick ranch with a three-car garage' ),
 		),
 		'group'         => 'West St. Louis County',
 		'slug'         => 'manchester',
@@ -1154,6 +1192,10 @@ function firstchoice_location_data() {
 
 	$cities['maryland-heights'] = array(
 		'city'         => 'Maryland Heights',
+		'gallery'      => array(
+			 array( 'file' => 'pdf-22.webp', 'alt' => 'New shingle roof on a white two-story home with a columned porch' ),
+			 array( 'file' => 'pdf-02.webp', 'alt' => 'Overhead view of a newly installed architectural shingle roof' ),
+		),
 		'group'         => 'North &amp; Northwest St. Louis County',
 		'slug'         => 'maryland-heights',
 		'h1'           => 'Roofing Company in Maryland Heights, MO',
@@ -1209,6 +1251,10 @@ function firstchoice_location_data() {
 	);
 	$cities['oakville'] = array(
 		'city'         => 'Oakville',
+		'gallery'      => array(
+			 array( 'file' => 'pdf-23.webp', 'alt' => 'Completed roof replacement on a ranch home with a covered front porch' ),
+			 array( 'file' => 'pdf-24.webp', 'alt' => 'New shingle roof on a navy split-level home' ),
+		),
 		'group'         => 'South St. Louis County',
 		'slug'         => 'oakville',
 		'h1'           => 'Roofing Company in Oakville, MO',
@@ -1264,6 +1310,10 @@ function firstchoice_location_data() {
 
 	$cities['overland'] = array(
 		'city'         => 'Overland',
+		'gallery'      => array(
+			 array( 'file' => 'pdf-16.webp', 'alt' => 'Aerial view of a new roof on a large ranch home on a wooded lot' ),
+			 array( 'file' => 'pdf-27.webp', 'alt' => 'Completed roof replacement on a grey brick ranch home' ),
+		),
 		'group'         => 'Mid &amp; Central St. Louis County',
 		'slug'         => 'overland',
 		'h1'           => 'Roofing Company in Overland, MO',
@@ -1319,6 +1369,10 @@ function firstchoice_location_data() {
 
 	$cities['ofallon-il'] = array(
 		'city'         => 'O’Fallon',
+		'gallery'      => array(
+			 array( 'file' => 'pdf-25.webp', 'alt' => 'Completed roof replacements on brick homes along a cul-de-sac' ),
+			 array( 'file' => 'pdf-26.webp', 'alt' => 'New roof on a stone and brick ranch home' ),
+		),
 		'group'         => 'Metro East, Illinois',
 		'slug'         => 'ofallon-il',
 		'h1'           => 'Roofing Company in O&#8217;Fallon, IL',
@@ -1422,6 +1476,10 @@ function firstchoice_location_data() {
 
 	$cities['richmond-heights'] = array(
 		'city'         => 'Richmond Heights',
+		'gallery'      => array(
+			 array( 'file' => 'pdf-04.webp', 'alt' => 'New shingle roof on a brick ranch home with a circular driveway' ),
+			 array( 'file' => 'pdf-28.webp', 'alt' => 'Aerial view of a finished roof on a large home on a wooded lot' ),
+		),
 		'group'         => 'Mid &amp; Central St. Louis County',
 		'slug'         => 'richmond-heights',
 		'h1'           => 'Roofing Company in Richmond Heights, MO',
@@ -1525,7 +1583,8 @@ function firstchoice_location_data() {
 		'cta_button'   => 'Request a Free Commercial Roof Inspection',
 		'testimonial_cite' => '[Company/Property], Richmond Heights, MO',
 		'region'       => 'Serving Richmond Heights and St. Louis County businesses',
-		'order'        => $services_first,
+		// Photos section hidden for now, at the client's request.
+		'order'        => array_values( array_diff( $services_first, array( 'gallery' ) ) ),
 	);
 
 	$cities['st-charles'] = array(
@@ -1645,6 +1704,10 @@ function firstchoice_location_data() {
 
 	$cities['st-louis'] = array(
 		'city'         => 'St. Louis',
+		'gallery'      => array(
+			 array( 'file' => 'pdf-29.webp', 'alt' => 'Completed roof replacement on a brick two-story home with a circular drive' ),
+			 array( 'file' => 'pdf-26.webp', 'alt' => 'New roof on a stone and brick ranch home' ),
+		),
 		'group'         => 'City of St. Louis',
 		'slug'         => 'st-louis',
 		'h1'           => 'Roofing Company in St. Louis, MO',
@@ -1702,6 +1765,10 @@ function firstchoice_location_data() {
 
 	$cities['sunset-hills'] = array(
 		'city'         => 'Sunset Hills',
+		'gallery'      => array(
+			 array( 'file' => 'pdf-30.webp', 'alt' => 'New shingle roof on a brick ranch home on a wooded lot' ),
+			 array( 'file' => 'pdf-28.webp', 'alt' => 'Aerial view of a finished roof on a large home on a wooded lot' ),
+		),
 		'group'         => 'South St. Louis County',
 		'slug'         => 'sunset-hills',
 		'h1'           => 'Roofing Company in Sunset Hills, MO',
@@ -1810,6 +1877,10 @@ function firstchoice_location_data() {
 
 	$cities['university-city'] = array(
 		'city'         => 'University City',
+		'gallery'      => array(
+			 array( 'file' => 'pdf-11.webp', 'alt' => 'Completed roof replacement on a long brick ranch home with dormers' ),
+			 array( 'file' => 'pdf-04.webp', 'alt' => 'New shingle roof on a brick ranch home with a circular driveway' ),
+		),
 		'group'         => 'Mid &amp; Central St. Louis County',
 		'slug'         => 'university-city',
 		'h1'           => 'Roofing Company in University City, MO',
@@ -1867,10 +1938,8 @@ function firstchoice_location_data() {
 	$cities['valley-park'] = array(
 		'city'         => 'Valley Park',
 		'gallery'      => array(
-			 array( 'file' => 'chesterfield-8.webp', 'alt' => 'Photo of the front elevation of a finished roof on a brick home in nearby Chesterfield, MO, West St. Louis County' ),
-			 array( 'file' => 'chesterfield-11.webp', 'alt' => 'Photo of an aerial view of a finished roof on a brick colonial in nearby Chesterfield, MO, West St. Louis County' ),
-			 array( 'file' => 'chesterfield-2.webp', 'alt' => 'Photo of a finished roof and dormers in nearby Chesterfield, MO, West St. Louis County' ),
-			 array( 'file' => 'wildwood-1.webp', 'alt' => 'Photo of a completed roof replacement on a large home in nearby Wildwood, MO, West St. Louis County' ),
+			 array( 'file' => 'pdf-30.webp', 'alt' => 'New shingle roof on a brick ranch home on a wooded lot' ),
+			 array( 'file' => 'pdf-27.webp', 'alt' => 'Completed roof replacement on a grey brick ranch home' ),
 		),
 		'group'         => 'West St. Louis County',
 		'slug'         => 'valley-park',
@@ -1928,6 +1997,10 @@ function firstchoice_location_data() {
 
 	$cities['webster-groves'] = array(
 		'city'         => 'Webster Groves',
+		'gallery'      => array(
+			 array( 'file' => 'pdf-22.webp', 'alt' => 'New shingle roof on a white two-story home with a columned porch' ),
+			 array( 'file' => 'pdf-31.webp', 'alt' => 'Completed roof replacement on a white two-story home' ),
+		),
 		'group'         => 'Mid &amp; Central St. Louis County',
 		'slug'         => 'webster-groves',
 		'h1'           => 'Roofing Company in Webster Groves, MO',
