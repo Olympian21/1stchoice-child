@@ -1259,34 +1259,39 @@ p.warranty-term-badge:not(.alignfull):not(.alignwide) {
 /* TESTIMONIAL */
 .location-testimonial {
 	background: var(--grey-vlight);
-	text-align: center;
 }
-.location-testimonial h2 {
+div.testimonial-cta:not(.alignfull):not(.alignwide) {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: calc( 1.5 * var(--gap));
+	box-sizing: border-box;
+}
+figure.testimonial-cta-photo:not(.alignfull):not(.alignwide) {
+	flex: 1 1 clamp( 280px, calc( 50% - var(--gap)), 560px);
+	margin: 0;
+	border-radius: 4px;
+	overflow: hidden;
+}
+.testimonial-cta-photo img {
+	display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+div.testimonial-cta-text:not(.alignfull):not(.alignwide) {
+	flex: 1 1 clamp( 280px, calc( 50% - var(--gap)), 480px);
+	box-sizing: border-box;
+}
+.testimonial-cta-text h2 {
 	margin-top: 0;
-	margin-bottom: calc( 1.5 * var(--gap));
-}
-.location-testimonial .wp-block-quote {
-	background: var(--white);
-	border-left: 4px solid var(--gold);
-	border-radius: 0;
-	padding: calc( 1.25 * var(--gap)) calc( 1.5 * var(--gap));
-	margin: 0 auto;
-	max-width: 44em;
+	margin-bottom: var(--gap);
 	text-align: left;
-
-	p {
-		font-style: italic;
-		color: var(--grey-dark);
-	}
-	cite {
-		display: block;
-		font-style: normal;
-		font-weight: 700;
-		text-transform: uppercase;
-		font-size: var(--font-size-sm);
-		color: var(--grey-dark);
-		text-align: right;
-	}
+}
+.testimonial-cta-text .wp-block-buttons {
+	display: flex;
+	flex-wrap: wrap;
+	gap: calc( var(--gap) * 0.75 );
 }
 
 /* RECENT WORK GALLERY — placeholders until real photos land */

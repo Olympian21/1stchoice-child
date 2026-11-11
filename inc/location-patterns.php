@@ -22,6 +22,22 @@ function firstchoice_location_company() {
 		'email'      => 'first@1stchoicestl.com',
 		'estimate'   => '/contact/',
 		'warranty'   => '/warranty/',
+		'testimonials' => '/testimonials/',
+	);
+}
+
+/**
+ * Lines used in place of a pull quote on the location pages. They rotate so
+ * that every location page does not say the same thing.
+ */
+function firstchoice_location_testimonial_lines() {
+	return array(
+		'What&#8217;s it actually like to work with us? Just ask our customers',
+		'See what your neighbors say about their new roof',
+		'5 stars, roof after roof. See for yourself here',
+		'See why homeowners give us 5 stars',
+		'Read why homeowners recommend our work',
+		'Look at our track record here',
 	);
 }
 
@@ -2678,27 +2694,45 @@ function firstchoice_location_warranty( $company ) {
  * Testimonial — swap in a real Google review before publishing.
  */
 function firstchoice_location_testimonial( $data ) {
-	$cite_tail = ! empty( $data['testimonial_cite'] )
-		? $data['testimonial_cite']
-		: sprintf( '%1$s, %2$s', $data['city'], firstchoice_location_state( $data ) );
+	$company = firstchoice_location_company();
+
+	// One of six lines, picked by the city's position in the data so each page
+	// gets a different one and the choice is stable between builds.
+	$lines = firstchoice_location_testimonial_lines();
+	$keys  = array_keys( firstchoice_location_data() );
+	$index = array_search( $data['slug'], $keys, true );
+	$line  = $lines[ ( false === $index ? 0 : $index ) % count( $lines ) ];
 
 	ob_start();
 	?>
 <!-- wp:group {"className":"location-testimonial alignfull","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull location-testimonial">
 	<div class="wp-block-group__inner-container">
-		<!-- wp:heading {"textAlign":"center"} -->
-		<h2 class="wp-block-heading has-text-align-center">What <?php echo esc_html( $data['city'] ); ?> Customers Say</h2>
-		<!-- /wp:heading -->
+		<!-- wp:group {"className":"testimonial-cta","layout":{"type":"flex","flexWrap":"wrap"}} -->
+		<div class="wp-block-group testimonial-cta">
 
-		<!-- wp:quote -->
-		<blockquote class="wp-block-quote">
-			<!-- wp:paragraph -->
-			<p>[ Pull a real Google review from a <?php echo esc_html( $data['city'] ); ?> customer before publishing. ]</p>
-			<!-- /wp:paragraph -->
-			<cite>&#8212; [First Name, Last Initial], <?php echo wp_kses_post( $cite_tail ); ?></cite>
-		</blockquote>
-		<!-- /wp:quote -->
+			<!-- wp:image {"className":"testimonial-cta-photo"} -->
+			<figure class="wp-block-image testimonial-cta-photo"><img src="<?php echo esc_url( get_stylesheet_directory_uri() . '/inc/img/testimonials-cta.webp' ); ?>" alt="A couple looking at their home after a roof replacement by 1st Choice Roofing and Construction" loading="lazy" decoding="async" width="1200" height="710" /></figure>
+			<!-- /wp:image -->
+
+			<!-- wp:group {"className":"testimonial-cta-text","layout":{"type":"constrained"}} -->
+			<div class="wp-block-group testimonial-cta-text">
+				<!-- wp:heading -->
+				<h2 class="wp-block-heading"><?php echo wp_kses_post( $line ); ?></h2>
+				<!-- /wp:heading -->
+
+				<!-- wp:buttons -->
+				<div class="wp-block-buttons">
+					<!-- wp:button {"className":"btn-primary-red"} -->
+					<div class="wp-block-button btn-primary-red"><a class="wp-block-button__link wp-element-button" href="<?php echo esc_url( $company['testimonials'] ); ?>">Read our reviews</a></div>
+					<!-- /wp:button -->
+				</div>
+				<!-- /wp:buttons -->
+			</div>
+			<!-- /wp:group -->
+
+		</div>
+		<!-- /wp:group -->
 	</div>
 </div>
 <!-- /wp:group -->
